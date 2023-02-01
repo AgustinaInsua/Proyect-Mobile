@@ -1,19 +1,35 @@
+
 <ion-app>
-  <ion-header>
-    <ion-toolbar><ion-title>Login</ion-title></ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <div>
-      <ion-label for="user">Usuario</ion-label>
-    </div>
-  
-    <input id="user" type="text" pInputText>
-    <div>
-      <ion-label for="password">Contraseña</ion-label>
-    </div>
-    <input id="password" type="text" pInputText>
-    <div>
-      <ion-button [routerLink]="['/home']">Ingresar</ion-button>
-    </div>
-  </ion-content>
+<ion-content> 
+<div class="conteiner-body"> 
+<h1>Iniciar Sesión</h1>
+<div class="conteiner"> 
+    <form class="form"  name="formRegister">
+        <div>
+                <div class="labelInput">
+                    <label for="email">Email</label>
+                </div>
+            <input tabindex="1" type="text" id="email" name="email"  minlength="8" required email pInputText>
+        </div>
+
+        <div>
+            <div class="labelInput">
+                <label for="password">Contraseña</label>
+            </div>
+            <input tabindex="2" type="text" id="password" name="password" minlength="6" required appPasswordValidation pwvalidlowerCase pInputText>
+        </div>
+
+
+        <button pButton type="submit">Entrar</button>
+
+        <div>
+            <label class="labelRegister">Nuevo usuario?</label>
+            <div>
+                <a class="linkRegister" routerLink="/register">Crea una nueva cuenta</a>
+            </div>
+        </div>
+    </form>
+  </div>
+</div>
+</ion-content>
 </ion-app>

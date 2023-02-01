@@ -1,0 +1,19 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar><ion-title>Login</ion-title></ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <div>
+      <ion-label for="user">Usuario</ion-label>
+    </div>
+  
+    <input id="user" type="text" pInputText>
+    <div>
+      <ion-label for="password">Contraseña</ion-label>
+    </div>
+    <input id="password" type="text" pInputText>
+    <div>
+      <ion-button [routerLink]="['/home']">Ingresar</ion-button>
+    </div>
+  </ion-content>
+</ion-app>

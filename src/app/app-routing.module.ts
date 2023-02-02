@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },  {
+    path: 'actualizar-datos',
+    loadChildren: () => import('./actualizar-datos/actualizar-datos.module').then( m => m.ActualizarDatosPageModule)
   },
+
 ];
 
 @NgModule({

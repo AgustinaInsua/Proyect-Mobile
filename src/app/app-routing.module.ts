@@ -1,3 +1,4 @@
+import { MenuComponent } from './menu/menu.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -8,13 +9,14 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },  {
+  },
+  {
     path: 'actualizar-datos',
     loadChildren: () => import('./actualizar-datos/actualizar-datos.module').then( m => m.ActualizarDatosPageModule)
   },
@@ -22,6 +24,11 @@ const routes: Routes = [
     path: 'boletas-emitidas',
     loadChildren: () => import('./boletas-emitidas/boletas-emitidas.module').then( m => m.BoletasEmitidasPageModule)
   },
+  { 
+    //Este es solo para pruebas directas en menu
+    path: 'menu',
+    component:MenuComponent
+  }
 
 ];
 

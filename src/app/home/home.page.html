@@ -10,12 +10,9 @@
         <ion-item button href="/login">
           <ion-label>Login</ion-label>
         </ion-item>
-        <ion-item button>
+        <ion-item button href="/boletas-emitidas">
           <ion-label>Menu</ion-label>
         </ion-item>
-        <ion-list [hidden]="true">
-          <ion-item>Buscar</ion-item>
-        </ion-list>
       </ion-list>
     </ion-content>
   </ion-menu>
@@ -32,7 +29,93 @@
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
-      This is the home.
+      <p-table
+      id="tableCompanies"
+      #dtCompanies
+      [value]="fizcalizaciones"
+      [tableStyle]="{ 'min-width': '50rem' }"
+      [paginator]="true"
+      [rows]="1"
+      [rowsPerPageOptions]="[1, 2, 3]"
+      [globalFilterFields]="['name', 'razonSocial', 'cuit', '']"
+      (onFilter)="onFilter($event, dtCompanies)"
+      selectionMode="single"
+      [exportHeader]="'customExportHeader'" 
+      autocomplete="off"
+    >
+    
+      <ng-template pTemplate="caption">
+        <div class="companies__flex">
+          <div class="flex__clear">
+            <button
+            pButton
+            label="Limpiar"
+            class="p-button-outlined"
+            icon="pi pi-filter-slash"
+            (click)="clear(dtCompanies)"
+          ></button>
+          </div>
+          
+
+          <div class="flex__search">
+            <span class="p-input-icon-left ml-auto">
+              <i class="pi pi-search"></i>
+              
+            </span>
+            
+          </div>
+          <div class="flex__print">
+            <p-speedDial  buttonStyle="height: 2.5rem; width: 2.5rem; position:relative" [model]="items" type="linear" direction="down" showIcon="pi pi-print" ></p-speedDial>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="name">
+            ID <p-sortIcon field="name"></p-sortIcon>
+            <p-columnFilter
+              type="text"
+              field="name"
+              display="menu"
+            ></p-columnFilter>
+          </th>
+          <th pSortableColumn="razonSocial">
+            Razon Social <p-sortIcon field="razonSocial"></p-sortIcon>
+            <p-columnFilter
+              type="text"
+              field="razonSocial"
+              display="menu"
+            ></p-columnFilter>
+          </th>
+          <th pSortableColumn="cuit">
+            Cuit <p-sortIcon field="cuit"></p-sortIcon>
+            <p-columnFilter
+              type="text"
+              field="cuit"
+              display="menu"
+            ></p-columnFilter>
+          </th>
+          <th pSortableColumn="razonSocial">
+            Nombre Contacto <p-sortIcon field="contactName"></p-sortIcon>
+            <p-columnFilter
+              type="text"
+              field="contactName"
+              display="menu"
+            ></p-columnFilter>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-company>
+        <tr>
+          <td>{{ company.id }}</td>
+          <td>{{ company.razonSocial }}</td>
+          <td>{{ company.cuit }}</td>
+          <td>{{ company.contactName }}</td>
+          <td>{{ company.contactNumber }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  
     </ion-content>
   </div>
   

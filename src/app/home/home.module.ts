@@ -6,6 +6,9 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import {InputTextModule} from 'primeng/inputtext';
+import {TableModule} from 'primeng/table';
+import {SpeedDialModule} from 'primeng/speeddial';
+
 
 @NgModule({
   imports: [
@@ -13,7 +16,9 @@ import {InputTextModule} from 'primeng/inputtext';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    InputTextModule
+    InputTextModule,
+    TableModule,
+    SpeedDialModule
   ],
   declarations: [HomePage]
 })

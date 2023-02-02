@@ -1,27 +1,100 @@
-#container {
-  text-align: center;
+h2{
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #495057;
+  padding-left: 20px;
+ }
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+
+.mainTable{
+   width: 97.5vw;;
+ }
+
+
+ .mainTable__companies{
+   width: 100%;
+ }
+
+ .companies__flex{
+   width: 100%;
+   height: 47px;
+   display: flex;
+   flex-direction: row;
+   align-items: stretch;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.flex__clear{
+   width: 130px;
+   display: inline-block;
+   flex-basis: auto;
+   flex-grow: 1;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.flex__print{
+   width: 47px;
+   display: inline-block;
+   flex-basis: auto;
 }
 
-#container a {
-  text-decoration: none;
+.flex__search{
+   width: 207px;
+   display: inline-block;
+   flex-basis: auto;
 }
+
+
+ @media screen and (min-width: 1329px){
+   html{
+       width: 1328px;
+       /*margin: 0vh 20vh 0vh 20vh;*/
+   }
+   .mainTable{
+       width: 1328px;
+   }
+}
+@media screen and (max-width:1328px){
+   h2{
+      font-size: large;
+   }
+}
+
+@media screen and (max-width:960px){
+   h2{
+      font-size: medium;
+   }
+}
+@media screen and (max-width:480px){
+   h2{
+      font-size: small;
+   }
+   .p-button {
+      font-size: small;
+      padding: 0.4rem 0.4rem;
+  }
+  :host ::ng-deep .p-button .p-button-icon-left {
+   margin-right: 0.5rem;
+   display: none;
+   }
+   .companies__flex{
+      height: 35px;
+   }
+   .flex__clear{
+      width: 130px;
+      display: inline-block;
+      flex-basis: auto;
+      flex-grow: 1;
+   }
+   
+   .flex__print{
+      width: 47px;
+      display: inline-block;
+      flex-basis: auto;
+   }
+   
+   .flex__search{
+      width: 207px;
+      display: inline-block;
+      flex-basis: auto;
+   }
+}
+
+

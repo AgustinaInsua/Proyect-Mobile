@@ -39,6 +39,6 @@ export class HomePage {
   }
 
   clear (table: Table){
-    
+    table.clear();
   }
 }

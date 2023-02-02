@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -15,7 +16,8 @@ import {ButtonModule} from 'primeng/button';
             IonicModule.forRoot(), 
             AppRoutingModule,
             InputTextModule,
-            ButtonModule
+            ButtonModule,
+            BrowserAnimationsModule
           ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

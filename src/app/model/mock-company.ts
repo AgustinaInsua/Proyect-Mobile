@@ -7,21 +7,19 @@ export const COMPANIES = [{
         contactNumber: 1154256485
     },
     {
-        name: 'Coto',
-        razonSocial: 'Coto CICSA',
-        cuit: 58791,
-        employees: [
-            {name: 'Juan', surname: 'Perez', cuit: 35481, position: 'Repositor'},
-            {name: 'Pedra', surname: 'Bambino', cuit: 25469, position: 'Cajera'}
-        ]
+        id: 64641,
+        razonSocial: 'Test 1',
+        cuit: 34345,
+        email: 'test1@bussiness.com',
+        contactName: 'Persona 1',
+        contactNumber: 1165414518
     },
     {
-        name: 'Dia',
-        razonSocial: 'Dia SRL',
-        cuit: 5454,
-        employees: [
-            {name: 'Lourdes', surname: 'Obregon', cuit: 42578, position: 'Encargada'},
-            {name: 'Rodrigo', surname: 'Gutierrez', cuit: 37195, position: 'Limpieza'}
-        ]
+        id: 64642,
+        razonSocial: 'Test 2',
+        cuit: 45456,
+        email: 'test2@bussiness.com',
+        contactName: 'Persona 2',
+        contactNumber: 3754256897
     }
 ]

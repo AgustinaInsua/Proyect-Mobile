@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'actualizar-datos',
     loadChildren: () => import('./actualizar-datos/actualizar-datos.module').then( m => m.ActualizarDatosPageModule)
   },
+  {
+    path: 'boletas-emitidas',
+    loadChildren: () => import('./boletas-emitidas/boletas-emitidas.module').then( m => m.BoletasEmitidasPageModule)
+  },
 
 ];
 

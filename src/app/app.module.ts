@@ -8,15 +8,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [AppComponent],
   imports:[ BrowserModule, 
             IonicModule.forRoot(), 
             AppRoutingModule,
             InputTextModule,
-            ButtonModule,
-            BrowserAnimationsModule
+            ButtonModule
           ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

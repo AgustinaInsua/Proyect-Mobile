@@ -1,0 +1,51 @@
+<ion-app>
+<ion-content>
+  <div>
+    <h2>Boletas Emitidas</h2>
+  </div>
+
+  <p-table class="boletas" #dt [value]="boletas"  styleClass="p-datatable-table" [(selection)]="selectedBoleta" responsiveLayout="scroll">
+    <ng-template pTemplate="caption">
+      <div class="table-header">List of boletas</div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+
+        <th>Periodo</th>
+        <th>Secuencia</th>
+        <th>Fecha de emision</th>
+        <th>Cant. Empleados</th>
+        <th>Estado</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-boleta [value]="boleta">
+
+          <tr class="p-selectable-row">
+              <td>
+                  <span class="p-column-title"></span>
+                  {{boleta.periodo}}
+              </td>
+              <td>
+                  <span class="p-column-title"></span>
+                  {{boleta.secuencia}}
+              </td>
+              <td>
+                  <span class="p-column-title"></span>
+                  {{boleta.fechaEmision}}
+              </td>
+              <td>
+                  <span class="p-column-title"></span>
+                  {{boleta.cantEmpleados}}
+              </td>
+              <td>
+                  <span class="p-column-title"></span>
+                  {{boleta.estado}}
+              </td>
+      </tr>
+  </ng-template>
+</p-table>
+
+
+</ion-content>
+</ion-app>

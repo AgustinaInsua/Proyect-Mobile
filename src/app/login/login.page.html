@@ -5,7 +5,6 @@
 <div class="conteiner-body"> 
 <h1>Iniciar Sesión</h1>
 <div class="conteiner"> 
-    <form class="form"  name="formRegister">
         <div>
                 <div class="labelInput">
                     <label for="email">Email</label>
@@ -21,14 +20,13 @@
         </div>
 
 
-        <button pButton type="submit" [routerLink]="['/home']">Entrar</button>
-        <div>
-            <label class="labelRegister">Nuevo usuario?</label>
+        <p-button type="submit" [routerLink]="['/home']">Entrar</p-button>
+        <div class="newUser">
+            <label class="labelNewUser">Nuevo usuario?</label>
             <div>
-                <a class="linkRegister">Crea una nueva cuenta</a>
+                <a class="linkNewAccount">Crea una nueva cuenta</a>
             </div>
         </div>
-    </form>
   </div>
 </div>
 </ion-content>

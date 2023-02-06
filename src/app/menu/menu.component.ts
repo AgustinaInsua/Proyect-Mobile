@@ -8,7 +8,29 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
   @Input() title!: string;
   @Input () icon!: string;
+
+  itemsMenuAccess = [
+      {
+        title: "Home",
+        icon: "home",
+        url: "/home"
+      },
+      {
+        title: "Boletas",
+        icon: "albums",
+        url: "/boletas-emitidas"
+      }]
+
+  itemsMenuAccount = [
+    {
+      title: "Cerrar Sesion",
+      icon: "exit-outline",
+      url: "/login"
+    }
+  ]
   constructor() { }
+
+
 
   ngOnInit() {}
 

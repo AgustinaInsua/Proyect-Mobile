@@ -19,6 +19,11 @@ export class MenuComponent implements OnInit {
         title: "Boletas",
         icon: "albums",
         url: "/boletas-emitidas"
+      },
+      {
+        title: "Buscar Empresas",
+        icon: "search",
+        url: "/search-companies"
       }]
 
   itemsMenuAccount = [

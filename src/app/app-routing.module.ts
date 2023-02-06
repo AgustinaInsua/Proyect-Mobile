@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'search-companies',
     pathMatch: 'full'
   },
   {
@@ -28,7 +28,12 @@ const routes: Routes = [
     //Este es solo para pruebas directas en menu
     path: 'menu',
     component:MenuComponent
+  },
+  {
+    path: 'search-companies',
+    loadChildren: () => import('./search-companies/search-companies.module').then( m => m.SearchCompaniesPageModule)
   }
+
 
 ];
 

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
+import {Table, TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,9 +18,10 @@ import {ButtonModule} from 'primeng/button';
             AppRoutingModule,
             InputTextModule,
             ButtonModule,
-            BrowserAnimationsModule
+            BrowserAnimationsModule,
+            TableModule
           ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

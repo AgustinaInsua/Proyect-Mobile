@@ -22,4 +22,8 @@ export const FIELDS_TABLE_COMPANY = [
       {
         title: "Numero de Contacto",
         field: "contactNumber"
-      },]
+      },
+      {
+        title: "Acciones",
+        field: "actions"
+      }]

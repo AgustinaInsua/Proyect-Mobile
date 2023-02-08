@@ -17,3 +17,32 @@
     flex-direction: row;
     align-items: stretch;
  }
+
+  #lupa{
+    height: 20px; 
+    float: right;
+    top: -10px;
+    position: relative;
+  }
+
+  :host ::ng-deep .p-button {
+    color: gray;
+    background: white;
+    border: white;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 50px;
+}
+:host ::ng-deep .p-button:hover{
+    color: gray;
+    background: #dee2e6;
+    border: 1px solid #dee2e6;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 50px;
+}
+
+.optionsButtons {
+  float: left;
+  top: -15px;
+}

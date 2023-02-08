@@ -68,7 +68,7 @@
             </th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-company>
+        <ng-template pTemplate="body" let-company let-i="rowIndex">
           <tr>
             <td>{{ company.id }}</td>
             <td>{{ company.razonSocial }}</td>
@@ -76,6 +76,13 @@
             <td>{{ company.email }}</td>
             <td>{{ company.contactName }}</td>
             <td>{{ company.contactNumber }}</td>
+            <td>
+              <div class="optionsButtons">
+                <div id="lupa">
+                <p-button (click)="searchActas(i)"  icon="pi pi-search"></p-button>
+                </div>
+              </div>
+            </td>
           </tr>
         </ng-template>
       </p-table>

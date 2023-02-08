@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Table } from 'primeng/table';
 import { Company } from '../model/Company';
 import { FIELDS_TABLE_COMPANY } from '../model/mock-fieldsTableCompany';
@@ -16,7 +17,7 @@ export class AuxTablePage implements OnInit {
   fieldsTableCompany = FIELDS_TABLE_COMPANY;
   suggestionsCompanies!: string[] ;
   urlCompanies: any;
-  constructor(private companyService: CompanyService, private apiService: ApiService) { }
+  constructor(private router: Router,private companyService: CompanyService, private apiService: ApiService) { }
 
   ngOnInit() {
     this.urlCompanies = this.companyService.apiURL;
@@ -31,5 +32,8 @@ export class AuxTablePage implements OnInit {
 
   clear (table: Table){
     table.clear();
+  }
+  searchActas(i: string) {
+    this.router.navigate(['boletas-emitidas']);
   }
 }

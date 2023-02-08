@@ -22,9 +22,6 @@ export class SearchCompaniesPage implements OnInit {
 
   ngOnInit() {
     this.urlCompanies = this.companyService.apiURL;
-    /*this.companyService.getCompanies().subscribe(res => {
-      this.companies = res;
-    });*/
     this.apiService.get(this.urlCompanies).subscribe(companies => {
       this.companies = companies;
     })

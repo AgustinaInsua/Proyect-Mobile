@@ -2,13 +2,27 @@
   <app-menu title="Buscar Empresas" icon="search"></app-menu>
   <ion-content>
     <div>
-      <div>
+      <div class="">
         <label for="inputCuit"><h2>Cuit</h2></label>
-        <input id="inputCuit" type="text" pInputText>
+        <input
+          id="inputCuit"
+          type="text"
+          (input)="dtCompanies.filter($any($event.target).value,'cuit','contains')"
+          (onFocus)="dtCompanies.filter($any($event.target).value,'cuit','contains')"
+          (onBlur)="dtCompanies.filter($any($event.target).value,'cuit','contains')"
+          pInputText
+        >
       </div>
       <div>
         <label for="inputRazonS"><h2>Razon Social</h2></label>
-      <input id="inputRazonS" type="text" pInputText>
+      <input 
+        id="inputRazonS"
+        type="text"      
+        (input)="dtCompanies.filter($any($event.target).value,'razonSocial','contains')"
+        (onFocus)="dtCompanies.filter($any($event.target).value,'razonSocial','contains')"
+        (onBlur)="dtCompanies.filter($any($event.target).value,'razonSocial','contains')"
+        pInputText
+        >
       </div>
     </div>
     <div class="mainTable">
@@ -20,10 +34,9 @@
         [paginator]="true"
         [rows]="3"
         [rowsPerPageOptions]="[1, 2, 3]"
-        [globalFilterFields]="['name', 'razonSocial', 'cuit', '']"
+        [globalFilterFields]="['id', 'razonSocial', 'cuit', 'email', 'contactName', 'contactNumber']"
         (onFilter)="onFilter($event, dtCompanies)"
         selectionMode="single"
-        [exportHeader]="'customExportHeader'"
         autocomplete="off"
       >
         <ng-template pTemplate="caption">

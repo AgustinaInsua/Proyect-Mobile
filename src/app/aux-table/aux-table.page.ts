@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Table } from 'primeng/table';
 import { Company } from '../model/Company';
 import { FIELDS_TABLE_COMPANY } from '../model/mock-fieldsTableCompany';
-import { ApiService } from '../service/boleta-service/api-service/api.service';
+import { ApiService } from '../service/api-service/api.service';
 import { CompanyService } from '../service/company-service/company.service';
 
 @Component({
@@ -23,6 +23,7 @@ export class AuxTablePage implements OnInit {
     this.urlCompanies = this.companyService.apiURL;
     this.apiService.get(this.urlCompanies).subscribe(companies => {
       this.companies = companies;
+      console.log(companies);
     })
   }
 

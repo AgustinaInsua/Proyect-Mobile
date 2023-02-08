@@ -1,0 +1,82 @@
+.mainTable{
+    width: 97.5vw;;
+  }
+
+
+.flex__clear{
+    width: 130px;
+    display: inline-block;
+    flex-basis: auto;
+    flex-grow: 1;
+ }
+ 
+ .companies__flex{
+    width: 100%;
+    height: 47px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+ }
+
+ .containerFilters{
+   display: flex;
+   margin-left: 10px;
+ }
+
+ .containerFilters_inputs{
+   margin-right: 1%;
+   margin-bottom: 1%;
+   display: inline-block;
+   input {
+      width: 100%;
+      height: 40px;
+      
+
+   }
+ }
+
+ @media screen and (max-width:480px){
+   h2{
+      font-size: small;
+   }
+   .p-button {
+      font-size: small;
+      padding: 0.4rem 0.4rem;
+  }
+  :host ::ng-deep .p-button .p-button-icon-left {
+   margin-right: 0.5rem;
+   display: none;
+   }
+   .companies__flex{
+      height: 35px;
+   }
+   .flex__clear{
+      width: 130px;
+      display: inline-block;
+      flex-basis: auto;
+      flex-grow: 1;
+   }
+   
+   .flex__print{
+      width: 47px;
+      display: inline-block;
+      flex-basis: auto;
+   }
+   
+   .flex__search{
+      width: 207px;
+      display: inline-block;
+      flex-basis: auto;
+   }
+   .containerFilters_inputs{
+      margin-right: 1%;
+      margin-bottom: 1%;
+      display: inline-block;
+      input {
+         width: 50%;
+         height: 20px;
+         
+   
+      }
+    }
+}

@@ -8,6 +8,5 @@ import { HttpClient, HttpErrorResponse, HttpStatusCode } from '@angular/common/h
 export class BoletasService {
 
   apiURL = environment.apiURLBoleta + 'boletas';
-
   constructor(private http: HttpClient) { }
 }

@@ -1,5 +1,5 @@
 import { environment } from 'src/environments/environment';
-import { ApiService } from './../service/boleta-service/api-service/api.service';
+import { ApiService } from '../service/api-service/api.service';
 import { Company } from './../model/Company';
 import { COMPANIES } from './../model/mock-company';
 import { Component, OnInit } from '@angular/core';

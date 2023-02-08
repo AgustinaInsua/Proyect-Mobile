@@ -7,6 +7,7 @@ import { Table } from 'primeng/table';
 import { FIELDS_TABLE_COMPANY } from '../model/mock-fieldsTableCompany';
 import { CompanyService } from '../service/company-service/company.service';
 import { Observable } from 'rxjs/internal/Observable';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-companies',
@@ -18,7 +19,7 @@ export class SearchCompaniesPage implements OnInit {
   fieldsTableCompany = FIELDS_TABLE_COMPANY;
   suggestionsCompanies!: string[] ;
   urlCompanies: any;
-  constructor(private companyService: CompanyService, private apiService: ApiService) { }
+  constructor(private router: Router,private companyService: CompanyService, private apiService: ApiService) { }
 
   ngOnInit() {
     this.urlCompanies = this.companyService.apiURL;
@@ -30,7 +31,9 @@ export class SearchCompaniesPage implements OnInit {
   onFilter(event: any, table: Table){
 
   }
-
+  searchActas() {
+    this.router.navigate(['boletas-emitidas']);
+  }
   clear (table: Table){
     table.clear();
   }

@@ -86,4 +86,51 @@
       }
       
     }
+
+}
+
+#search{
+   height: 10px; 
+   top: 0px;
+   position: relative;
+ }
+
+ #pencil{
+   height: 10px; 
+   left: 10px;
+   top: -10px;
+   margin-left: 40px;
+   position: relative;
+ }
+
+ #print {
+   height: 10px; 
+   left: 20px;
+   top: -20px;
+   margin-left: 80px;
+   position: relative;
+ }
+
+ :host ::ng-deep .p-button{
+   color: gray;
+   background: white;
+   border: white;
+   padding: 0.75rem 1.25rem;
+   font-size: 1rem;
+   border-radius: 50px;
+}
+
+:host ::ng-deep .p-button:hover{
+   color: gray;
+   background: #dee2e6;
+   border: 1px solid #dee2e6;
+   padding: 0.75rem 1.25rem;
+   font-size: 1rem;
+   border-radius: 50px;
+}
+
+.optionsButtons {
+ float: left;
+ top: -5px;
+ position: relative;
 }

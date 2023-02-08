@@ -18,10 +18,25 @@
     align-items: stretch;
  }
 
-  #lupa{
-    height: 20px; 
-    float: right;
+  #search{
+    height: 10px; 
+    top: 0px;
+    position: relative;
+  }
+
+  #pencil{
+    height: 10px; 
+    left: 10px;
     top: -10px;
+    margin-left: 40px;
+    position: relative;
+  }
+
+  #print {
+    height: 10px; 
+    left: 20px;
+    top: -20px;
+    margin-left: 80px;
     position: relative;
   }
 
@@ -33,6 +48,7 @@
     font-size: 1rem;
     border-radius: 50px;
 }
+
 :host ::ng-deep .p-button:hover{
     color: gray;
     background: #dee2e6;
@@ -44,5 +60,6 @@
 
 .optionsButtons {
   float: left;
-  top: -15px;
+  top: -5px;
+  position: relative;
 }

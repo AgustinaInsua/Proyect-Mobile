@@ -1,9 +1,9 @@
 <ion-app>
   <app-menu title="Buscar Empresas" icon="search"></app-menu>
   <ion-content>
-    <div>
-      <div class="">
-        <label for="inputCuit"><h2>Cuit</h2></label>
+    <div class="containerFilters">
+      <div class="containerFilters_inputs">
+        <label for="inputCuit"><h4>Cuit</h4></label>
         <input
           id="inputCuit"
           type="text"
@@ -13,8 +13,8 @@
           pInputText
         >
       </div>
-      <div>
-        <label for="inputRazonS"><h2>Razon Social</h2></label>
+      <div class="containerFilters_inputs">
+        <label for="inputRazonS"><h4>Razon Social</h4></label>
       <input 
         id="inputRazonS"
         type="text"      
@@ -61,8 +61,8 @@
               {{column.title}}
               <p-sortIcon field="{{column.field}}"></p-sortIcon>
               <p-columnFilter
-                type="text"
-                field="name"
+                type={{column.type}}
+                field={{column.field}}
                 display="menu"
               ></p-columnFilter>
             </th>

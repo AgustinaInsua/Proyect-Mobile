@@ -1,29 +1,36 @@
 export const FIELDS_TABLE_COMPANY = [
     {
       title: "ID",
-      field: "id"
+      field: "id",
+      type: "text"
     },
     {
         title: "Razon Social",
-        field: "razonSocial"
+        field: "razonSocial",
+        type: "text"
       },
       {
         title: "CUIT",
-        field: "cuit"
+        field: "cuit",
+        type: "text"
       },
       {
         title: "Email",
-        field: "email"
+        field: "email",
+        type: "text"
       },
       {
         title: "Nombre de Contacto",
-        field: "contactName"
+        field: "contactName",
+        type: "text"
       },
       {
         title: "Numero de Contacto",
-        field: "contactNumber"
+        field: "contactNumber",
+        type: "text"
       },
       {
         title: "Acciones",
-        field: "actions"
+        field: "actions",
+        type: "text"
       }]

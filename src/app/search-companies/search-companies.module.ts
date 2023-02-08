@@ -12,6 +12,7 @@ import { MenuModule } from './../menu/menu.module';
 import {ButtonModule} from 'primeng/button';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {InputTextModule} from 'primeng/inputtext';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import {InputTextModule} from 'primeng/inputtext';
     TableModule,
     ButtonModule,
     AutoCompleteModule,
-    InputTextModule
+    InputTextModule,
+    HttpClientModule
   ],
   declarations: [SearchCompaniesPage]
 })

@@ -13,32 +13,19 @@ import { Observable } from 'rxjs';
 })
 export class BoletasEmitidasPage implements OnInit {
 
-  boletas: any;
+  boletas!: Boleta[];
   selectedBoleta!: Boleta;
   urlGetBoletas : any;
-  boleta = new Boleta();
   constructor(private apiService: ApiService, private boletasService: BoletasService) { }
 
   ngOnInit() {
     this.urlGetBoletas = this.boletasService.apiURL;
-    this.boletas = this.urlGetBoletas;
+    this.apiService.get(this.urlGetBoletas).subscribe(boletas => {
+      this.boletas = boletas;
+    })
   }
 
   onSelect(boleta: Boleta): void {
     this.selectedBoleta = boleta;
-  }
-
-  get(){
-    this.returnResponse(this.apiService.get(this.urlGetBoletas));
-  }
-
-  returnResponse(obs: Observable<any>){
-    obs.subscribe( {next: (response: any) => {   
-      console.log(response);
-    },
-    error: (error: { message: any; }) =>{
-      console.log(error.message);
-    }
-   })
   }
 }

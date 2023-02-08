@@ -32,7 +32,11 @@ const routes: Routes = [
   {
     path: 'search-companies',
     loadChildren: () => import('./search-companies/search-companies.module').then( m => m.SearchCompaniesPageModule)
+  },  {
+    path: 'aux-table',
+    loadChildren: () => import('./aux-table/aux-table.module').then( m => m.AuxTablePageModule)
   }
+
 
 
 ];

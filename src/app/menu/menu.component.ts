@@ -24,7 +24,13 @@ export class MenuComponent implements OnInit {
         title: "Buscar Empresas",
         icon: "search",
         url: "/search-companies"
-      }]
+      },
+      {
+        title: "Buscar AuxTable",
+        icon: "search",
+        url: "/aux-table"
+      },
+    ]
 
   itemsMenuAccount = [
     {

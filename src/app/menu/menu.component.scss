@@ -9,12 +9,10 @@ ion-menu::part(container) {
     
 }
 
-@media screen and (min-width: 1367px){
-  ion-header {
-    width: 1366px;
-}
-ion-img{
-  width: 1366px;
+@media screen and (min-width: 1921px){
+  .menu-content {
+    width: 1920px;
+    margin: auto;
 }
 }
 

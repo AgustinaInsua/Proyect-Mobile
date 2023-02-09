@@ -141,3 +141,10 @@ h1 {
   }
 }
 
+@media screen and (min-width: 1921px){
+
+  :host {
+    width: 1920px;
+    margin: auto;
+}
+}

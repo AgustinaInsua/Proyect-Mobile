@@ -14,6 +14,12 @@
     margin-right: 5%;
 }
 
+.comentarios {
+    margin: 0.7rem 0 1rem;
+    margin-left: 1%;
+    margin-right: 5%;
+}
+
 .data-3{
     margin-right: 6%;
 }
@@ -36,9 +42,10 @@ textarea{
     height: 115px;
     left: 0px;
     top: 24px;
-    
     background: rgba(217, 217, 217, 0.5);
     border-radius: 12px;
+    margin-left: 1%;
+    margin-right: 5%;
 }
 
 @media screen and (max-width: 804px) {
@@ -95,9 +102,10 @@ textarea{
         height: 115px;
         left: 0px;
         top: 24px;
-        
         background: rgba(217, 217, 217, 0.5);
         border-radius: 12px;
+        margin-left: 1%;
+        margin-right: 5%;
     }
   }
 
@@ -131,9 +139,10 @@ textarea{
         height: 115px;
         left: 0px;
         top: 24px;
-        
         background: rgba(217, 217, 217, 0.5);
         border-radius: 12px;
+        margin-left: 1%;
+        margin-right: 5%;
     }
     .container {
         margin-top: -55px;

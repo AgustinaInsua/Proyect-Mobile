@@ -34,6 +34,11 @@ export class SearchCompaniesPage implements OnInit {
   searchActas() {
     this.router.navigate(['boletas-emitidas']);
   }
+
+  editData(){
+    this.router.navigate(['actualizar-datos']);
+  }
+
   clear (table: Table){
     table.clear();
   }

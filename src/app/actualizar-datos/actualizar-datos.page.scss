@@ -1,3 +1,141 @@
+.p-inputtext {
+    width: 211px;
+    height: 32px;
+    left: 0px;
+    top: 5%;
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 10px;
+    margin: 0.7rem 0 2rem;
+}
+
+.data-1, .data-2, .data-3{
+    float: left;
+    margin-left: 1%;
+    margin-right: 5%;
+}
+
+.data-3{
+    margin-right: 6%;
+}
 
 
+.conteiner-data-1{
+    margin-top: 25px;
+}
 
+.conteiner-data-2{
+
+}
+
+.container {
+    margin-top: -25px;
+}
+
+textarea{
+    width: 510px;
+    height: 115px;
+    left: 0px;
+    top: 24px;
+    
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 12px;
+}
+
+@media screen and (max-width: 804px) {
+
+    .p-inputtext {
+        width: 180px;
+        height: 32px;
+        left: 0px;
+        top: 5%;
+        background: rgba(217, 217, 217, 0.5);
+        border-radius: 10px;
+        margin: 0.7rem 0 2rem;
+    }
+    
+    .data-1, .data-2, .data-3{
+        float: left;
+        margin-left: 0.2%;
+        margin-right: 5%;
+    }
+    
+    .data-3{
+        margin-right: 6%;
+    }
+    
+  }
+
+  @media screen and (max-width: 643px) {
+
+    .p-inputtext {
+        width: 180px;
+        height: 32px;
+        left: 0px;
+        top: 5%;
+        background: rgba(217, 217, 217, 0.5);
+        border-radius: 10px;
+        margin: 0.7rem 0 2rem;
+    }
+    .estado, .confirmaMail{
+        width: 180px;
+    }
+    
+    .data-1, .data-2, .data-3{
+        float: left;
+        margin-left: 0.2%;
+        margin-right: 5%;
+    }
+    
+    .data-3{
+        margin-right: 6%;
+    }
+
+    textarea{
+        width: 395px;
+        height: 115px;
+        left: 0px;
+        top: 24px;
+        
+        background: rgba(217, 217, 217, 0.5);
+        border-radius: 12px;
+    }
+  }
+
+  @media screen and (max-width: 442px) {
+
+    .p-inputtext {
+        width: 150px;
+        height: 32px;
+        left: 0px;
+        top: 5%;
+        background: rgba(217, 217, 217, 0.5);
+        border-radius: 10px;
+        margin: 0.7rem 0 1rem;
+    }
+    .estado, .confirmaMail{
+        width: 150px;
+    }
+    
+    .data-1, .data-2, .data-3{
+        float: left;
+        margin-left: 0.2%;
+        margin-right: 5%;
+    }
+    
+    .data-3{
+        margin-right: 6%;
+    }
+
+    textarea{
+        width: 320px;
+        height: 115px;
+        left: 0px;
+        top: 24px;
+        
+        background: rgba(217, 217, 217, 0.5);
+        border-radius: 12px;
+    }
+    .container {
+        margin-top: -55px;
+    }
+  }

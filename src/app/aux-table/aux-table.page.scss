@@ -49,24 +49,16 @@
     border-radius: 50px;
 }
 
-:host ::ng-deep .p-button::after{
-    content: 'BuscarActas';
-    color: black;
-    top: -20px;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    letter-spacing: .3rem;
-    font-weight: 400;
-    text-shadow: .1rem .1rem .1rem #333;
-    transition: .2s ease;
+#search > div {
+  position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding: 10px;
+    margin: 0;
+    color: #dee2e6;
 }
-:host ::ng-deep .p-button:hover::after{
-  transform: translate(-50%, -50%) scale(2);
-  opacity: 1;
-}
+
 :host ::ng-deep .p-button:hover{
   color: gray;
   background: #dee2e6;
@@ -74,7 +66,14 @@
   padding: 0.75rem 1.25rem;
   font-size: 1rem;
   border-radius: 50px;
+  opacity: 0.07;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  -ms-transition: opacity 500ms;
+  transition: opacity 500ms;
 }
+
 
 .optionsButtons {
   float: left;

@@ -13,6 +13,7 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
 import {InputTextModule} from 'primeng/inputtext';
 import { HttpClientModule } from '@angular/common/http';
 import {CardModule} from 'primeng/card';
+import {AccordionModule} from 'primeng/accordion';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import {CardModule} from 'primeng/card';
     AutoCompleteModule,
     InputTextModule,
     HttpClientModule,
-    CardModule
+    CardModule,
+    AccordionModule
   ],
   declarations: [ActualizarDatosPage]
 })

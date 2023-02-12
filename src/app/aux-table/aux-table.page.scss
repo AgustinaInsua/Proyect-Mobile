@@ -18,11 +18,7 @@
     align-items: stretch;
  }
 
-  #search{
-    height: 10px; 
-    top: 0px;
-    position: relative;
-  }
+
 
   #pencil{
     height: 10px; 
@@ -40,6 +36,13 @@
     position: relative;
   }
 
+  #search{
+    height: 10px; 
+    top: -4px;
+    position: relative;
+
+  }
+
   :host ::ng-deep .p-button {
     color: gray;
     background: white;
@@ -49,31 +52,28 @@
     border-radius: 50px;
 }
 
-#search > div {
-  position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    padding: 10px;
-    margin: 0;
-    color: #dee2e6;
+.info {
+  height: 5px;
+  top: -20px;
+  right: 10px;
+  position: relative;
+  -webkit-transition: opacity 0.2s;
+  opacity: 0;
 }
 
 :host ::ng-deep .p-button:hover{
   color: gray;
   background: #dee2e6;
   border: 1px solid #dee2e6;
-  padding: 0.75rem 1.25rem;
-  font-size: 1rem;
-  border-radius: 50px;
-  opacity: 0.07;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  -ms-transition: opacity 500ms;
-  transition: opacity 500ms;
 }
 
+div#search:hover div.info{
+  opacity: 1;
+}
+
+p#buscarActas {
+  font-size: 14px;
+}
 
 .optionsButtons {
   float: left;

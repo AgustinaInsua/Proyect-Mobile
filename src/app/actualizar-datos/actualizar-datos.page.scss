@@ -25,12 +25,8 @@
 }
 
 
-.conteiner-data-1{
-    margin-top: 25px;
-}
-
-.conteiner-data-2{
-
+.conteiner-data-1, .conteiner-data-3{
+    margin-top: 0px;
 }
 
 .container {
@@ -48,6 +44,12 @@ textarea{
     margin-right: 5%;
 }
 
+.buttons {
+    position: relative;
+    margin-top: 15px;
+    left: 35%;
+}
+
 :host ::ng-deep .p-button {
     color: #ffffff;
     background: #67B5CF;
@@ -56,9 +58,26 @@ textarea{
     font-size: 1rem;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
     border-radius: 18px;
+    margin-left: 5%;
+}
+:host ::ng-deep .p-accordion .p-accordion-header .p-accordion-header-link {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    color: #6c757d;
+    background: #f8f9fa;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: box-shadow 0.2s;
 }
 
+
 @media screen and (max-width: 804px) {
+
+    .buttons {
+        position: relative;
+        margin-top: 15px;
+        left: 25%;
+    }
 
     .p-inputtext {
         width: 180px;
@@ -83,6 +102,11 @@ textarea{
   }
 
   @media screen and (max-width: 643px) {
+    .buttons {
+        position: relative;
+        margin-top: 15px;
+        left: 20%;
+    }
 
     .p-inputtext {
         width: 180px;
@@ -121,8 +145,17 @@ textarea{
 
   @media screen and (max-width: 442px) {
 
+    :host ::ng-deep .p-card .p-card-body {
+        padding: 1.25rem;
+        margin-top: 10%;
+    }
+    .buttons {
+        position: relative;
+        margin-top: 15px;
+        left: 10%;
+    }
     .p-inputtext {
-        width: 150px;
+        width: 120px;
         height: 32px;
         left: 0px;
         top: 5%;
@@ -131,7 +164,7 @@ textarea{
         margin: 0.7rem 0 1rem;
     }
     .estado, .confirmaMail, .calle{
-        width: 150px;
+        width: 120px;
     }
     
     .data-1, .data-2, .data-3{
@@ -158,6 +191,18 @@ textarea{
         margin-top: -55px;
     }
   }
+  @media screen and (max-width: 442px) {
+        textarea{
+            width: 250px;
+            height: 115px;
+            left: 0px;
+            top: 24px;
+            background: rgba(217, 217, 217, 0.5);
+            border-radius: 12px;
+            margin-left: 1%;
+            margin-right: 5%;
+        }
+    }
   @media screen and (min-width: 1921px){
    
     :host {

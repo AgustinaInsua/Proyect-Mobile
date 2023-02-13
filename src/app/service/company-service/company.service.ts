@@ -11,16 +11,22 @@ import { Company } from 'src/app/model/Company';
 export class CompanyService {
 
   companies!: Company[];
+  id: any;
   apiURL= environment.apiURLBoleta + 'companies';
   constructor(private http: HttpClient) { }
 
   setCompanyInformation(companyInformation: any){
-    this.companies = companyInformation;
-  }
+    this.companies = companyInformation;  }
 
   getCompanyInformation(){
     return this.companies;
   }
 
+  setCompanyInformationID(id: any){
+    this.id = id;
+  }
 
+  getCompanyInformationID(){
+    return this.id;
+  }
 }

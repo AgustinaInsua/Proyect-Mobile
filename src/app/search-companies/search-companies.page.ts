@@ -29,10 +29,10 @@ export class SearchCompaniesPage implements OnInit {
   }
 
   onFilter(event: any, table: Table){
-
   }
+
   searchActas(i:string) {
-    this.companyService.setCompanyInformation(this.companies[parseInt(i)]);
+    this.companyService.setCompanyInformationID(this.companies[parseInt(i)].id);
     this.router.navigate(['boletas-emitidas']);
   }
 

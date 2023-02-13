@@ -1,4 +1,6 @@
+import { CompanyService } from './../service/company-service/company.service';
 import { Component, OnInit } from '@angular/core';
+import { Company } from '../model/Company';
 
 @Component({
   selector: 'app-actualizar-datos',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActualizarDatosPage implements OnInit {
 
-  constructor() { }
+  companies: any;
+
+  constructor(private companyService: CompanyService) { }
 
   ngOnInit() {
+    this.companies = this.companyService.getCompanyInformation();
   }
+
+
 
 }

@@ -31,11 +31,13 @@ export class SearchCompaniesPage implements OnInit {
   onFilter(event: any, table: Table){
 
   }
-  searchActas() {
+  searchActas(i:string) {
+    this.companyService.setCompanyInformation(this.companies[parseInt(i)]);
     this.router.navigate(['boletas-emitidas']);
   }
 
-  editData(){
+  editData(i:string){
+    this.companyService.setCompanyInformation(this.companies[parseInt(i)]);
     this.router.navigate(['actualizar-datos']);
   }
 

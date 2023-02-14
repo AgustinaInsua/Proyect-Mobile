@@ -94,7 +94,7 @@
                   <div class="info"> 
                     <p id="imprimirActas">Imprimir Actas</p>
                   </div>
-                  <p-button icon="pi pi-print"></p-button>
+                  <a href="http://localhost:3003/companies/companies.pdf/{{company.id}}" target="_blank"><p-button icon="pi pi-print"></p-button></a>
                 </div>
               </div>
             </td>
@@ -102,5 +102,6 @@
         </ng-template>
       </p-table>
     </div>
+
   </ion-content>
 </ion-app>

@@ -8,6 +8,8 @@ import { FIELDS_TABLE_COMPANY } from '../model/mock-fieldsTableCompany';
 import { CompanyService } from '../service/company-service/company.service';
 import { Observable } from 'rxjs/internal/Observable';
 import { Router } from '@angular/router';
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
 
 @Component({
   selector: 'app-search-companies',
@@ -19,10 +21,13 @@ export class SearchCompaniesPage implements OnInit {
   fieldsTableCompany = FIELDS_TABLE_COMPANY;
   suggestionsCompanies!: string[] ;
   urlCompanies: any;
+  urlCompaniesPDF:any;
   constructor(private router: Router,private companyService: CompanyService, private apiService: ApiService) { }
 
   ngOnInit() {
+
     this.urlCompanies = this.companyService.apiURL;
+    this.urlCompaniesPDF = this.urlCompanies+'companies.pdf'+'/';
     this.apiService.get(this.urlCompanies).subscribe(companies => {
       this.companies = companies;
     })

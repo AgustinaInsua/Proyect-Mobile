@@ -1,5 +1,6 @@
+import { ComponentsModule } from './../components.module';
 import { HeaderModule } from './../components/header/header.module';
-import { MenuModule } from './../menu/menu.module';
+import { MenuModule } from '../components/menu/menu.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -21,8 +22,7 @@ import {SpeedDialModule} from 'primeng/speeddial';
     InputTextModule,
     TableModule,
     SpeedDialModule,
-    MenuModule,
-    HeaderModule
+    ComponentsModule
   ],
   declarations: [HomePage]
 })

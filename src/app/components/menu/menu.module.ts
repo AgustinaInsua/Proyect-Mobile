@@ -13,7 +13,7 @@ import { MenuComponent } from './menu.component';
     FormsModule,
     IonicModule
   ],
-  declarations: [MenuComponent],
-  exports: [MenuComponent]
+  declarations: [],
+  exports: []
 })
 export class MenuModule {}

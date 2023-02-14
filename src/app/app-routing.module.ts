@@ -1,4 +1,4 @@
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from './components/menu/menu.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -32,7 +32,8 @@ const routes: Routes = [
   {
     path: 'search-companies',
     loadChildren: () => import('./search-companies/search-companies.module').then( m => m.SearchCompaniesPageModule)
-  },  {
+  },
+  {
     path: 'aux-table',
     loadChildren: () => import('./aux-table/aux-table.module').then( m => m.AuxTablePageModule)
   }

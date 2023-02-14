@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './actualizar-datos.page.html',
   styleUrls: ['./actualizar-datos.page.scss'],
 })
+
 export class ActualizarDatosPage implements OnInit {
 
   companies: any;

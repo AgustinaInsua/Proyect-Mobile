@@ -1,4 +1,4 @@
-import { HeaderModule } from './../components/header/header.module';
+import { ComponentsModule } from './../components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -8,7 +8,6 @@ import { ActualizarDatosPageRoutingModule } from './actualizar-datos-routing.mod
 import { ActualizarDatosPage } from './actualizar-datos.page';
 
 import { TableModule } from 'primeng/table';
-import { MenuModule } from './../menu/menu.module';
 import {ButtonModule} from 'primeng/button';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {InputTextModule} from 'primeng/inputtext';
@@ -23,14 +22,13 @@ import {AccordionModule} from 'primeng/accordion';
     IonicModule,
     ActualizarDatosPageRoutingModule,
     TableModule,
-    MenuModule,
     ButtonModule,
     AutoCompleteModule,
     InputTextModule,
     HttpClientModule,
     CardModule,
     AccordionModule,
-    HeaderModule
+    ComponentsModule
   ],
   declarations: [ActualizarDatosPage]
 })

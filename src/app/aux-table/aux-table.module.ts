@@ -9,7 +9,6 @@ import {AuxTablePageRoutingModule} from './aux-table-routing.module';
 import { AuxTablePage } from './aux-table.page';
 
 import { TableModule } from 'primeng/table';
-import { MenuModule } from '../components/menu/menu.module';
 import {ButtonModule} from 'primeng/button';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {InputTextModule} from 'primeng/inputtext';

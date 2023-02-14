@@ -1,4 +1,4 @@
-import { MenuModule } from '../components/menu/menu.module';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -18,8 +18,7 @@ import {ButtonModule} from 'primeng/button';
     IonicModule,
     LoginPageRoutingModule,
     InputTextModule,
-    ButtonModule,
-    MenuModule
+    ButtonModule
   ],
   declarations: [LoginPage]
 })

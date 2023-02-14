@@ -12,6 +12,7 @@ export class CompanyService {
 
   companies!: Company[];
   id: any;
+  mail: any;
   apiURL= environment.apiURLBoleta + 'companies';
   constructor(private http: HttpClient) { }
 
@@ -28,5 +29,13 @@ export class CompanyService {
 
   getCompanyInformationID(){
     return this.id;
+  }
+
+  setCompanyInformationMail(mail: any){
+    this.mail = mail;
+  }
+
+  getCompanyInformationMail(){
+    return this.mail;
   }
 }

@@ -31,6 +31,7 @@ export class SearchCompaniesPage implements OnInit {
     this.apiService.get(this.urlCompanies).subscribe(companies => {
       this.companies = companies;
     })
+
   }
 
   onFilter(event: any, table: Table){
@@ -43,6 +44,7 @@ export class SearchCompaniesPage implements OnInit {
 
   editData(i:string){
     this.companyService.setCompanyInformation(this.companies[parseInt(i)]);
+    this.urlCompanies = this.companyService.apiURL + this.companyService.getCompanyInformationMail();
     this.router.navigate(['actualizar-datos']);
   }
 

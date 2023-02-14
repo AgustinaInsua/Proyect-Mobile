@@ -1,3 +1,4 @@
+import { HeaderModule } from './../components/header/header.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -28,7 +29,8 @@ import {AccordionModule} from 'primeng/accordion';
     InputTextModule,
     HttpClientModule,
     CardModule,
-    AccordionModule
+    AccordionModule,
+    HeaderModule
   ],
   declarations: [ActualizarDatosPage]
 })

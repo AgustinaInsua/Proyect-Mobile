@@ -1,3 +1,4 @@
+import { HeaderModule } from './../components/header/header.module';
 import { MenuModule } from './../menu/menu.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -20,7 +21,8 @@ import {SpeedDialModule} from 'primeng/speeddial';
     InputTextModule,
     TableModule,
     SpeedDialModule,
-    MenuModule
+    MenuModule,
+    HeaderModule
   ],
   declarations: [HomePage]
 })

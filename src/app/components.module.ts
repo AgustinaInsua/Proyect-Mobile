@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,7 +14,8 @@ import { IonicModule } from '@ionic/angular';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule
+    IonicModule,
+    TranslateModule
   ],
   declarations: [HeaderComponent, MenuComponent],
   exports: [HeaderComponent, MenuComponent]

@@ -1,5 +1,8 @@
 {
     "HOME": {
+        "NAV": {
+            "TITLE": "Home"
+        },
         "TITLE" : "Welcome to home page"
     }
 }

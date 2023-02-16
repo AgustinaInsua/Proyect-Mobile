@@ -9,6 +9,6 @@ import { Languages } from './model/emumLanguages';
 })
 export class AppComponent {
   constructor(private langService: LanguageService) {
-    this.langService.setDefaultLang(Languages.en);
+    this.langService.setDefaultLang(Languages.es);
   }
 }

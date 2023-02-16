@@ -1,5 +1,8 @@
 {
     "HOME": {
+        "NAV": {
+            "TITLE": "Inicio"
+        },
         "TITLE" : "Bienvenido a la pagina de inicio"
     }
 }

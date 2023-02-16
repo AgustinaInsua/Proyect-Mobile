@@ -1,3 +1,5 @@
+import { Languages } from './../../model/emumLanguages';
+import { LanguageService } from './../../service/language-service/language.service';
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 
@@ -9,8 +11,15 @@ import { Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Input() title!: string;
   @Input () icon!: string;
-  constructor() { }
+  es = Languages.es;
+  en = Languages.en;
+  constructor(private langService: LanguageService) { }
 
-  ngOnInit() {}
-
+  ngOnInit() {
+    console.log(this.langService.getActualLang());
+  }
+  changeLang(lang: Languages){
+    this.langService.setLang(lang);
+    console.log(this.langService.getActualLang());
+  }
 }

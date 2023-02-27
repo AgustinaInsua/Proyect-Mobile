@@ -9,8 +9,8 @@ import { Input } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() title!: string;
-  @Input () icon!: string;
+  @Input() title!: any;
+  @Input () icon!: any;
   es = Languages.es;
   en = Languages.en;
   constructor(private langService: LanguageService) { }

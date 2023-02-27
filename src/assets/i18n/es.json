@@ -4,5 +4,30 @@
             "TITLE": "Inicio"
         },
         "TITLE" : "Bienvenido a la pagina de inicio"
+    },
+    "SEARCH_COMPANIES": {
+
+    },
+    "INPUTS": {
+        "CUIT": "Cuit",
+        "RAZON": "Razon Social",
+        "STATUS": "Estado",
+        "MAIL": "Email",
+        "ALT_MAIL": "Mail Alternativo",
+        "CONFIRM_ALT_MAIL": "Confirmar mail alternativo",
+        "ZIP_CODE": "Codigo Postal",
+        "STREET": "Calle",
+        "COMENTS": "Comentarios",
+        "SAVE": "Guardar",
+        "CANCEL": "Cancelar"
+    },
+    "NAV": {
+        "TITLES": {
+            "SEARCH_COMPANIES": "Buscar Empresas"
+        },
+        "LANG": {
+            "SP": "ES",
+            "EN": "ING"
+        }
     }
 }

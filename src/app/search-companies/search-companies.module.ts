@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { ComponentsModule } from './../components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     AutoCompleteModule,
     InputTextModule,
     HttpClientModule,
-    ComponentsModule
+    ComponentsModule,
+    TranslateModule
   ],
   declarations: [SearchCompaniesPage]
 })

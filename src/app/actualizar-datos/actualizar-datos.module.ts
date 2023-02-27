@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { ComponentsModule } from './../components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -28,7 +29,8 @@ import {AccordionModule} from 'primeng/accordion';
     HttpClientModule,
     CardModule,
     AccordionModule,
-    ComponentsModule
+    ComponentsModule,
+    TranslateModule
   ],
   declarations: [ActualizarDatosPage]
 })

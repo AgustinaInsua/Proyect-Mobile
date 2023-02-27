@@ -17,6 +17,7 @@ export class ActualizarDatosPage implements OnInit {
 
   ngOnInit() {
     this.companies = this.companyService.getCompanyInformation();
+    console.log(this.companies);
   }
 
   saveData(){

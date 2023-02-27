@@ -4,5 +4,30 @@
             "TITLE": "Home"
         },
         "TITLE" : "Welcome to home page"
+    },
+    "SEARCH_COMPANIES": {
+
+    },
+    "INPUTS": {
+        "CUIT": "Cuit en ingles (?",
+        "RAZON": "Bussiness Name",
+        "STATUS": "Status",
+        "MAIL": "Email",
+        "ALT_MAIL": "Alternative Mail",
+        "CONFIRM_ALT_MAIL": "Confirm alternative mail",
+        "ZIP_CODE": "ZIP Code",
+        "STREET": "Street",
+        "COMENTS": "Coments",
+        "SAVE": "Save",
+        "CANCEL": "Cancel"
+    },
+    "NAV": {
+        "TITLES": {
+            "SEARCH_COMPANIES": "Buscar Empresas"
+        },
+        "LANG": {
+            "SP": "SP",
+            "EN": "EN"
+        }
     }
 }

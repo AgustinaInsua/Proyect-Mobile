@@ -8,20 +8,20 @@
           <p-accordionTab header="Datos de la empresa">
             <div class="conteiner-data-1">
               <div class="data-1">
-                <div><label>Razon social</label></div>
+                <div><label>{{"INPUTS.RAZON" | translate}}</label></div>
                 <input tabindex="1" type="text" name="razonSocial"
                 [(ngModel)]="companies.razonSocial"
                 #razonSocial="ngModel" required pInputText disabled="true" />
               </div>
 
               <div class="data-1">
-                <div><label>CUIT</label></div>
+                <div><label>{{"INPUTS.CUIT" | translate}}</label></div>
                 <input tabindex="2" type="text" name="cuit"
                 [(ngModel)]="companies.cuit"
                 #cuit="ngModel" required pInputText disabled="true"/>
               </div>
 
-              <div class="estado"><label>Estado</label></div>
+              <div class="estado"><label>{{"INPUTS.STATUS" | translate}}</label></div>
               <input tabindex="3" type="text" name="estado"
               [(ngModel)]="companies.estado"
               #estado="ngModel" required pInputText />
@@ -29,19 +29,19 @@
 
             <div class="conteiner-data-2">
               <div class="data-2">
-                <div><label>Mail</label></div>
+                <div><label>{{"INPUTS.MAIL" | translate}}</label></div>
                 <input tabindex="4" type="email" name="email"
                 [(ngModel)]="companies.email"
                 #email="ngModel" required pInputText />
               </div>
 
               <div class="data-2">
-                <div><label>Mail alternativo</label></div>
+                <div><label>{{"INPUTS.ALT_MAIL" | translate}}</label></div>
                 <input tabindex="5" type="email" required pInputText />
               </div>
 
               <div class="confirmaMail">
-                <label>Confirmar mail alternativo</label>
+                <label>{{"INPUTS.CONFIRM_ALT_MAIL" | translate}}</label>
               </div>
               <input tabindex="6" type="email" required pInputText />
             </div>
@@ -50,24 +50,24 @@
             <div class="domicilio">
               <div class="conteiner-data-3">
                 <div class="data-3">
-                  <div><label>Codigo Postal</label></div>
+                  <div><label>{{"INPUTS.ZIP_CODE" | translate}}</label></div>
                   <input tabindex="7" type="text" required pInputText />
                 </div>
                 
-                <div class="calle"><label>Calle</label></div>
+                <div class="calle"><label>{{"INPUTS.STREET" | translate}}</label></div>
                 <input tabindex="8" type="text" required pInputText />
               </div>
             </div>
           </p-accordionTab>
           <p-accordionTab header="Datos complementarios">
-            <div class="comentarios"><label>Comentarios:</label></div>
+            <div class="comentarios"><label>{{"INPUTS.COMENTS" | translate}}:</label></div>
             <textarea></textarea>
           </p-accordionTab>
         </p-accordion>
 
         <div class="buttons">
-        <p-button (click)="saveData()">Guardar</p-button>
-        <p-button>Cancelar</p-button>
+        <p-button (click)="saveData()">{{"INPUTS.SAVE" | translate}}</p-button>
+        <p-button>{{"INPUTS.CANCEL" | translate}}</p-button>
       </div>
       </div>
     </p-card>

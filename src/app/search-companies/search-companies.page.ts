@@ -10,6 +10,8 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Router } from '@angular/router';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import { error } from 'console';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-search-companies',
@@ -22,15 +24,20 @@ export class SearchCompaniesPage implements OnInit {
   suggestionsCompanies!: string[] ;
   urlCompanies: any;
   urlCompaniesPDF:any;
-  constructor(private router: Router,private companyService: CompanyService, private apiService: ApiService) { }
+  constructor(private router: Router,private messageService: MessageService,private companyService: CompanyService, private apiService: ApiService) { }
 
   ngOnInit() {
 
     this.urlCompanies = this.companyService.apiURL;
     this.urlCompaniesPDF = this.urlCompanies+'companies.pdf'+'/';
-    this.apiService.get(this.urlCompanies).subscribe(companies => {
+    this.apiService.get(this.urlCompanies).subscribe({next: companies => {
       this.companies = companies;
-    })
+    },
+    error: (error: { message: any; }) =>{
+      console.log(error.message);
+      this.messageService.add({severity:'error', summary:error.message, life:2000});
+    }
+  })
 
   }
 

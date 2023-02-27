@@ -14,6 +14,10 @@ import {ButtonModule} from 'primeng/button';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {InputTextModule} from 'primeng/inputtext';
 import { HttpClientModule } from '@angular/common/http';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {ToastModule} from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   imports: [
@@ -27,8 +31,12 @@ import { HttpClientModule } from '@angular/common/http';
     InputTextModule,
     HttpClientModule,
     ComponentsModule,
-    TranslateModule
-  ],
+    TranslateModule,
+    MessageModule,
+    MessagesModule,
+    ToastModule
+  ], 
+  providers: [MessageService],
   declarations: [SearchCompaniesPage]
 })
 export class SearchCompaniesPageModule {}

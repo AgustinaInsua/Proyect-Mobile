@@ -38,4 +38,5 @@ export class CompanyService {
   getCompanyInformationMail(){
     return this.mail;
   }
+  
 }

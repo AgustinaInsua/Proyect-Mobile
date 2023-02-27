@@ -25,4 +25,8 @@ export class ActualizarDatosPage implements OnInit {
     this.router.navigate(['search-companies']);
   }
 
+  cancelData(){
+    this.router.navigate(['search-companies']);
+  }
+
 }

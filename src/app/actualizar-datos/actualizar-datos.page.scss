@@ -8,7 +8,7 @@
     margin: 0.7rem 0 2rem;
 }
 
-.data-1, .data-2, .data-3{
+.data-1, .data-2 , .data-3{
     float: left;
     margin-left: 1%;
     margin-right: 5%;
@@ -19,6 +19,7 @@
     margin-left: 1%;
     margin-right: 5%;
 }
+
 
 .data-3{
     margin-right: 6%;
@@ -50,6 +51,20 @@ textarea{
     left: 35%;
 }
 
+:host ::ng-deep .p-accordion .p-accordion-content {
+    padding: 0.55rem;
+    border: 1px solid #dee2e6;
+    background: #ffffff;
+    color: #495057;
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+:host ::ng-deep .p-card .p-card-body {
+    padding: 0.3rem;
+}
 :host ::ng-deep .p-button {
     color: #ffffff;
     background: #67B5CF;
@@ -98,6 +113,8 @@ textarea{
     .data-3{
         margin-right: 6%;
     }
+
+
     
   }
 

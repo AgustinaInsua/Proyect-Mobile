@@ -16,11 +16,6 @@ export class MenuComponent implements OnInit {
         url: "/home"
       },
       {
-        title: "Boletas",
-        icon: "albums",
-        url: "/boletas-emitidas"
-      },
-      {
         title: "Buscar Empresas",
         icon: "search",
         url: "/search-companies"

@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { Table } from 'primeng/table';
 import { FIELDS_TABLE_BOLETA } from '../model/mock-fieldsTableBoletas';
 import { Boleta } from '../model/Boleta';
+import { CompanyDTO } from '../model/dto/companyDTO';
 
 @Component({
   selector: 'app-boletas-emitidas',
@@ -20,15 +21,15 @@ export class BoletasEmitidasPage implements OnInit {
   fieldsTableBoleta = FIELDS_TABLE_BOLETA;
   suggestionsBoletas!: string[] ;
   urlBoletas : any;
-  constructor(private apiService: ApiService, private boletasService: BoletasService, private companyService: CompanyService) { }
+  constructor(private apiService: ApiService, private boletasService: BoletasService, private companyDTO: CompanyDTO) { }
 
   ngOnInit() {
     this.urlBoletas = this.boletasService.apiURL;
-    this.apiService.get(this.urlBoletas+"/"+this.companyService.id).subscribe(boletas => {
+    this.apiService.get(this.urlBoletas+"/"+this.companyDTO.id).subscribe(boletas => {
       this.boletas = boletas;
       console.log(boletas);
     })
-    console.log(this.companyService.id);
+    console.log(this.companyDTO.id);
   }
 
   onFilter(event: any, table: Table){

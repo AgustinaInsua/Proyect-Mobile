@@ -12,6 +12,7 @@ import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import { error } from 'console';
 import { MessageService } from 'primeng/api';
+import { CompanyDTO } from '../model/dto/companyDTO';
 
 @Component({
   selector: 'app-search-companies',
@@ -24,12 +25,12 @@ export class SearchCompaniesPage implements OnInit {
   suggestionsCompanies!: string[] ;
   urlCompanies: any;
   urlCompaniesPDF:any;
-  constructor(private router: Router,private messageService: MessageService,private companyService: CompanyService, private apiService: ApiService) { }
+  constructor(private router: Router,private messageService: MessageService,private companyDTO: CompanyDTO,private companyService: CompanyService, private apiService: ApiService) { }
 
   ngOnInit() {
 
     this.urlCompanies = this.companyService.apiURL;
-    this.urlCompaniesPDF = this.urlCompanies+'companies.pdf'+'/';
+    this.urlCompaniesPDF = this.companyService.apiPdfURL;
     this.apiService.get(this.urlCompanies).subscribe({next: companies => {
       this.companies = companies;
     },
@@ -45,13 +46,13 @@ export class SearchCompaniesPage implements OnInit {
   }
 
   searchActas(i:string) {
-    this.companyService.setCompanyInformationID(this.companies[parseInt(i)].id);
+    this.companyDTO.setCompanyInformationID(this.companies[parseInt(i)].id);
     this.router.navigate(['boletas-emitidas']);
   }
 
   editData(i:string){
-    this.companyService.setCompanyInformation(this.companies[parseInt(i)]);
-    this.urlCompanies = this.companyService.apiURL + this.companyService.getCompanyInformationMail();
+    this.companyDTO.setCompanyInformation(this.companies[parseInt(i)]);
+    this.urlCompanies = this.companyService.apiURL + this.companyDTO.getCompanyInformationMail();
     this.router.navigate(['actualizar-datos']);
   }
 

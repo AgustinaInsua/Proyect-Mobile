@@ -3,6 +3,7 @@ import { MessageService } from 'primeng/api';
 import { User } from './../model/User';
 import { LoginService } from './../service/login-service/login.service';
 import { Component, OnInit } from '@angular/core';
+import { HttpStatusCode } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,8 @@ export class LoginPage implements OnInit {
   }
 
   login(){
-    if (this.loginService.validateUser(this.user)){
+    if (this.loginService.validateUser(this.user)== HttpStatusCode.Ok){
+      //this.messageService.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
       this.router.navigate(['home']);
     }else {
       this.messageService.add({severity:'error', summary:'Usuario y/o Contraseña incorrecta',detail:'Verifique los datos ingresados.', life:2000});

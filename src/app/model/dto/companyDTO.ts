@@ -1,5 +1,9 @@
+import { Injectable } from '@angular/core';
 import { Company } from 'src/app/model/Company';
 
+@Injectable({
+    providedIn: 'root'
+  })
 
 export class CompanyDTO {
 

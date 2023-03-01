@@ -1,8 +1,8 @@
 import { CompanyService } from './../service/company-service/company.service';
 import { Component, OnInit } from '@angular/core';
 import { Company } from '../model/Company';
-import { Router } from '@angular/router';
 import { CompanyDTO } from '../model/dto/companyDTO';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-actualizar-datos',

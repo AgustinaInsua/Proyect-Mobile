@@ -25,13 +25,14 @@ export class SearchCompaniesPage implements OnInit {
   suggestionsCompanies!: string[] ;
   urlCompanies: any;
   urlCompaniesPDF:any;
+
   constructor(private router: Router,private messageService: MessageService,private companyDTO: CompanyDTO,private companyService: CompanyService, private apiService: ApiService) { }
 
   ngOnInit() {
 
-    this.urlCompanies = this.companyService.apiURL;
-    this.urlCompaniesPDF = this.companyService.apiPdfURL;
-    this.apiService.get(this.urlCompanies).subscribe({next: companies => {
+    this.urlCompanies = ApiService.apiURLCompanies;
+    this.urlCompaniesPDF = ApiService.apiPdfURL;
+    this.apiService.get(ApiService.apiURLCompanies).subscribe({next: companies => {
       this.companies = companies;
     },
     error: (error: { message: any; }) =>{
@@ -39,7 +40,6 @@ export class SearchCompaniesPage implements OnInit {
       this.messageService.add({severity:'error', summary:error.message, life:2000});
     }
   })
-
   }
 
   onFilter(event: any, table: Table){
@@ -52,7 +52,7 @@ export class SearchCompaniesPage implements OnInit {
 
   editData(i:string){
     this.companyDTO.setCompanyInformation(this.companies[parseInt(i)]);
-    this.urlCompanies = this.companyService.apiURL + this.companyDTO.getCompanyInformationMail();
+    this.urlCompanies = ApiService.apiURLCompanies + this.companyDTO.getCompanyInformationMail();
     this.router.navigate(['actualizar-datos']);
   }
 

@@ -3,11 +3,16 @@ import { HttpClient, HttpErrorResponse, HttpStatusCode } from '@angular/common/h
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs';
 import { throwError } from 'rxjs';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
+  static readonly apiURLCompanies =  environment.apiURL+ 'companies';
+  static readonly apiPdfURL = ApiService.apiURLCompanies+'pdf'+'/';
+  static readonly apiURLBoletas = environment.apiURL + 'boletas';
+  
   constructor(private httpClient: HttpClient) { }
 
   get(url: string): Observable<any[]> {

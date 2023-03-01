@@ -9,8 +9,8 @@
         
       </ion-buttons>
       <ion-buttons slot="end">
-        <div class="sp" type="checkbox"><ion-button (click)="changeLangEs(es)">{{"SP" | translate}}</ion-button></div>
-        <div class="en" type="checkbox"><ion-button (click)="changeLangEn(en)">{{"EN" | translate}}</ion-button></div>
+        <div class="sp"><ion-button [ngStyle]="{'background-color':myColor[0]}" (click)="changeLangEs(es)">{{"SP" | translate}}</ion-button></div>
+        <div class="en"><ion-button [ngStyle]="{'background-color':myColor[1]}" (click)="changeLangEn(en)">{{"EN" | translate}}</ion-button></div>
       </ion-buttons>
       
       

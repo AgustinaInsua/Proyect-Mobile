@@ -20,7 +20,7 @@ export class AuxTablePage implements OnInit {
   constructor(private router: Router,private companyService: CompanyService, private apiService: ApiService) { }
 
   ngOnInit() {
-    this.urlCompanies = this.companyService.apiURL;
+    this.urlCompanies = ApiService.apiURLCompanies;
     this.apiService.get(this.urlCompanies).subscribe(companies => {
       this.companies = companies;
       console.log(companies);

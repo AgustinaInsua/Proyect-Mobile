@@ -24,7 +24,7 @@ export class BoletasEmitidasPage implements OnInit {
   constructor(private apiService: ApiService, private boletasService: BoletasService, private companyDTO: CompanyDTO) { }
 
   ngOnInit() {
-    this.urlBoletas = this.boletasService.apiURL;
+    this.urlBoletas = ApiService.apiURLBoletas;
     this.apiService.get(this.urlBoletas+"/"+this.companyDTO.id).subscribe(boletas => {
       this.boletas = boletas;
       console.log(boletas);

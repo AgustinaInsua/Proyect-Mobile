@@ -13,8 +13,7 @@ export class HeaderComponent implements OnInit {
   @Input () icon!: any;
   es = Languages.es;
   en = Languages.en;
-  selectedEs !: boolean;
-  selectedEn !: boolean;
+  myColor = ['#67B5CF','write'];
   constructor(private langService: LanguageService) { }
 
   ngOnInit() {
@@ -22,15 +21,20 @@ export class HeaderComponent implements OnInit {
   }
   changeLangEs(lang: Languages){
     this.langService.setLang(lang);
-    console.log(this.langService.getActualLang());
-    this.selectedEs = true;
-    this.selectedEn = false;
-  }
+    console.log(this.langService.getActualLang());  }
 
   changeLangEn(lang: Languages){
     this.langService.setLang(lang);
     console.log(this.langService.getActualLang());
-    this.selectedEn = true;
-    this.selectedEs = false;
+    this.sap()
+  }
+  sap(){
+   if (this.myColor[0] == 'write' && this.myColor[1] == '#67B5CF'){
+    this.myColor = ['#67B5CF','write'];
+   }
+   else if (this.myColor[1] == 'write' && this.myColor[0] == '#67B5CF'){
+    console.log("pase por aca");
+    this.myColor = ['write','#67B5CF'];
+   }
   }
 }

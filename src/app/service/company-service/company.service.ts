@@ -9,8 +9,6 @@ import { Company } from 'src/app/model/Company';
 
 export class CompanyService {
 
-  apiURL= environment.apiURLBoleta + 'companies';
-  apiPdfURL = this.apiURL+'pdf'+'/';
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
 }

@@ -9,27 +9,34 @@ import { User } from 'src/app/model/User';
   providedIn: 'root'
 })
 export class LoginService {
+  url = environment.apiURL;
   constructor(private apiService: ApiService) { }
-
+  /*
   validateUser(user: User){
     return this.existUser(user);
   }
-
+  */
   existUser(user: User){
     return USERS_LOGIN.some((obj) =>{
       return (obj.email === user.email) && (obj.password === user.password)}) ? 
       HttpStatusCode.Ok : 
-      HttpStatusCode.BadRequest;
+      HttpStatusCode.Unauthorized;
   }
 
-  }
-  /*
   validateUser(user: User){
-    this.apiService.get2(this.url+'login/', {"email" : "leanf@gmail.com"}).subscribe({next: companies => {
+
+    return this.apiService.post(this.url+'login', user);
+    /*.subscribe({next: companies => {
+      console.log(companies);
       console.log("TRUE");
     },
     error: (error: { message: any; }) =>{
+      console.log(user);
       console.log("FALSE");
     }
-  });
-  }*/
+  });*/
+  }
+  }
+  
+  
+

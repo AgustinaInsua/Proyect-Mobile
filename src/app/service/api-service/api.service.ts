@@ -21,12 +21,6 @@ export class ApiService {
       catchError(this.handleError)); 
   }
 
-  get2(url: string, body: any): Observable<any[]> {
-    return this.httpClient.get<any[]>(url, {params: body})
-    .pipe(
-      catchError(this.handleError)); 
-  }
-
   post(url: string, body: any){
     return this.httpClient.post(url, body)
     .pipe(

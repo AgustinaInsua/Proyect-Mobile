@@ -4,5 +4,29 @@
 <app-menu></app-menu>
 <ion-content>
   <h4>{{"HOME.TITLE" | translate}}</h4>
+
+  <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '40vw', height: '100vw' }" position="center">
+    <ng-template pTemplate="header">
+        <h2>Calculadora</h2>
+    </ng-template>
+    <ng-template pTemplate="content">
+      <div class="inputs">
+        <label>Fecha de primer pago</label>
+        <p-calendar [(ngModel)]="value" [showIcon]="true" placeholder="Seleccione..."></p-calendar>
+        <label>Aprobador</label>
+        <p-dropdown [options]="aprobadores" [(ngModel)]="selecAprobador" placeholder="Seleccione..."></p-dropdown>
+        <label>Cantidad de pagos</label>
+        <p-dropdown [options]="amountPayments" [(ngModel)]="selecAmountPayments" placeholder="Seleccione..."></p-dropdown>
+        <label>Periocidad</label>
+        <p-dropdown [options]="periodicity" [(ngModel)]="selecPeriodicity" placeholder="Seleccione..."></p-dropdown>
+      </div>
+    </ng-template>
+    
+    <ng-template pTemplate="footer">
+        <ion-button>Aceptar</ion-button>
+    </ng-template>
+  </p-dialog>
+
+<button pButton type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Calculadora"></button>
 </ion-content>
 </ion-app>

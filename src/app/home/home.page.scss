@@ -48,6 +48,12 @@ h2{
    flex-basis: auto;
 }
 
+.inputs {
+   label{
+      display: block;
+   }
+}
+
 
  @media screen and (min-width: 1329px){
    html{

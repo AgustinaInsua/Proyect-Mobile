@@ -25,24 +25,13 @@ export class LoginPage implements OnInit {
 
   login(){
     this.loginService.validateUser(this.user).subscribe({
-    next: (v) => {
-      console.log(v)
-    },
-    error: (e) => {
-      this.messageService.add({severity:'error', summary:'Usuario y/o Contraseña incorrecta',detail:'Verifique los datos ingresados.', life:2000});
-    },
-    complete: () => {
-      this.router.navigate(['home']);
-    }
-});
-    /*
-    if (this.loginService.validateUser(this.user)== HttpStatusCode.Ok){
-      //this.messageService.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
-      this.router.navigate(['home']);
-    }else {
-      this.messageService.add({severity:'error', summary:'Usuario y/o Contraseña incorrecta',detail:'Verifique los datos ingresados.', life:2000});
-    }
-    */
+      next: (v) => {
+        this.router.navigate(['home']);
+      },
+      error: (e) => {
+        this.messageService.add({severity:'error', summary:'Usuario y/o Contraseña incorrecta',detail:'Verifique los datos ingresados.', life:2000});
+      }
+    });
   }
 
 }

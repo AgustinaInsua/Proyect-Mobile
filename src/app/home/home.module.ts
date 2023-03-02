@@ -10,7 +10,9 @@ import { HomePageRoutingModule } from './home-routing.module';
 import {InputTextModule} from 'primeng/inputtext';
 import {TableModule} from 'primeng/table';
 import {SpeedDialModule} from 'primeng/speeddial';
-
+import {DialogModule} from 'primeng/dialog';
+import {CalendarModule} from 'primeng/calendar';
+import {DropdownModule} from 'primeng/dropdown';
 
 @NgModule({
   imports: [
@@ -22,7 +24,10 @@ import {SpeedDialModule} from 'primeng/speeddial';
     TableModule,
     SpeedDialModule,
     ComponentsModule,
-    TranslateModule
+    TranslateModule,
+    DialogModule,
+    CalendarModule,
+    DropdownModule
   ],
   declarations: [HomePage]
 })

@@ -34,13 +34,22 @@ export class SearchCompaniesPage implements OnInit {
     this.urlCompaniesPDF = ApiService.apiPdfURL;
     this.apiService.get(ApiService.apiURLCompanies).subscribe({next: companies => {
       this.companies = companies;
+      console.log(companies);
     },
     error: (error: { message: any; }) =>{
       console.log(error.message);
       this.messageService.add({severity:'error', summary:error.message, life:2000});
     }
   })
-  }
+
+    this.apiService.post(ApiService.apiURLCompanies,{"id": "64640"}).subscribe({next: response => {
+      console.log(response);
+    },
+    error: (error: { message: any; }) =>{
+      console.log("noandapost");
+    }
+  });
+   }
 
   onFilter(event: any, table: Table){
   }
@@ -53,6 +62,7 @@ export class SearchCompaniesPage implements OnInit {
   editData(i:string){
     this.companyDTO.setCompanyInformation(this.companies[parseInt(i)]);
     this.urlCompanies = ApiService.apiURLCompanies + this.companyDTO.getCompanyInformationMail();
+    
     this.router.navigate(['actualizar-datos']);
   }
 

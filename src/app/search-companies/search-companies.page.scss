@@ -29,6 +29,7 @@
       display: block;
       width: 100%;
       margin-left: 2%;
+      margin-top: 3%;
       font-size: 20px;
 
    }
@@ -128,6 +129,26 @@ p#buscarActas,p#editarActas,p#imprimirActas{
  position: relative;
 }
 
+:host ::ng-deep .p-datatable-table {
+   margin-top: 0%;
+   border-spacing: 0px;
+   width: 100%;
+}
+
+
+:host ::ng-deep .p-datatable-header ng-star-inserted {
+   margin-top: 3%;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-header {
+   background: #f8f9fa;
+   color: #343a40;
+   border: 1px solid #dee2e6;
+   border-width: 1px 0 1px 0;
+   padding: 1rem 1rem;
+   margin-top: 2%;
+   font-weight: 700;
+}
  
 @media screen and (min-width: 1921px){
    

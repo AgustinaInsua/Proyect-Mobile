@@ -126,6 +126,48 @@ textarea{
     }
 
     .p-inputtext {
+        width: 220px;
+        height: 32px;
+        left: 0px;
+        top: 5%;
+        background: rgba(217, 217, 217, 0.5);
+        border-radius: 10px;
+        margin: 0.7rem 0 2rem;
+    }
+    .estado, .confirmaMail{
+        width: 180px;
+    }
+    
+    .data-1, .data-2, .data-3{
+        float: left;
+        margin-left: 0.2%;
+        margin-right: 5%;
+    }
+    
+    .data-3{
+        margin-right: 6%;
+    }
+
+    textarea{
+        width: 395px;
+        height: 115px;
+        left: 0px;
+        top: 24px;
+        background: rgba(217, 217, 217, 0.5);
+        border-radius: 12px;
+        margin-left: 1%;
+        margin-right: 5%;
+    }
+  }
+
+  @media screen and (max-width: 521px) {
+    .buttons {
+        position: relative;
+        margin-top: 15px;
+        left: 20%;
+    }
+
+    .p-inputtext {
         width: 180px;
         height: 32px;
         left: 0px;
@@ -172,7 +214,7 @@ textarea{
         left: 10%;
     }
     .p-inputtext {
-        width: 120px;
+        width: 150px;
         height: 32px;
         left: 0px;
         top: 5%;
@@ -210,7 +252,7 @@ textarea{
   }
   @media screen and (max-width: 442px) {
         textarea{
-            width: 250px;
+            width: 310px;
             height: 115px;
             left: 0px;
             top: 24px;

@@ -108,6 +108,20 @@ p#buscarActas,p#editarActas,p#imprimirActas{
  font-size: 14px;
 }
 
+:host ::ng-deep .p-column-filter-overlay-menu .p-column-filter-operator {
+   padding: 0.5rem 1rem;
+   border-bottom: 1px solid #dee2e6;
+   color: #343a40;
+   background: #f8f9fa;
+   margin: 0;
+   border-top-right-radius: 6px;
+   border-top-left-radius: 6px;
+}
+
+:host ::ng-deep .p-column-filter-overlay-menu .p-column-filter-add-rule {
+   padding: 0rem 0rem;
+}
+
 .optionsButtons {
  float: left;
  top: 0px;

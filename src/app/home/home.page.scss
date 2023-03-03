@@ -48,12 +48,44 @@ h2{
    flex-basis: auto;
 }
 
-.inputs {
-   label{
+
+label{
       display: block;
-   }
+      margin-top: 7%;
 }
 
+.inputs{
+   margin-top: 2%;
+}
+
+:host ::ng-deep .p-dialog .p-dialog-header {
+   border-bottom: 0 none;
+   background: #ffffff;
+   color: #343a40;
+   padding: 0rem;
+   border-top-right-radius: 6px;
+   border-top-left-radius: 6px;
+}
+
+:host ::ng-deep .p-dropdown ,:host ::ng-deep .p-calendar{
+   margin-top: 2%;
+}
+
+:host ::ng-deep .p-button {
+   color: #ffffff;
+   background: #67B5CF;
+   border: 1px solid #67B5CF;
+   padding: 0.75rem 1.25rem;
+   font-size: 1rem;
+   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+   border-radius: 6px;
+}
+
+:host ::ng-deep .p-dropdown .p-dropdown-label {
+   background: transparent;
+   border: 0 none;
+   width: 205px;
+}
 
  @media screen and (min-width: 1329px){
    html{

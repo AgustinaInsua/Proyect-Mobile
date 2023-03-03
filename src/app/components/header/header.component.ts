@@ -26,15 +26,6 @@ export class HeaderComponent implements OnInit {
   changeLangEn(lang: Languages){
     this.langService.setLang(lang);
     console.log(this.langService.getActualLang());
-    this.sap()
   }
-  sap(){
-   if (this.myColor[0] == 'write' && this.myColor[1] == '#67B5CF'){
-    this.myColor = ['#67B5CF','write'];
-   }
-   else if (this.myColor[1] == 'write' && this.myColor[0] == '#67B5CF'){
-    console.log("pase por aca");
-    this.myColor = ['write','#67B5CF'];
-   }
-  }
+
 }

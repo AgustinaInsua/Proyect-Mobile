@@ -13,7 +13,7 @@ export class HomePage {
   selecAprobador: any;
   selecAmountPayments: any;
   selecPeriodicity: any;
-
+  isRequerid:boolean =true;
   aprobadores:any;
   amountPayments:any;
   periodicity:any;

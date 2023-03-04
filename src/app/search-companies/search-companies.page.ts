@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 import { error } from 'console';
 import { MessageService } from 'primeng/api';
 import { CompanyDTO } from '../model/dto/companyDTO';
+import {MegaMenuItem,MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-search-companies',
@@ -23,7 +24,18 @@ export class SearchCompaniesPage implements OnInit {
   suggestionsCompanies!: string[] ;
   urlCompanies: any;
   urlCompaniesPDF:any;
+  megaItems!: MegaMenuItem [];
+  items!: MenuItem[];
+  display: boolean = false;
+  value: any;
+  selecAprobador: any;
+  selecAmountPayments: any;
+  selecPeriodicity: any;
 
+  aprobadores = ["Gaston Alles", "Noelia Sosa"];
+  amountPayments = ["1","2","3","4","5","6","7","8","9","10","11","12"];
+  periodicity = ["15","30","60"];
+    
   constructor(private router: Router,private messageService: MessageService,private companyDTO: CompanyDTO,private companyService: CompanyService, private apiService: ApiService) { }
 
   ngOnInit() {
@@ -39,6 +51,22 @@ export class SearchCompaniesPage implements OnInit {
       this.messageService.add({severity:'error', summary:error.message, life:2000});
     }
   })
+
+  this.items = [
+    {
+      label: "Home"
+    },
+    {
+      label: "Actas",
+      items: [
+          {
+            label: "Calculadora",
+            command: (event) => {
+              this.showDialog();
+          }}
+      ]
+    }
+  ];
    }
 
   onFilter(event: any, table: Table){
@@ -58,5 +86,9 @@ export class SearchCompaniesPage implements OnInit {
   clear (table: Table){
     table.clear();
   }
+
+  showDialog() {
+    this.display = true;
+}
 
 }

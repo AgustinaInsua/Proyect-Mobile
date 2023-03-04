@@ -13,6 +13,7 @@ import {SpeedDialModule} from 'primeng/speeddial';
 import {DialogModule} from 'primeng/dialog';
 import {CalendarModule} from 'primeng/calendar';
 import {DropdownModule} from 'primeng/dropdown';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import {DropdownModule} from 'primeng/dropdown';
     TranslateModule,
     DialogModule,
     CalendarModule,
-    DropdownModule
+    DropdownModule,
+    ReactiveFormsModule
   ],
   declarations: [HomePage]
 })

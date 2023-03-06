@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import {MenubarModule} from 'primeng/menubar';
+import {BreadcrumbModule} from 'primeng/breadcrumb';
 
 @NgModule({
   imports: [
@@ -13,7 +13,7 @@ import {MenubarModule} from 'primeng/menubar';
     FormsModule,
     IonicModule,
     TranslateModule,
-    MenubarModule
+    BreadcrumbModule
   ],
   declarations: [HeaderComponent, MenuComponent],
   exports: [HeaderComponent, MenuComponent]

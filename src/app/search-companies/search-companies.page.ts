@@ -54,16 +54,186 @@ export class SearchCompaniesPage implements OnInit {
 
   this.items = [
     {
-      label: "Home"
-    },
-    {
-      label: "Actas",
+      label: "Acciones",
       items: [
           {
-            label: "Calculadora",
+            label: "Guardar",
             command: (event) => {
-              this.showDialog();
+              console.log("Guardar");
+          }},
+          {
+            label: "Cerrar",
+            command: (event) => {
+              console.log("Cerrar");
+          }},
+          {
+            label: "Cancelar",
+            command: (event) => {
+              console.log("Cancelar");
+          }},
+          {
+            label: "Salir",
+            command: (event) => {
+              console.log("Salir");
           }}
+      ]
+    },
+    {
+      label: "Imprimir",
+      icon: "pi pi-fw pi-print",
+      items: [
+        {
+          label: "Resumen",
+          command: (event) => {
+           console.log("Imprimir resumen");
+        }
+      },
+        {
+          label: "Actas",
+          items:[
+            { label: "Acta", 
+              command: (event) => {
+                console.log("Imprimir Acta")
+              }
+            },
+            { label: "Acta Compactada", 
+              command: (event) => {
+                console.log("Imprimir Acta Acompactada")
+              }
+            }
+          ]
+        },
+        {
+          label: "Certificados",
+          items:[
+            { label: "Certificado", 
+              command: (event) => {
+                console.log("Imprimir Certificado")
+              }
+            },
+            { label: "Certificado Compactado", 
+              command: (event) => {
+                console.log("Imprimir Certificado Compactado")
+              }
+            }
+          ]},
+        {
+          label: "PDF Adhesion",
+          command: (event) => {
+           console.log("PDF Adhesion");
+        }}
+    ]
+    },
+    {
+      label: "Actualizaciones",
+      items: [
+        {
+          label: "Actualizar Datos",
+          command: (event) => {
+            this.showDialog();
+        }},
+        {
+          label: "Asoc. Fecha Calc. Int.",
+          command: (event) => {
+            this.showDialog();
+        }},
+        {
+          label: "Aprobar Fecha Calc. Int",
+          command: (event) => {
+            this.showDialog();
+        }},
+        {
+          label: "Calculadora",
+          command: (event) => {
+            this.showDialog();
+        }},
+        {
+          label: "Asoc. Fecha de Pago",
+          command: (event) => {
+            this.showDialog();
+        }},
+        {
+          label: "Asoc. Cheque",
+          command: (event) => {
+            this.showDialog();
+        }},
+        {
+          label: "Asoc. CBU General",
+          command: (event) => {
+            this.showDialog();
+        }},
+        {
+          label: "Aprobar Fecha de Acreditación",
+          command: (event) => {
+            this.showDialog();
+        }},
+        {
+          label: "Eliminar Fecha de Pago",
+          command: (event) => {
+            this.showDialog();
+        }}
+      ]
+    },
+    {
+      label: "Actualizaciones 2",
+      items: [
+        {
+          label: "Asociar",
+          items:[
+            { label: "Fecha Calc. Int.", 
+              command: (event) => {
+                console.log("Asociar Fecha Calc. Int.")
+              }
+            },
+            { label: "Fecha de Pago", 
+              command: (event) => {
+                console.log("Asociar Fecha de Pago")
+              }
+            },
+            { label: "Cheque", 
+              command: (event) => {
+                console.log("Asociar Cheque")
+              }
+            },
+            { label: "CBU General", 
+              command: (event) => {
+                console.log("Asociar CBU General")
+              }
+            }
+          ]},
+          {
+            label: "Aprobar",
+            items:[
+              { label: "Fecha Calc. Int.", 
+                command: (event) => {
+                  console.log("Asociar Fecha Calc. Int.")
+                }
+              },
+              { label: "Fecha de Acreditación", 
+                command: (event) => {
+                  console.log("Asociar Fecha de Pago")
+                }
+              }
+            ]},
+        {
+          label: "Actualizar Datos",
+          command: (event) => {
+            this.showDialog();
+        }},
+        {
+          label: "Calculadora",
+          command: (event) => {
+            this.showDialog();
+        }},
+        {
+          label: "Eliminar",
+          items:[
+            { label: "Fecha de Pago", 
+              command: (event) => {
+                console.log("Asociar Fecha Calc. Int.")
+              }
+            }
+          ]}
       ]
     }
   ];

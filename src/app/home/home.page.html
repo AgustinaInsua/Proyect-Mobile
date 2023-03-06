@@ -11,24 +11,22 @@
     </ng-template>
     <ng-template pTemplate="content">
       
-    <form class="form" [formGroup]="myForm" >
+
       <div class="inputs">
         <label>Fecha de primer pago</label>
-        <p-calendar  [minDate]="minDate" [showIcon]="true" (onSelect)="onSelect($event)" [required]="true" id="calendar" class="form-control"
-        formControlName="calendar" placeholder="Seleccione..."></p-calendar>
-        <span class="text-danger" *ngIf="(f['calendar'].touched || f['calendar'].dirty) && f['calendar'].errors?.['required']">La fecha es requerida</span>
+        <p-calendar  [minDate]="calculator.todayDate" [showIcon]="true" (onSelect)="onSelect($event)" [required]="true" id="calendar"
+        placeholder="Seleccione..."></p-calendar>
 
         <label>Aprobador</label>
-        <p-dropdown [options]="aprobadores"  placeholder="Seleccione..." ></p-dropdown>
+        <p-dropdown [options]="calculator.aprobadores"  placeholder="Seleccione..." ></p-dropdown>
+
         <label>Cantidad de pagos</label>
-        <p-dropdown  [options]="amountPayments"  [required]="true" placeholder="Seleccione..." id="pago" class="form-control"
-       formControlName="pago"></p-dropdown>
-       <span class="text-danger" *ngIf="(f['pago'].touched || f['pago'].dirty) && f['pago'].errors?.['required']">La cantidad de pagos es requerida</span>
+        <p-dropdown  [options]="calculator.amountPayments"  [required]="true" placeholder="Seleccione..." id="pago"></p-dropdown>
 
         <label>Periocidad</label>
-        <p-dropdown [options]="periodicity"  placeholder="Seleccione..."></p-dropdown>
+        <p-dropdown [options]="calculator.periodicity"  placeholder="Seleccione..."></p-dropdown>
       </div>
-    </form>
+ 
       
     </ng-template>
     

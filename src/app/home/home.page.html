@@ -10,7 +10,6 @@
         <h2>Calculadora</h2>
     </ng-template>
     <ng-template pTemplate="content">
-      <form (ngSubmit)="onSubmit()" #myform ="ngForm">
       <div class="inputs">
         <label>Fecha de primer pago</label>
         <p-calendar  [minDate]="calculator.todayDate" [showIcon]="true" [(ngModel)]="calculator.date" #date="ngModel" (onSelect)="onSelect($event)" [required]="true" name="date"
@@ -25,7 +24,7 @@
         <p-dropdown [options]="calculator.aprobadores"  placeholder="Seleccione..." ></p-dropdown>
 
         <label>Cantidad de pagos</label>
-        <p-dropdown class="form-control" [options]="calculator.amountPayments" name ="amountPayments" [(ngModel)]="selecAmountPayments" #amountPayments="ngModel"
+        <p-dropdown class="form-control" [options]="calculator.amountPayments" name ="amountPayments"  (onChange)="onSelect($event)" [(ngModel)]="selecAmountPayments" #amountPayments="ngModel"
          [required]="true" placeholder="Seleccione..." id="amountPayments"></p-dropdown>
         <div [hidden]="amountPayments.valid || !amountPayments.touched" class="errors">
           <span *ngIf="amountPayments.errors?.['required']">
@@ -36,13 +35,12 @@
         <label>Periocidad</label>
         <p-dropdown [options]="calculator.periodicity"  placeholder="Seleccione..."></p-dropdown>
       </div>
-
-      <div class="buttonAcept"><p-button [disabled]="submitted">Aceptar</p-button></div>
-      <div class="buttonCancel"><p-button>Cancelar</p-button></div>
-    </form>
     </ng-template>
     
-
+    <ng-template pTemplate="footer">
+      <div class="buttonAcept"><p-button [disabled]="submitted">Aceptar</p-button></div>
+        <div class="buttonCancel"><p-button>Cancelar</p-button></div>
+    </ng-template>
   </p-dialog>
 
 <button pButton type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Calculadora"></button>

@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment';
 export class ApiService {
 
   static readonly apiURLCompanies =  environment.apiURL+ 'companies';
+  static readonly apiURLCompaniesActas =  environment.apiURL+ 'companies/actas';
   static readonly apiPdfURL = ApiService.apiURLCompanies+'pdf'+'/';
   static readonly apiURLBoletas = environment.apiURL + 'boletas';
   

@@ -1,3 +1,6 @@
+import { ActualizarDatosPageRoutingModule } from './actualizar-datos-routing.module';
+import { ActualizarDatosPage } from './actualizar-datos.page';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { ComponentsModule } from './../components.module';
 import { NgModule } from '@angular/core';
@@ -5,8 +8,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
-import { ActualizarDatosPageRoutingModule } from './actualizar-datos-routing.module';
-import { ActualizarDatosPage } from './actualizar-datos.page';
 
 import { TableModule } from 'primeng/table';
 import {ButtonModule} from 'primeng/button';

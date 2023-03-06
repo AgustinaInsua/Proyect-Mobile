@@ -9,7 +9,7 @@ import { Calculadora } from '../model/Calculadora';
 })
 export class HomePage {
   display: boolean = false;  
-  submitted!: boolean;
+  submitted: boolean = true;  
   value: any;
   minDate!: Date;
   selecAprobador: any;
@@ -23,20 +23,18 @@ export class HomePage {
   }
     
   ngOnInit() {
-
   }
-  onSubmit() { 
-    if(this.calculator.date == null  || this.selecAmountPayments ==null){
-      console.log("no hay fecha");
-        this.submitted = true; 
-    }
-    console.log("mostrar boton");
-    this.submitted = false;
-}
 
   onSelect(event:any){
     console.log(event);
+    if(this.selecAmountPayments !=null && this.calculator.date != null ){
+      console.log("Estan los campos completados", this.selecAmountPayments);
+      this.submitted = false; 
+      }
+      console.log("NO Estan los campos completados");
+    this.submitted = true;
   }
+
     showDialog() {
     this.display = true;
    }

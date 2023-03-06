@@ -2,69 +2,88 @@
   <app-header title="Actas de planes" icon="albums"></app-header>
   <app-menu></app-menu>
   <ion-content>
+
     <p-card>
       <div class="container">
         <p-accordion [multiple]="true">
           <p-accordionTab header="Datos de la empresa">
+            <ul class="companies">
+              <li *ngFor="let companies of companies">
             <div class="conteiner-data-1">
-
               <div class="data-1">
                 <div><label>Acta</label></div>
+                <label>{{companies.acta}}</label>
               </div>
 
               <div class="data-1">
                 <div><label>Estado</label></div>
+                <label>{{companies.estado}}</label>
               </div>
 
               <div class="data-1">
               <div><label>Fecha Apertura</label></div>
+              <label>{{companies.fecheApertura}}</label>
               </div>
           
                 <div><label>Fiscalizador</label></div>
-
+                <label>{{companies.fiscalizador}}</label>
             </div>
 
               <div class="conteiner-data-2">
 
               <div class="data-2">
                 <div> <label>Empresa</label></div>
+                <label>{{companies.cuit}}</label>
               </div>
 
               <div class="data-2">
                 <div><label>Alta AFIP</label></div>
+                <label>{{companies.altaAfip}}</label>
               </div>
 
               <div class="data-2">
               <div><label>Aprobador Fec.Intereses</label></div>
+              <label>{{companies.aprobadorFecIntereses}}</label>
             </div>
 
               <div class="Aprobador">
                 <label>Aprobador Fec.Acreditacion</label>
+                <label>{{companies.aprobadorFecAcreditacion}}</label>
               </div>
             </div>
+          </li>
+        </ul>
 
           </p-accordionTab>
           <p-accordionTab header="Datos de contacto">
+            <ul class="companies">
+            <li *ngFor="let companies of companies">
             <div class="domicilio">
               <div class="conteiner-data-3">
                 <div class="data-3">
                   <div><label>Nombre</label></div>
+                  <label>{{companies.contactName}}</label>
                 </div>
 
                 <div class="data-3">
                   <div><label>Apellido</label></div>
+                  <label>{{companies.contactLastName}}</label>
                 </div>
                 
                 <div class="data-4">
                   <div><label>Mail</label></div>
+                  <label>{{companies.email}}</label>
                 </div>
                 
                 <div class="data-4">
                   <div><label>Telefono</label></div>
+                  <label>{{companies.contactNumber}}</label>
                 </div>
                 
               </div>
             </div>
+          </li>
+        </ul>
           </p-accordionTab>
         </p-accordion>
 

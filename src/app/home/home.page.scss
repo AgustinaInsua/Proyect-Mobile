@@ -51,19 +51,28 @@ h2{
 
 label{
       display: block;
-      margin-top: 7%;
+      margin-top: 4%;
 }
 
 .inputs{
-   margin-top: 2%;
+   margin-top: 1%;
 }
 
 .buttonCancel {
-   float: right;
-}
-.buttonAcept {
    float: left;
 }
+.buttonAcept {
+   float: right;
+}
+
+.errors {
+   color: red;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   font-size:medium;
+   text-align: left;
+   padding: 0em 1em;
+   margin-top: -3px;
+ }
 
 :host ::ng-deep .p-dialog .p-dialog-header {
    border-bottom: 0 none;
@@ -75,7 +84,7 @@ label{
 }
 
 :host ::ng-deep .p-dropdown ,:host ::ng-deep .p-calendar{
-   margin-top: 2%;
+   margin-top: 0%;
    background-color: #D9D9D9;
 }
 

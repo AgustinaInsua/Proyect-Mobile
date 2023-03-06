@@ -5,35 +5,44 @@
 <ion-content>
   <h4>{{"HOME.TITLE" | translate}}</h4>
 
-  <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '24vw', height: '35vw' }" position="center">
+  <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '30vw', height: '38vw' }" position="center">
     <ng-template pTemplate="header">
         <h2>Calculadora</h2>
     </ng-template>
     <ng-template pTemplate="content">
-      
-
+      <form (ngSubmit)="onSubmit()" #myform ="ngForm">
       <div class="inputs">
         <label>Fecha de primer pago</label>
-        <p-calendar  [minDate]="calculator.todayDate" [showIcon]="true" (onSelect)="onSelect($event)" [required]="true" id="calendar"
+        <p-calendar  [minDate]="calculator.todayDate" [showIcon]="true" [(ngModel)]="calculator.date" #date="ngModel" (onSelect)="onSelect($event)" [required]="true" name="date"
         placeholder="Seleccione..."></p-calendar>
-
+        <div [hidden]="date.valid || !date.touched" class="errors">
+          <span *ngIf="date.errors?.['required']">
+              La fecha es requerida
+          </span>    
+        </div>
+    
         <label>Aprobador</label>
         <p-dropdown [options]="calculator.aprobadores"  placeholder="Seleccione..." ></p-dropdown>
 
         <label>Cantidad de pagos</label>
-        <p-dropdown  [options]="calculator.amountPayments"  [required]="true" placeholder="Seleccione..." id="pago"></p-dropdown>
+        <p-dropdown class="form-control" [options]="calculator.amountPayments" name ="amountPayments" [(ngModel)]="selecAmountPayments" #amountPayments="ngModel"
+         [required]="true" placeholder="Seleccione..." id="amountPayments"></p-dropdown>
+        <div [hidden]="amountPayments.valid || !amountPayments.touched" class="errors">
+          <span *ngIf="amountPayments.errors?.['required']">
+              La cantidad de pagos es requerida
+          </span>    
+        </div>
 
         <label>Periocidad</label>
         <p-dropdown [options]="calculator.periodicity"  placeholder="Seleccione..."></p-dropdown>
       </div>
- 
-      
+
+      <div class="buttonAcept"><p-button [disabled]="submitted">Aceptar</p-button></div>
+      <div class="buttonCancel"><p-button>Cancelar</p-button></div>
+    </form>
     </ng-template>
     
-    <ng-template pTemplate="footer">
-      <div class="buttonAcept"><p-button>Aceptar</p-button></div>
-        <div class="buttonCancel"><p-button>Cancelar</p-button></div>
-    </ng-template>
+
   </p-dialog>
 
 <button pButton type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Calculadora"></button>

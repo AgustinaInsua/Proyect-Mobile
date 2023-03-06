@@ -8,7 +8,8 @@ import { Calculadora } from '../model/Calculadora';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  display: boolean = false;
+  display: boolean = false;  
+  submitted!: boolean;
   value: any;
   minDate!: Date;
   selecAprobador: any;
@@ -22,7 +23,16 @@ export class HomePage {
   }
     
   ngOnInit() {
+
   }
+  onSubmit() { 
+    if(this.calculator.date == null  || this.selecAmountPayments ==null){
+      console.log("no hay fecha");
+        this.submitted = true; 
+    }
+    console.log("mostrar boton");
+    this.submitted = false;
+}
 
   onSelect(event:any){
     console.log(event);

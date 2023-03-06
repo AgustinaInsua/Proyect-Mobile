@@ -1,0 +1,30 @@
+.data-1, .data-2 , .data-3 , .data-4{
+    float: left;
+    margin-left: 1%;
+    margin-right: 5%;
+}
+.data-2 {
+
+}
+
+:host ::ng-deep .p-accordion .p-accordion-content {
+    padding: 1.25rem;
+    border: 1px solid #dee2e6;
+    background: #ffffff;
+    color: #495057;
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+:host ::ng-deep .p-accordion .p-accordion-header .p-accordion-header-link {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    color: #6c757d;
+    background: #f8f9fa;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: box-shadow 0.2s;
+}

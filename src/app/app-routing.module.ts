@@ -36,7 +36,11 @@ const routes: Routes = [
   {
     path: 'aux-table',
     loadChildren: () => import('./aux-table/aux-table.module').then( m => m.AuxTablePageModule)
+  },  {
+    path: 'actas-de-planes',
+    loadChildren: () => import('./actas-de-planes/actas-de-planes.module').then( m => m.ActasDePlanesPageModule)
   }
+
 
 
 

@@ -22,9 +22,8 @@
                 <td>{{companies.fiscalizador}}</td></tr> 
             </div>
 
-              <div class="conteiner-data-2">
 
-                <tr><th>empresa</th> 
+              <tr><th>Empresa</th> 
                 <th>Alta AFIP</th> 
                 <th>Aprobador Fec.Intereses</th> 
                 <th>Aprobador Fec.Acreditacion</th></tr>
@@ -33,16 +32,16 @@
                 <td>{{companies.altaAfip}}</td>
                 <td>{{companies.aprobadorFecIntereses}}</td>
                 <td>{{companies.aprobadorFecAcreditacion}}</td></tr> 
-    
+     
             </div>
-          </div>
+       
 
           </p-accordionTab>
           <p-accordionTab header="Datos de contacto">
             <div *ngFor="let companies of companies">
               <div class="conteiner-data-3">
 
-                <tr><th> Nombre</th>
+                <tr><th>Nombre</th>
                   <th>Apellido</th>
                   <th>Mail</th>
                   <th>Telefono</th></tr>
@@ -54,7 +53,6 @@
 
                 </div>
             </div>           
- 
           </p-accordionTab>
         </p-accordion>
 

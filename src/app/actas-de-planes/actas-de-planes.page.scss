@@ -58,6 +58,30 @@
   font-weight: 700;
 }
 
+:host ::ng-deep .p-paginator {
+  background: #ffffff;
+  color: #6c757d;
+  border: solid #e9ecef;
+  border-width: 0;
+  padding: 0rem 1rem;
+  border-radius: 6px;
+}
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+  text-align: left;
+  padding: 1rem 1rem;
+  border: 1px solid #dee2e6;
+  border-width: 0 0 1px 0;
+  font-weight: 700;
+  color: #6c757d;
+  background: #f8f9fa;
+  transition: box-shadow 0.2s;
+}
+:host ::ng-deep .p-datatable .p-paginator-bottom {
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+  height: 3rem;
+}
+
 th {
   padding: 0.3rem 4.5rem;
   font-style: normal;

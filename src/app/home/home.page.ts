@@ -26,16 +26,13 @@ export class HomePage {
   }
 
   onSelect(event:any){
-    console.log(event);
     if(this.selecAmountPayments !=null && this.calculator.date != null ){
-      console.log("Estan los campos completados", this.selecAmountPayments);
       this.submitted = false; 
-      }
-      console.log("NO Estan los campos completados");
-    this.submitted = true;
+      }else {
+      this.submitted = true; }
   }
 
-    showDialog() {
+  showDialog() {
     this.display = true;
    }
 

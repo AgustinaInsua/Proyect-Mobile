@@ -19,6 +19,11 @@ export class MenuComponent implements OnInit {
         title: "Buscar Empresas",
         icon: "search",
         url: "/search-companies"
+      },
+      {
+        title: "Actas",
+        icon: "albums",
+        url: "/actas-de-planes"
       }
     ]
 

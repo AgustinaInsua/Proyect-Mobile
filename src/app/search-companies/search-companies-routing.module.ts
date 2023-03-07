@@ -36,7 +36,7 @@ const routes: Routes = [
       {
         path: 'actualizar-datos',       
         data: {
-          breadcrumb: "Actualizar actas"
+          breadcrumb: "Actualizar datos"
         },
         children: [
           {

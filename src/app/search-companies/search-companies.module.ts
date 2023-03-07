@@ -18,11 +18,6 @@ import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
-import {MenubarModule} from 'primeng/menubar';
-import {BreadcrumbModule} from 'primeng/breadcrumb';
-import {CalendarModule} from 'primeng/calendar';
-import {DropdownModule} from 'primeng/dropdown';
-import {DialogModule} from 'primeng/dialog';
 
 @NgModule({
   imports: [
@@ -39,12 +34,7 @@ import {DialogModule} from 'primeng/dialog';
     TranslateModule,
     MessageModule,
     MessagesModule,
-    ToastModule,
-    MenubarModule,
-    BreadcrumbModule,
-    CalendarModule,
-    DropdownModule,
-    DialogModule
+    ToastModule
   ], 
   providers: [MessageService],
   declarations: [SearchCompaniesPage]

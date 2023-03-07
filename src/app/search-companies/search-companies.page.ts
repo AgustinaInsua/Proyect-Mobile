@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 import { error } from 'console';
 import { MessageService } from 'primeng/api';
 import { CompanyDTO } from '../model/dto/companyDTO';
-import {MegaMenuItem,MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-search-companies',
@@ -24,9 +23,6 @@ export class SearchCompaniesPage implements OnInit {
   suggestionsCompanies!: string[] ;
   urlCompanies: any;
   urlCompaniesPDF:any;
-  megaItems!: MegaMenuItem [];
-  items!: MenuItem[];
-  display: boolean = false;
   value: any;
   selecAprobador: any;
   selecAmountPayments: any;
@@ -51,192 +47,6 @@ export class SearchCompaniesPage implements OnInit {
       this.messageService.add({severity:'error', summary:error.message, life:2000});
     }
   })
-
-  this.items = [
-    {
-      label: "Acciones",
-      items: [
-          {
-            label: "Guardar",
-            command: (event) => {
-              console.log("Guardar");
-          }},
-          {
-            label: "Cerrar",
-            command: (event) => {
-              console.log("Cerrar");
-          }},
-          {
-            label: "Cancelar",
-            command: (event) => {
-              console.log("Cancelar");
-          }},
-          {
-            label: "Salir",
-            command: (event) => {
-              console.log("Salir");
-          }}
-      ]
-    },
-    {
-      label: "Imprimir",
-      icon: "pi pi-fw pi-print",
-      items: [
-        {
-          label: "Resumen",
-          command: (event) => {
-           console.log("Imprimir resumen");
-        }
-      },
-        {
-          label: "Actas",
-          items:[
-            { label: "Acta", 
-              command: (event) => {
-                console.log("Imprimir Acta")
-              }
-            },
-            { label: "Acta Compactada", 
-              command: (event) => {
-                console.log("Imprimir Acta Acompactada")
-              }
-            }
-          ]
-        },
-        {
-          label: "Certificados",
-          items:[
-            { label: "Certificado", 
-              command: (event) => {
-                console.log("Imprimir Certificado")
-              }
-            },
-            { label: "Certificado Compactado", 
-              command: (event) => {
-                console.log("Imprimir Certificado Compactado")
-              }
-            }
-          ]},
-        {
-          label: "PDF Adhesion",
-          command: (event) => {
-           console.log("PDF Adhesion");
-        }}
-    ]
-    },
-    {
-      label: "Actualizaciones",
-      items: [
-        {
-          label: "Actualizar Datos",
-          command: (event) => {
-            this.showDialog();
-        }},
-        {
-          label: "Asoc. Fecha Calc. Int.",
-          command: (event) => {
-            this.showDialog();
-        }},
-        {
-          label: "Aprobar Fecha Calc. Int",
-          command: (event) => {
-            this.showDialog();
-        }},
-        {
-          label: "Calculadora",
-          command: (event) => {
-            this.showDialog();
-        }},
-        {
-          label: "Asoc. Fecha de Pago",
-          command: (event) => {
-            this.showDialog();
-        }},
-        {
-          label: "Asoc. Cheque",
-          command: (event) => {
-            this.showDialog();
-        }},
-        {
-          label: "Asoc. CBU General",
-          command: (event) => {
-            this.showDialog();
-        }},
-        {
-          label: "Aprobar Fecha de Acreditación",
-          command: (event) => {
-            this.showDialog();
-        }},
-        {
-          label: "Eliminar Fecha de Pago",
-          command: (event) => {
-            this.showDialog();
-        }}
-      ]
-    },
-    {
-      label: "Actualizaciones 2",
-      items: [
-        {
-          label: "Asociar",
-          items:[
-            { label: "Fecha Calc. Int.", 
-              command: (event) => {
-                console.log("Asociar Fecha Calc. Int.")
-              }
-            },
-            { label: "Fecha de Pago", 
-              command: (event) => {
-                console.log("Asociar Fecha de Pago")
-              }
-            },
-            { label: "Cheque", 
-              command: (event) => {
-                console.log("Asociar Cheque")
-              }
-            },
-            { label: "CBU General", 
-              command: (event) => {
-                console.log("Asociar CBU General")
-              }
-            }
-          ]},
-          {
-            label: "Aprobar",
-            items:[
-              { label: "Fecha Calc. Int.", 
-                command: (event) => {
-                  console.log("Asociar Fecha Calc. Int.")
-                }
-              },
-              { label: "Fecha de Acreditación", 
-                command: (event) => {
-                  console.log("Asociar Fecha de Pago")
-                }
-              }
-            ]},
-        {
-          label: "Actualizar Datos",
-          command: (event) => {
-            this.showDialog();
-        }},
-        {
-          label: "Calculadora",
-          command: (event) => {
-            this.showDialog();
-        }},
-        {
-          label: "Eliminar",
-          items:[
-            { label: "Fecha de Pago", 
-              command: (event) => {
-                console.log("Asociar Fecha Calc. Int.")
-              }
-            }
-          ]}
-      ]
-    }
-  ];
    }
 
   onFilter(event: any, table: Table){
@@ -256,9 +66,5 @@ export class SearchCompaniesPage implements OnInit {
   clear (table: Table){
     table.clear();
   }
-
-  showDialog() {
-    this.display = true;
 }
 
-}

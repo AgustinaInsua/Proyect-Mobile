@@ -3,28 +3,6 @@
   <app-header title="Buscar Empresas" icon="search"></app-header>
   <app-menu></app-menu>
   <ion-content>
-    <p-menubar [model]="items"></p-menubar>
-    <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '24vw', height: '35vw' }" position="center">
-      <ng-template pTemplate="header">
-          <h2>Calculadora</h2>
-      </ng-template>
-      <ng-template pTemplate="content">
-        <div class="inputs">
-          <label>Fecha de primer pago</label>
-          <p-calendar [(ngModel)]="value" [showIcon]="true" placeholder="Seleccione..."></p-calendar>
-          <label>Aprobador</label>
-          <p-dropdown [options]="aprobadores" [(ngModel)]="selecAprobador" placeholder="Seleccione..."></p-dropdown>
-          <label>Cantidad de pagos</label>
-          <p-dropdown [options]="amountPayments" [(ngModel)]="selecAmountPayments" placeholder="Seleccione..."></p-dropdown>
-          <label>Periocidad</label>
-          <p-dropdown [options]="periodicity" [(ngModel)]="selecPeriodicity" placeholder="Seleccione..."></p-dropdown>
-        </div>
-      </ng-template>
-      <ng-template pTemplate="footer">
-        <div class="buttonAcept"><p-button>Aceptar</p-button></div>
-          <div class="buttonCancel"><p-button>Cancelar</p-button></div>
-      </ng-template>
-    </p-dialog>
     <div class="containerFilters">
       <div class="containerFilters_inputs">
         <label for="inputCuit">{{ "INPUTS.CUIT" | translate}}</label>

@@ -6,7 +6,10 @@ import { ActasDePlanesPage } from './actas-de-planes.page';
 const routes: Routes = [
   {
     path: '',
-    component: ActasDePlanesPage
+    component: ActasDePlanesPage,
+    data: {
+      breadcrumb: 'Actas de planes'
+    }
   }
 ];
 

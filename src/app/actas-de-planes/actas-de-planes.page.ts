@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { ApiService } from '../service/api-service/api.service';
 import {MenuItem} from 'primeng/api';
+import { Table } from 'primeng/table';
+import { FIELDS_TABLE_COMPANY } from '../model/mock-fieldsTableCompany';
 
 @Component({
   selector: 'app-actas-de-planes',
@@ -12,6 +14,8 @@ import {MenuItem} from 'primeng/api';
 export class ActasDePlanesPage implements OnInit {
   items!: MenuItem[];
   companies!:any;
+  fieldsTableCompany = FIELDS_TABLE_COMPANY;
+  suggestionsCompanies!: string[] ;
   constructor(private router: Router,private messageService: MessageService,
     private apiService: ApiService) { }
 
@@ -163,5 +167,12 @@ export class ActasDePlanesPage implements OnInit {
   }
   showDialog(){
     console.log("Evento de click en el menu")
+  }
+
+  onFilter(event: any, table: Table){
+  }
+  
+  clear (table: Table){
+    table.clear();
   }
 }

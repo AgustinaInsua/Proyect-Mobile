@@ -24,14 +24,15 @@
 
 
               <tr><th>Empresa</th> 
-                <th>Alta AFIP</th> 
-                <th>Aprobador Fec.Intereses</th> 
-                <th>Aprobador Fec.Acreditacion</th></tr>
+                <th style="padding: 0rem 3rem;">Alta AFIP</th>
+                <th style="padding: 0rem 4rem;">Aprobador Fec.Intereses</th> 
+                <th style="padding: 0rem;">Aprobador Fec.Acreditacion</th></tr>
+              
 
                 <tr><td>{{companies.cuit}}</td>
-                <td>{{companies.altaAfip}}</td>
-                <td>{{companies.aprobadorFecIntereses}}</td>
-                <td>{{companies.aprobadorFecAcreditacion}}</td></tr> 
+                 <td style="padding: 0rem;" >{{companies.altaAfip}}</td>
+                 <td style="padding: 0rem;">{{companies.aprobadorFecIntereses}}</td>
+                <td style="padding: 0rem;">{{companies.aprobadorFecAcreditacion}}</td></tr> 
      
             </div>
        
@@ -55,7 +56,52 @@
             </div>           
           </p-accordionTab>
         </p-accordion>
+      </div>
 
+      <div class="mainTable">
+        <p-table
+          id="tableCompanies"
+          #dtCompanies
+          [value]="companies"
+          [tableStyle]="{ 'min-width': '50rem' }"
+          [paginator]="true"
+          [rows]="3"
+          [rowsPerPageOptions]="[1, 2, 3]"
+          [globalFilterFields]="['id', 'razonSocial', 'cuit', 'email', 'contactName', 'contactNumber']"
+          (onFilter)="onFilter($event, dtCompanies)"
+          selectionMode="single"
+          autocomplete="off"
+        >
+          <ng-template pTemplate="caption">
+            <h2>Plan de pagos</h2>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th
+                *ngFor="let column of fieldsTableCompany"
+                pSortableColumn="{{column.field}}"
+              >
+                {{column.title}}
+                <p-sortIcon field="{{column.field}}"></p-sortIcon>
+                <p-columnFilter
+                  type={{column.type}}
+                  field={{column.field}}
+                  display="menu"
+                ></p-columnFilter>
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-company let-i="rowIndex">
+            <tr>
+              <td>{{ company.id }}</td>
+              <td>{{ company.razonSocial }}</td>
+              <td>{{ company.cuit }}</td>
+              <td>{{ company.email }}</td>
+              <td>{{ company.contactName }}</td>
+              <td>{{ company.contactNumber }}</td>
+            </tr>
+          </ng-template>
+        </p-table>
       </div>
     </p-card>
   </ion-content>

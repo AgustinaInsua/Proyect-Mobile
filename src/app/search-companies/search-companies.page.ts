@@ -244,13 +244,13 @@ export class SearchCompaniesPage implements OnInit {
 
   searchActas(i:string) {
     this.companyDTO.setCompanyInformationID(this.companies[parseInt(i)].id);
-    this.router.navigate(['boletas-emitidas']);
+    this.router.navigate(['search-companies/boletas-emitidas']);
   }
 
   editData(i:string){
     this.companyDTO.setCompanyInformation(this.companies[parseInt(i)]);
     this.urlCompanies = ApiService.apiURLCompanies + this.companyDTO.getCompanyInformationMail();
-    this.router.navigate(['actualizar-datos']);
+    this.router.navigate(['search-companies/actualizar-datos']);
   }
 
   clear (table: Table){

@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
+  },/*
   {
     path: 'actualizar-datos',
     loadChildren: () => import('./actualizar-datos/actualizar-datos.module').then( m => m.ActualizarDatosPageModule)
@@ -23,7 +23,7 @@ const routes: Routes = [
   {
     path: 'boletas-emitidas',
     loadChildren: () => import('./boletas-emitidas/boletas-emitidas.module').then( m => m.BoletasEmitidasPageModule)
-  },
+  },*/
   { 
     //Este es solo para pruebas directas en menu
     path: 'menu',
@@ -36,7 +36,8 @@ const routes: Routes = [
   {
     path: 'aux-table',
     loadChildren: () => import('./aux-table/aux-table.module').then( m => m.AuxTablePageModule)
-  },  {
+  },
+  {
     path: 'actas-de-planes',
     loadChildren: () => import('./actas-de-planes/actas-de-planes.module').then( m => m.ActasDePlanesPageModule)
   }

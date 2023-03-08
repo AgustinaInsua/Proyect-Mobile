@@ -9,7 +9,7 @@
         <p-accordion [multiple]="true">
           <p-accordionTab header="Datos de la empresa">
 
-            <div *ngFor="let companies of companies">
+            <div *ngFor="let companies of records">
             <div class="conteiner-data-1">
 
             <tr><th>Acta</th> 
@@ -21,7 +21,7 @@
                <th>Aprobador Fec.Int</th> 
                <th>Aprobador Fec.Acr</th></tr> 
 
-               <tr><td>{{companies.acta}}</td>
+               <tr><td>{{companies.nroActa}}</td>
                 <td>{{companies.estado}}</td>
                 <td>{{companies.fechaApertura}}</td>
                 <td>{{companies.fiscalizador}}</td>
@@ -35,7 +35,7 @@
 
           </p-accordionTab>
           <p-accordionTab header="Datos de contacto">
-            <div *ngFor="let companies of companies">
+            <div *ngFor="let companies of records">
               <div class="conteiner-data-3">
 
                 <tr><th>Nombre</th>
@@ -58,12 +58,11 @@
         <p-table
           id="tableCompanies"
           #dtCompanies
-          [value]="companies"
+          [value]="periods"
           [tableStyle]="{ 'min-width': '50rem' }"
           [paginator]="true"
           [rows]="3"
           [rowsPerPageOptions]="[1, 2, 3]"
-          [globalFilterFields]="['id', 'razonSocial', 'cuit', 'email', 'contactName', 'contactNumber']"
           (onFilter)="onFilter($event, dtCompanies)"
           selectionMode="single"
           autocomplete="off"
@@ -74,27 +73,28 @@
           <ng-template pTemplate="header">
             <tr>
               <th
-                *ngFor="let column of fieldsTableCompany"
-                pSortableColumn="{{column.field}}"
-              >
+                *ngFor="let column of fieldsTableRecord"
+                pSortableColumn="{{column.field}}">
                 {{column.title}}
-                <p-sortIcon field="{{column.field}}"></p-sortIcon>
-                <p-columnFilter
-                  type={{column.type}}
-                  field={{column.field}}
-                  display="menu"
-                ></p-columnFilter>
               </th>
             </tr>
           </ng-template>
-          <ng-template pTemplate="body" let-company let-i="rowIndex">
+          <ng-template pTemplate="body" let-period let-i="rowIndex">
             <tr>
-              <td>{{ company.id }}</td>
-              <td>{{ company.razonSocial }}</td>
-              <td>{{ company.cuit }}</td>
-              <td>{{ company.email }}</td>
-              <td>{{ company.contactName }}</td>
-              <td>{{ company.contactNumber }}</td>
+              <td>{{ period.periodo }}</td>
+              <td>{{ period.cantEmpleados }}</td>
+              <td>{{ period.valorCuota }}</td>
+              <td>{{ period.empleadosAuditados }}</td>
+              <td>{{ period.monto}}</td>
+              <td>{{ period.empApagar }}</td>
+              <td>{{ period.montoApagar}}</td>
+              <td>{{ period.vtoOriginal }}</td>
+              <td>
+                <div class="optionsButtons">
+                  <p-button icon="pi pi-dollar"></p-button>
+                  <p-button icon="pi pi-exclamation-triangle"></p-button>
+                </div>
+              </td>
             </tr>
           </ng-template>
         </p-table>

@@ -36,7 +36,6 @@
    
  }
  
-
  :host ::ng-deep .p-button{
    color: gray;
    background: white;
@@ -54,6 +53,21 @@
    font-size: 1rem;
    border-radius: 50px;
 }
+
+:host ::ng-deep .p-button {
+   color: gray;
+   background: white;
+   border: white;
+   padding: 0.75rem 1.25rem;
+   font-size: 1rem;
+   border-radius: 50px;
+}
+
+:host ::ng-deep .p-button:hover{
+   color: gray;
+   background: #dee2e6;
+   border: 1px solid #dee2e6;
+  }
 
 #search{
    height: 0px; 
@@ -77,15 +91,6 @@
    position: relative;
  }
 
- :host ::ng-deep .p-button {
-   color: gray;
-   background: white;
-   border: white;
-   padding: 0.75rem 1.25rem;
-   font-size: 1rem;
-   border-radius: 50px;
-}
-
 .info {
  height: 0px;
  top: -20px;
@@ -95,11 +100,6 @@
  opacity: 0;
 }
 
-:host ::ng-deep .p-button:hover{
- color: gray;
- background: #dee2e6;
- border: 1px solid #dee2e6;
-}
 
 div#search:hover div.info, div#pencil:hover div.info, div#print:hover div.info{
  opacity: 1;

@@ -4,8 +4,8 @@ import { MessageService } from 'primeng/api';
 import { ApiService } from '../service/api-service/api.service';
 import {MenuItem} from 'primeng/api';
 import { Table } from 'primeng/table';
-import { FIELDS_TABLE_COMPANY } from '../model/mock-fieldsTableCompany';
 import { RecordDTO } from '../model/dto/recordDTO';
+import { FIELDS_TABLE_RECORD } from '../model/mock-fieldsTableRecord';
 
 @Component({
   selector: 'app-actas-de-planes',
@@ -14,16 +14,17 @@ import { RecordDTO } from '../model/dto/recordDTO';
 })
 export class ActasDePlanesPage implements OnInit {
   items!: MenuItem[];
-  companies!:any;
-  fieldsTableCompany = FIELDS_TABLE_COMPANY;
+  records!:any;
+  periods!:any;
+  fieldsTableRecord = FIELDS_TABLE_RECORD;
   suggestionsCompanies!: string[] ;
   constructor(private router: Router,private messageService: MessageService,
     private apiService: ApiService, private recordDTO: RecordDTO) { }
 
   ngOnInit() {
-    this.apiService.get(ApiService.apiURLCompanies +"/64640/actas").subscribe({next: companies => {
-      this.recordDTO.setRecordByCompany(companies);
-      console.log(companies);
+    this.apiService.get(ApiService.apiURLCompanies +"/64640/actas").subscribe({next: records => {
+      this.recordDTO.setRecordByCompany(records);
+      console.log(records);
     },
     error: (error: { message: any; }) =>{
       console.log(error.message);
@@ -31,9 +32,10 @@ export class ActasDePlanesPage implements OnInit {
     }
   });
 
-  this.apiService.get(ApiService.apiURLCompanies +"/64640/actas/56540").subscribe({next: companies => {
+  this.apiService.get(ApiService.apiURLCompanies +"/64640/actas/56540").subscribe({next: records => {
     this.recordDTO.setPeriodByRecord("56540");
-    this.companies= companies;
+    this.records= records;
+    this.periods = this.recordDTO.getPeriodByRecord();
   },
   error: (error: { message: any; }) =>{
     console.log(error.message);

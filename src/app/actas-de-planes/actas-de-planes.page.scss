@@ -83,6 +83,40 @@
   height: 3rem;
 }
 
+:host ::ng-deep .p-button{
+  color: gray;
+  background: white;
+  border: white;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+:host ::ng-deep .p-button:hover{
+  color: gray;
+  background: #dee2e6;
+  border: 1px solid #dee2e6;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+:host ::ng-deep .p-button {
+  color: gray;
+  background: white;
+  border: white;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+:host ::ng-deep .p-button:hover{
+  color: gray;
+  background: #dee2e6;
+  border: 1px solid #dee2e6;
+ }
+
+
 th {
   padding: 0.3rem  2.7rem;
   font-style: normal;
@@ -116,7 +150,6 @@ h2 {
 .mainTable {
   margin-top: 3%;
 }
-
 
 @media screen and (max-width: 1300px) {
 

@@ -16,6 +16,7 @@
   color: #6c757d;
   background: #f8f9fa;
   font-weight: 700;
+  font-size: 18px;
   border-radius: 6px;
   transition: box-shadow 0.2s;
 }
@@ -83,7 +84,7 @@
 }
 
 th {
-  padding: 0.3rem 4.5rem;
+  padding: 0.3rem  2.7rem;
   font-style: normal;
   line-height: 14px;
   color: #434b52d1;
@@ -91,8 +92,17 @@ th {
 }
 
 td {
-  padding: 0.3rem 4.5rem;
+  padding: 0.3rem 2.7rem;
   text-align: center;
+}
+
+h2 {
+  margin-top: 5px;
+  text-align: center;
+  color: #67b5cf;
+  font-size: 18px;
+  font-weight: 700;
+
 }
 
 .container-data-1 {
@@ -102,9 +112,16 @@ td {
 .data-1 {
   margin-left: -3%;
 }
-h2 {
-  margin-top: 5px;
-  text-align: center;
-  font-size: 24px;
-  color: #67b5cf;
+
+.mainTable {
+  margin-top: 3%;
 }
+
+
+@media screen and (max-width: 1300px) {
+
+  .container-data-2{
+    display: block;
+  }
+  }
+

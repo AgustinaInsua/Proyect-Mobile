@@ -40,7 +40,15 @@ const routes: Routes = [
   {
     path: 'actas-de-planes',
     loadChildren: () => import('./actas-de-planes/actas-de-planes.module').then( m => m.ActasDePlanesPageModule)
+  },  {
+    path: 'search-records',
+    loadChildren: () => import('./search-records/search-records.module').then( m => m.SearchRecordsPageModule)
+  },
+  {
+    path: 'search-plans',
+    loadChildren: () => import('./search-plans/search-plans.module').then( m => m.SearchPlansPageModule)
   }
+
 
 
 

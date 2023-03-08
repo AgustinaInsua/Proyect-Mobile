@@ -52,7 +52,6 @@ export class HeaderComponent implements OnInit {
     for (const child of children) {
       const routeURL: string = child.snapshot.url.map(segment => segment.path).join('/');
       if (routeURL !== '') {
-        console.log(routeURL);
         routerLink += `/${routeURL}`;
       }
 

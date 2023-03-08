@@ -5,6 +5,7 @@ import { ApiService } from '../service/api-service/api.service';
 import {MenuItem} from 'primeng/api';
 import { Table } from 'primeng/table';
 import { FIELDS_TABLE_COMPANY } from '../model/mock-fieldsTableCompany';
+import { RecordDTO } from '../model/dto/recordDTO';
 
 @Component({
   selector: 'app-actas-de-planes',
@@ -17,11 +18,11 @@ export class ActasDePlanesPage implements OnInit {
   fieldsTableCompany = FIELDS_TABLE_COMPANY;
   suggestionsCompanies!: string[] ;
   constructor(private router: Router,private messageService: MessageService,
-    private apiService: ApiService) { }
+    private apiService: ApiService, private recordDTO: RecordDTO) { }
 
   ngOnInit() {
-    this.apiService.get(ApiService.apiURLCompaniesActas).subscribe({next: companies => {
-      this.companies = companies;
+    this.apiService.get(ApiService.apiURLCompanies +"/64640/actas").subscribe({next: companies => {
+      this.recordDTO.setRecordByCompany(companies);
       console.log(companies);
     },
     error: (error: { message: any; }) =>{
@@ -29,6 +30,17 @@ export class ActasDePlanesPage implements OnInit {
       this.messageService.add({severity:'error', summary:error.message, life:2000});
     }
   });
+
+  this.apiService.get(ApiService.apiURLCompanies +"/64640/actas/56540").subscribe({next: companies => {
+    this.recordDTO.setPeriodByRecord("56540");
+    this.companies= companies;
+  },
+  error: (error: { message: any; }) =>{
+    console.log(error.message);
+    this.messageService.add({severity:'error', summary:error.message, life:2000});
+  }
+});
+
   this.items = [
     {
       label: "Imprimir",

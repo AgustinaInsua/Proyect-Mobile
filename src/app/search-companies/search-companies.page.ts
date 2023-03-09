@@ -40,10 +40,8 @@ export class SearchCompaniesPage implements OnInit {
     this.urlCompaniesPDF = ApiService.apiPdfURL;
     this.apiService.get(ApiService.apiURLCompanies).subscribe({next: companies => {
       this.companies = companies;
-      console.log(companies);
     },
     error: (error: { message: any; }) =>{
-      console.log(error.message);
       this.messageService.add({severity:'error', summary:error.message, life:2000});
     }
   })

@@ -71,11 +71,32 @@
             <td>{{ company.cuit }}</td>
             <td >{{ company.amountEmployees }}</td>
             <td>
-              <div class="optionsButtons">              
-                <p-button  icon="pi pi-search"></p-button>
-                <p-button icon="pi pi-pencil"></p-button>
-                <p-button  icon="pi pi-search"></p-button>
-                <p-button  icon="pi pi-print"></p-button>
+              <div class="optionsButtons">  
+                <div class="viewPlans">
+                  <div class="info"> 
+                    <p id="viewPlans">Ver planes</p>
+                  </div>
+                  <p-button  icon="pi pi-book"></p-button>
+                </div>
+                <div class="edit">
+                  <div class="info">
+                    <p id="editarActas">Editar</p>               
+                  </div>
+                  <p-button icon="pi pi-pencil"></p-button>
+                </div>
+                <div class="search">
+                  <div class="info">
+                    <p id="searchActa">Buscar acta</p>    
+                  </div>
+                  <p-button  icon="pi pi-search"></p-button>
+                </div>
+                <div class="print">
+                  <div class="info">
+                    <p id="print">Imprimir</p> 
+                  </div>
+                  <p-button  icon="pi pi-print"></p-button>
+                </div>
+                            
               </div>             
             </td>
           </tr>

@@ -67,13 +67,13 @@
           id="tableCompanies"
           #dtCompanies
           [value]="periods"
-          [tableStyle]="{ 'min-width': '50rem' }"
           [paginator]="true"
           [rows]="3"
           [rowsPerPageOptions]="[1, 2, 3]"
           (onFilter)="onFilter($event, dtCompanies)"
           selectionMode="single"
           autocomplete="off"
+          responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{'min-width': '50rem'}"
         >
           <ng-template pTemplate="caption">
             <h2>Plan de pagos</h2>
@@ -87,17 +87,17 @@
               </th>
             </tr>
           </ng-template>
-          <ng-template pTemplate="body" let-period let-i="rowIndex">
+          <ng-template pTemplate="body" let-period let-i="rowIndex" >
             <tr>
-              <td>{{ period.periodo }}</td>
-              <td>{{ period.cantEmpleados }}</td>
-              <td>{{ period.valorCuota }}</td>
-              <td>{{ period.empleadosAuditados }}</td>
-              <td>{{ period.monto}}</td>
-              <td>{{ period.empApagar }}</td>
-              <td>{{ period.montoApagar}}</td>
-              <td>{{ period.vtoOriginal }}</td>
-              <td>
+              <td><span class="p-column-title">Periodo</span>{{ period.periodo }}</td>
+              <td><span class="p-column-title">Cant.Empledos</span>{{ period.cantEmpleados }}</td>
+              <td><span class="p-column-title">Valor cuota</span>{{ period.valorCuota }}</td>
+              <td><span class="p-column-title">Empleados Auditados</span>{{ period.empleadosAuditados }}</td>
+              <td><span class="p-column-title">Monto</span>{{ period.monto}}</td>
+              <td><span class="p-column-title">Emp.Apagar</span>{{ period.empApagar }}</td>
+              <td><span class="p-column-title">Monto.Apagar</span>{{ period.montoApagar}}</td>
+              <td><span class="p-column-title">Vto.Original</span>{{ period.vtoOriginal }}</td>
+              <td><span class="p-column-title">Acciones</span>
                 <div class="optionsButtons">
                   <p-button icon="pi pi-dollar"></p-button>
                   <p-button icon="pi pi-exclamation-triangle"></p-button>

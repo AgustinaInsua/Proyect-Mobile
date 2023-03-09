@@ -122,18 +122,24 @@
  }
 
 
-th {
-  padding: 0.3rem  2.7rem;
-  font-style: normal;
-  line-height: 14px;
-  color: #434b52d1;
-  text-align: center;
+
+ .conteiner-data-1 label , .conteiner-data-3 label{
+  padding: 1rem 2.4rem;
+  display: inline;
+  font-weight: 700;
+  color: #6c757d;
 }
 
-td {
-  padding: 0.3rem 2.7rem;
-  text-align: center;
+.conteiner-data-1 {
+  display: inline-flex;
+  flex-direction: row;
 }
+
+td{
+ padding: 1rem 2.3rem;
+ text-align: left;
+}
+
 
 h2 {
   margin-top: 5px;
@@ -141,12 +147,8 @@ h2 {
   color: #67b5cf;
   font-size: 18px;
   font-weight: 700;
-
 }
 
-.container-data-1 {
-  margin-top: -2%;
-}
 
 .data-1 {
   margin-left: -3%;
@@ -156,10 +158,109 @@ h2 {
   margin-top: 3%;
 }
 
-@media screen and (max-width: 1300px) {
+.conteiner-data-1 .conteiner-data-2 .altaAfip{
+   padding: 1rem 6rem;
+}
+.conteiner-data-1 .fiscalizador {
+  padding: 1rem 5rem;
+}
 
-  .container-data-2{
-    display: block;
-  }
+@media screen and (max-width: 1320px) {
+
+  .conteiner-data-1 label {
+    padding: 1rem 1.5rem;
+    display: inline;
   }
 
+  td{
+    padding: 0.5rem 1.3rem;
+    text-align: left;
+   }
+   .conteiner-data-1 .conteiner-data-2 .altaAfip{
+    padding: 1rem 5rem;
+   }
+   .conteiner-data-1 .fiscalizador {
+   padding: 1rem 4rem;
+   }
+}
+
+@media screen and (max-width: 1065px) {
+  .conteiner-data-1 label {
+    padding: 1rem 3rem;
+    display: inline;
+  }
+  td{
+    padding: 0.5rem 2.7rem;
+    text-align: left;
+   }
+   .conteiner-data-1 {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .conteiner-data-1 .conteiner-data-2 .altaAfip{
+    padding: 1rem 7rem;
+   }
+   .conteiner-data-1 .fiscalizador {
+   padding: 1rem 6rem;
+   }
+  
+}
+
+@media screen and (max-width: 800px) {
+  .conteiner-data-1 label {
+    padding: 1rem 2rem;
+    display: inline;
+  }
+  td{
+    padding: 0.5rem 1.7rem;
+    text-align: left;
+   }
+   .conteiner-data-1 {
+    display: inline-flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .conteiner-data-1 label {
+    padding: 1rem 1rem;
+    display: inline;
+  }
+  td{
+    padding: 0.5rem 0.7rem;
+    text-align: left;
+   }
+   .conteiner-data-1 {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .conteiner-data-1 .conteiner-data-2 .altaAfip{
+    padding: 1rem 5rem;
+   }
+   .conteiner-data-1 .fiscalizador {
+   padding: 1rem 3rem;
+   }
+}
+
+@media screen and (max-width: 540px) {
+  .conteiner-data-1 label {
+    padding: 1rem 0.5rem;
+    display: inline;
+  }
+  td{
+    padding: 0.5rem 0.3rem;
+    text-align: left;
+   }
+   .conteiner-data-1 {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .conteiner-data-1 .conteiner-data-2 .altaAfip{
+    padding: 1rem 4rem;
+   }
+   .conteiner-data-1 .fiscalizador {
+   padding: 1rem 2rem;
+   }
+}

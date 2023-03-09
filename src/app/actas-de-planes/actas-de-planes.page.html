@@ -10,27 +10,35 @@
           <p-accordionTab header="Datos de la empresa">
 
             <div *ngFor="let companies of records">
-            <div class="conteiner-data-1">
 
-            <tr><th>Acta</th> 
-               <th>Estado</th> 
-               <th>Fecha Apertura</th> 
-               <th>Fiscalizador</th>
-               <th>Empresa</th> 
-               <th>Alta AFIP</th>
-               <th>Aprobador Fec.Int</th> 
-               <th>Aprobador Fec.Acr</th></tr> 
+          <div class="conteiner-data-1">
+          
+            <div class="conteiner-data-4">
+            <label>Acta</label> 
+               <label>Estado</label> 
+               <label>Fecha Apertura</label> 
+               <label>Fiscalizador</label>
+           <tr><td>{{companies.nroActa}}</td>
+               <td>{{companies.estado}}</td>
+               <td>{{companies.fechaApertura}}</td>
+               <td class="fiscalizador">{{companies.fiscalizador}}</td>
+           </tr> 
+          </div>
+           <div class="conteiner-data-2">
+            <label>Empresa</label>
+            <label>Alta AFIP</label>
+            <label>Aprob Fec.Int </label>
+            <label>Aprob Fec.Acr</label>
+            <td>{{companies.cuit}}</td>
+            <td class="altaAfip">{{companies.altaAfip}}</td>
+            <td>{{companies.aprobadorFecIntereses}}</td>
+            <td>{{companies.aprobadorFecAcreditacion}}</td> 
+           </div>
+              
 
-               <tr><td>{{companies.nroActa}}</td>
-                <td>{{companies.estado}}</td>
-                <td>{{companies.fechaApertura}}</td>
-                <td>{{companies.fiscalizador}}</td>
-                <td>{{companies.cuit}}</td>
-                <td>{{companies.altaAfip}}</td>
-                <td>{{companies.aprobadorFecIntereses}}</td>
-                <td>{{companies.aprobadorFecAcreditacion}}</td></tr> 
+
               </div>
-            </div>
+         </div>
        
 
           </p-accordionTab>
@@ -38,15 +46,15 @@
             <div *ngFor="let companies of records">
               <div class="conteiner-data-3">
 
-                <tr><th>Nombre</th>
-                  <th>Apellido</th>
-                  <th>Mail</th>
-                  <th>Telefono</th></tr>
+                <label>Nombre</label>
+                <label>Apellido</label>
+                <label>Mail</label>
+                <label>Telefono</label>
 
-               <tr><td>{{companies.contactName}}</td>
+               <td>{{companies.contactName}}</td>
                 <td>{{companies.contactLastName}}</td>
                 <td> {{companies.email}}</td>
-                <td>{{companies.contactNumber}}</td></tr> 
+                <td>{{companies.contactNumber}}</td> 
 
                 </div>
             </div>           

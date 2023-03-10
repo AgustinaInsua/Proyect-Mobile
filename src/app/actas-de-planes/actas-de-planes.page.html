@@ -99,8 +99,8 @@
               <td><span class="p-column-title">Vto.Original</span>{{ period.vtoOriginal }}</td>
               <td><span class="p-column-title">Acciones</span>
                 <div class="optionsButtons">
-                  <p-button icon="pi pi-dollar"></p-button>
-                  <p-button icon="pi pi-exclamation-triangle"></p-button>
+                  <p-button (onClick)="showDialogPago()" icon="pi pi-dollar"></p-button>
+                  <p-button (onClick)="showDialogDeuda()" icon="pi pi-exclamation-triangle"></p-button>
                 </div>
               </td>
             </tr>
@@ -109,7 +109,9 @@
       </div>
     </p-card>
 
-    <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '24vw', height: '32vw' }" position="center">
+  <!--CALCULADORA MODAL-->
+   
+  <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '24vw', height: '32vw' }" position="center">
       <ng-template pTemplate="header">
           <div class="titleCalculadora"><h2>Calculadora</h2></div>
       </ng-template>
@@ -147,5 +149,64 @@
       </ng-template>
     </p-dialog>
   
+  <!--BOTON PAGO MODAL-->
+
+    <p-dialog [(visible)]="displayPago" [modal]="true" [style]="{ width: '45vw', height: '15vw' }" position="center">
+      <div class="mainTable">
+        <p-table
+          id="tableCompanies"
+          #dtCompanies
+          (onFilter)="onFilter($event, dtCompanies)"
+          selectionMode="single"
+          autocomplete="off"
+          responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{'min-width': '15rem'}"
+        >
+          <ng-template pTemplate="caption">
+            <h2>Plan de pagos</h2>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Periodo</th>
+              <th>Cant.Empledos</th>
+              <th>Valor cuota</th>
+              <th>Empleados Auditados</th>       
+              <th>Vto.Original</th>       
+              <th>Acciones</th>       
+            </tr>
+          </ng-template>
+          
+        </p-table>
+      </div>
+    </p-dialog>
+
+      <!--BOTON PAGO MODAL-->
+
+      <p-dialog [(visible)]="displayDeuda" [modal]="true" [style]="{ width: '45vw', height: '15vw' }" position="center">
+        <div class="mainTable">
+          <p-table
+            id="tableCompanies"
+            #dtCompanies
+            (onFilter)="onFilter($event, dtCompanies)"
+            selectionMode="single"
+            autocomplete="off"
+            responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{'min-width': '15rem'}"
+          >
+            <ng-template pTemplate="caption">
+              <h2>Plan de pagos</h2>
+            </ng-template>
+            <ng-template pTemplate="header">
+              <tr>
+                <th>Periodo</th>
+                <th>Cant.Empledos</th>
+                <th>Valor cuota</th>
+                <th>Empleados Auditados</th>       
+                <th>Vto.Original</th>       
+                <th>Acciones</th>       
+              </tr>
+            </ng-template>
+            
+          </p-table>
+        </div>
+      </p-dialog>
   </ion-content>
 </ion-app>

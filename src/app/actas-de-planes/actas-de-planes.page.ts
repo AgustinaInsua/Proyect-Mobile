@@ -19,6 +19,8 @@ export class ActasDePlanesPage implements OnInit {
 
   //calculadora
   display: boolean = false;  
+  displayPago:boolean = false;  
+  displayDeuda:boolean = false;  
   submitted: boolean = true;  
   value: any;
   minDate!: Date;
@@ -183,7 +185,7 @@ export class ActasDePlanesPage implements OnInit {
         {
           label: "Calculadora",
           command: (event) => {
-            this.showDialog();
+            this.showDialogCalculator();
         }},
         {
           label: "Eliminar",
@@ -199,9 +201,15 @@ export class ActasDePlanesPage implements OnInit {
   ];
   }
 
-  showDialog(){
+  showDialogCalculator(){
     this.display = true;
     console.log("Evento de click en el menu")
+  }
+  showDialogPago(){
+    this.displayPago = true;
+  }
+  showDialogDeuda(){
+    this.displayDeuda = true;
   }
   CancelShowDialog(){
     this.display = false;

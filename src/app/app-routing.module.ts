@@ -37,18 +37,22 @@ const routes: Routes = [
     path: 'aux-table',
     loadChildren: () => import('./aux-table/aux-table.module').then( m => m.AuxTablePageModule)
   },
-  {
+/*  {
     path: 'actas-de-planes',
     loadChildren: () => import('./actas-de-planes/actas-de-planes.module').then( m => m.ActasDePlanesPageModule)
-  },  {
+  },
+  {
     path: 'search-records',
     loadChildren: () => import('./search-records/search-records.module').then( m => m.SearchRecordsPageModule)
-  },
+  },*/
   {
     path: 'search-plans',
     loadChildren: () => import('./search-plans/search-plans.module').then( m => m.SearchPlansPageModule)
-  }
-
+  },
+  {
+    path: 'search-records',
+    loadChildren: () => import('./search-records/search-records.module').then( m => m.SearchRecordsPageModule)
+  },
 
 
 

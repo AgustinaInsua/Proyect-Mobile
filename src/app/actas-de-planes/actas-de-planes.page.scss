@@ -223,7 +223,7 @@ h2 {
 }
 
 @media screen and (max-width: 675px) {
-  .conteiner-data-1 label {
+  .conteiner-data-1 label, .conteiner-data-3 label {
     padding: 1rem 1rem;
     display: inline;
   }
@@ -251,6 +251,27 @@ h2 {
   }
   td{
     padding: 0.5rem 0.3rem;
+    text-align: left;
+   }
+   .conteiner-data-1 {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .conteiner-data-1 .conteiner-data-2 .altaAfip{
+    padding: 1rem 4rem;
+   }
+   .conteiner-data-1 .fiscalizador {
+   padding: 1rem 3rem;
+   }
+}
+
+@media screen and (max-width: 440px) {
+  .conteiner-data-1 label {
+    padding: 1rem 0.3rem;
+    display: inline;
+  }
+  td{
+    padding: 0.5rem 0.1rem;
     text-align: left;
    }
    .conteiner-data-1 {

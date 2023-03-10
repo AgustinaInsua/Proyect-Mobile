@@ -33,7 +33,7 @@ export class SearchPlansPage implements OnInit {
 
   navToSearchRecords(){
     //this.router.navigate(['search-records']);
-    this.routerService.navTo("search-records");
+    this.routerService.navTo("search-plans/search-records");
   }
 
   onFilter(event: any, table: Table){

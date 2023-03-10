@@ -14,6 +14,6 @@ export class SearchRecordsPage implements OnInit {
   }
 
   paymentRecords (){
-    this.router.navigate(['actas-de-planes']);
+    this.router.navigate(['search-plans/search-records/actas-de-planes']);
   }
 }

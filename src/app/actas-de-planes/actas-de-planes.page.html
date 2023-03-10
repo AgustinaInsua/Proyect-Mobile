@@ -109,7 +109,7 @@
       </div>
     </p-card>
 
-    <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '30vw', height: '38vw' }" position="center">
+    <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '24vw', height: '32vw' }" position="center">
       <ng-template pTemplate="header">
           <div class="titleCalculadora"><h2>Calculadora</h2></div>
       </ng-template>
@@ -139,13 +139,11 @@
           <label>Periocidad</label>
           <p-dropdown [options]="calculator.periodicity"  placeholder="Seleccione..."></p-dropdown>
         </div>
-  
-        <div class="buttonAcept"><p-button [disabled]="submitted">Aceptar</p-button></div>
-        <div class="buttonCancel"><p-button>Cancelar</p-button></div>
       </ng-template>
       
       <ng-template pTemplate="footer">
-  
+        <div class="buttonAcept"><p-button (click)="CancelShowDialog()" [disabled]="submitted">Aceptar</p-button></div>
+        <div class="buttonCancel"><button (click)="CancelShowDialog()">Cancelar</button></div>
       </ng-template>
     </p-dialog>
   

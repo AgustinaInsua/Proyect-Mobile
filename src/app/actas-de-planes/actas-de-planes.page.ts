@@ -203,6 +203,9 @@ export class ActasDePlanesPage implements OnInit {
     this.display = true;
     console.log("Evento de click en el menu")
   }
+  CancelShowDialog(){
+    this.display = false;
+  }
 
   selectEvent(event:any){
     if(this.selecAmountPayments !=null && this.calculator.date != null ){

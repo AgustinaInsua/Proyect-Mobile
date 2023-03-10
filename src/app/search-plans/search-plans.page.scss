@@ -55,7 +55,7 @@
     opacity: 0;
    }
 
-.viewPlans:hover div.info, .search:hover div.info, .edit:hover div.info, .print:hover div.info{
+.viewPlans:hover .info, .search:hover .info, .edit:hover .info, .print:hover .info{
     opacity: 1;
 }
 

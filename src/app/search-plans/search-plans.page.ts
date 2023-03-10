@@ -1,3 +1,4 @@
+import { RoutingService } from './../service/routing-service/routing.service';
 import { MessageService } from 'primeng/api';
 import { ApiService } from './../service/api-service/api.service';
 import { FIELDS_TABLE_PLANS } from './../model/mock-fieldsTablePlans';
@@ -14,7 +15,11 @@ import { Company } from '../model/Company';
 export class SearchPlansPage implements OnInit {
   fieldsTablePlans = FIELDS_TABLE_PLANS;
   companies !: Company[];
-  constructor(private router: Router, private apiService: ApiService, private messageService: MessageService) { }
+  constructor(
+    private router: Router,
+    private apiService: ApiService,
+    private messageService: MessageService,
+    private routerService: RoutingService) { }
 
   ngOnInit() {
     this.apiService.get(ApiService.apiURLCompanies).subscribe({next: companies => {
@@ -26,9 +31,11 @@ export class SearchPlansPage implements OnInit {
   })
   }
 
-  searchRecords(){
-    this.router.navigate(['search-records']);
+  navToSearchRecords(){
+    //this.router.navigate(['search-records']);
+    this.routerService.navTo("search-records");
   }
+
   onFilter(event: any, table: Table){
   }
 

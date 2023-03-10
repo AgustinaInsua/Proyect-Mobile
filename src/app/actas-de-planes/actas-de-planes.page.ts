@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { catchError } from 'rxjs';
+import { Calculadora } from './../model/Calculadora';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { ApiService } from '../service/api-service/api.service';
@@ -6,6 +8,7 @@ import {MenuItem} from 'primeng/api';
 import { Table } from 'primeng/table';
 import { RecordDTO } from '../model/dto/recordDTO';
 import { FIELDS_TABLE_RECORD } from '../model/mock-fieldsTableRecord';
+import { CalculatorPage } from '../components/calculator/calculator.page';
 
 @Component({
   selector: 'app-actas-de-planes',
@@ -13,6 +16,18 @@ import { FIELDS_TABLE_RECORD } from '../model/mock-fieldsTableRecord';
   styleUrls: ['./actas-de-planes.page.scss'],
 })
 export class ActasDePlanesPage implements OnInit {
+
+  //calculadora
+  display: boolean = false;  
+  submitted: boolean = true;  
+  value: any;
+  minDate!: Date;
+  selecAprobador: any;
+  selecAmountPayments: any;
+  selecPeriodicity: any;
+  isRequerid:boolean =true;
+  calculator!: Calculadora;
+  //actas
   items!: MenuItem[];
   records!:any;
   periods!:any;
@@ -22,6 +37,10 @@ export class ActasDePlanesPage implements OnInit {
     private apiService: ApiService, private recordDTO: RecordDTO) { }
 
   ngOnInit() {
+
+    //calculadora
+    this.calculator = new Calculadora();
+    //acta
     this.apiService.get(ApiService.apiURLCompanies +"/64640/actas").subscribe({next: records => {
       this.recordDTO.setRecordByCompany(records);
       console.log(records);
@@ -159,7 +178,7 @@ export class ActasDePlanesPage implements OnInit {
         {
           label: "Actualizar Datos",
           command: (event) => {
-            this.showDialog();
+          //  this.showDialog();
         }},
         {
           label: "Calculadora",
@@ -179,10 +198,20 @@ export class ActasDePlanesPage implements OnInit {
     }
   ];
   }
+
   showDialog(){
+    this.display = true;
     console.log("Evento de click en el menu")
   }
 
+  selectEvent(event:any){
+    if(this.selecAmountPayments !=null && this.calculator.date != null ){
+      this.submitted = false; 
+      }else {
+      this.submitted = true; }
+  }
+
+ 
   onFilter(event: any, table: Table){
   }
   

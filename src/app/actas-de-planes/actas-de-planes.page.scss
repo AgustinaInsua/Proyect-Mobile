@@ -325,3 +325,85 @@ h2 {
       }
   }
 }
+.titleCalculadora {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #495057;
+  padding-left: 20px;
+}
+
+.inputs{
+  margin-top: 1%;
+}
+
+.inputs label{
+  display: block;
+  margin-top: 4%;
+}
+
+.buttonCancel {
+  float: left;
+}
+.buttonAcept {
+  float: right;
+}
+
+.buttonAcept, .buttonCancel {
+  margin-top: 3%;
+}
+
+.errors {
+  color: red;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size:medium;
+  text-align: left;
+  padding: 0em 1em;
+  margin-top: -3px;
+}
+
+:host ::ng-deep .p-dialog .p-dialog-header {
+  border-bottom: 0 none;
+  background: #ffffff;
+  color: #343a40;
+  padding: 0rem;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+:host ::ng-deep .p-dropdown ,:host ::ng-deep .p-calendar{
+  margin-top: 0%;
+  background-color: #D9D9D9;
+}
+
+:host ::ng-deep .p-calendar{
+  background-color: #D9D9D9;
+}
+
+:host ::ng-deep .p-inputtext {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  color: #495057;
+  background: #D9D9D9;
+  padding: 0.75rem 0.75rem;
+  border: 1px solid #ced4da;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 6px;
+}
+
+:host ::ng-deep .p-button {
+  color: #ffffff;
+  background: #67B5CF;
+  border: 1px solid #67B5CF;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  border-radius: 6px;
+}
+
+:host ::ng-deep .p-dropdown .p-dropdown-label {
+  background: transparent;
+  border: 0 none;
+  width: 205px;
+}

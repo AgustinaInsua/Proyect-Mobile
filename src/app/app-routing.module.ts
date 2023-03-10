@@ -52,7 +52,11 @@ const routes: Routes = [
   {
     path: 'search-records',
     loadChildren: () => import('./search-records/search-records.module').then( m => m.SearchRecordsPageModule)
+  },  {
+    path: 'calculator',
+    loadChildren: () => import('./components/calculator/calculator.module').then( m => m.CalculatorPageModule)
   },
+
 
 
 

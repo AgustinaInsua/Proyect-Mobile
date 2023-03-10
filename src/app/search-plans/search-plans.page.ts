@@ -1,5 +1,5 @@
 import { RoutingService } from './../service/routing-service/routing.service';
-import { MessageService } from 'primeng/api';
+import { MessageService, MenuItem } from 'primeng/api';
 import { ApiService } from './../service/api-service/api.service';
 import { FIELDS_TABLE_PLANS } from './../model/mock-fieldsTablePlans';
 import { Router } from '@angular/router';
@@ -15,6 +15,7 @@ import { Company } from '../model/Company';
 export class SearchPlansPage implements OnInit {
   fieldsTablePlans = FIELDS_TABLE_PLANS;
   companies !: Company[];
+  items!: MenuItem[];
   constructor(
     private router: Router,
     private apiService: ApiService,
@@ -22,6 +23,14 @@ export class SearchPlansPage implements OnInit {
     private routerService: RoutingService) { }
 
   ngOnInit() {
+    this.items = [
+      {label: 'Acta', command: () => {
+          
+      }},
+      {label: 'Acta Compacta', command: (e: any) => {
+          console.log(e);
+      }}
+  ];
     this.apiService.get(ApiService.apiURLCompanies).subscribe({next: companies => {
       this.companies = companies;
     },
@@ -29,6 +38,7 @@ export class SearchPlansPage implements OnInit {
       this.messageService.add({severity:'error', summary:error.message, life:2000});
     }
   })
+  
   }
 
   navToSearchRecords(){

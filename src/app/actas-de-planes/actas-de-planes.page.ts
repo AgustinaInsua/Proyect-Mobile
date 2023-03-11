@@ -33,6 +33,7 @@ export class ActasDePlanesPage implements OnInit {
   items!: MenuItem[];
   records!:any;
   periods!:any;
+  companies!:any;
   fieldsTableRecord = FIELDS_TABLE_RECORD;
   suggestionsCompanies!: string[] ;
   constructor(private router: Router,private messageService: MessageService,
@@ -63,6 +64,8 @@ export class ActasDePlanesPage implements OnInit {
     this.messageService.add({severity:'error', summary:error.message, life:2000});
   }
 });
+
+
 
   this.items = [
     {

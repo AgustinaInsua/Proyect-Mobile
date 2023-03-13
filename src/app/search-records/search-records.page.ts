@@ -1,3 +1,4 @@
+import { ApiService } from './../service/api-service/api.service';
 import { FIELDS_TABLE_RECORDS } from './../model/mock-fieldsTableRecords';
 import { Table } from 'primeng/table';
 import { Router } from '@angular/router';
@@ -11,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 export class SearchRecordsPage implements OnInit {
   records : any;
   fieldsTableRecords = FIELDS_TABLE_RECORDS;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private apiService: ApiService) { }
   
   ngOnInit() {
+    this.apiService.get(ApiService.apiURLCompanies + "/64640/actas").subscribe({next: records => {
+      this.records = records;
+    }});
   }
 
   paymentRecords (){

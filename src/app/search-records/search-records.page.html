@@ -51,15 +51,21 @@
         </ng-template>
         <ng-template pTemplate="body" let-company let-i="rowIndex">
           <tr >
-            <td>{{ company.razonSocial }}</td>
-            <td>{{ company.cuit }}</td>
-            <td >{{ company.amountEmployees }}</td>
+            <td>{{ company.nroActa }}</td>
+            <td>{{ company.estado }}</td>
+            <td >{{ company.fechaApertura }}</td>
+            <td >{{ company.fechaCierre }}</td>
+            <td >{{ company.usuarioCierre }}</td>
+            <td >{{ company.fechaAprobacion }}</td>
+            <td >{{ company.cuotaDesde }}</td>
+            <td >{{ company.cuotaHasta }}</td>
             <td>
               <div class="optionsButtons">  
-                <div class="viewPlans">
+                <div class="viewRecord">
                   <div class="info"> 
-                    <p id="viewPlans">Ver planes</p>
-                  </div>         
+                    <p id="viewSearchs">Ver</p>
+                  </div>
+                  <p-button (click)="paymentRecords()" icon="pi pi-book"></p-button>         
               </div>  
               </div>         
             </td>
@@ -67,7 +73,6 @@
         </ng-template>
       </p-table>
       </div>
-    <button pButton type="button" (click)="paymentRecords()" label="Actas de planes de pago"></button>
   </ion-content>
 </ion-app>
 

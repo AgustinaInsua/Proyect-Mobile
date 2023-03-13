@@ -15,7 +15,10 @@
     font-size: 1rem;
     border-radius: 50px;
  }
-
+ :host ::ng-deep .p-datatable .p-datatable-thead > tr > th{
+   text-align:center;
+ }
+ 
  :host ::ng-deep .p-datatable .p-datatable-tbody > tr > td{
     text-align:center;
     padding: 0;
@@ -43,4 +46,25 @@ p{
     position: relative;
     top: -3px;
     height: 60px;
+}
+
+.filter{
+   margin-left: 2%;
+}
+
+.filter__dropdown{
+   width: 18%;
+   display: inline-flex;
+   position: relative;
+}
+
+.filter__label{
+      width: 100%;
+      display: inline;
+      font-size: 20px;
+   
+}
+
+:host ::ng-deep .p-dropdown{
+   width: 100%;
 }

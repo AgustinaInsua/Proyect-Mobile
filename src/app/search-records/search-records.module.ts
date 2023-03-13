@@ -10,6 +10,7 @@ import { SearchRecordsPageRoutingModule } from './search-records-routing.module'
 import { SearchRecordsPage } from './search-records.page';
 import {ButtonModule} from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import {DropdownModule} from 'primeng/dropdown';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { TableModule } from 'primeng/table';
     ComponentsModule,
     ButtonModule,
     TableModule,
-    ComponentsModule
+    ComponentsModule,
+    DropdownModule
   ],
   declarations: [SearchRecordsPage]
 })

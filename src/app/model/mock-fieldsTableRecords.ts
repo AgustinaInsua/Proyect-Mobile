@@ -6,7 +6,7 @@ export const FIELDS_TABLE_RECORDS = [
     },
     {
         title: "Estado",
-        field: "status",
+        field: "estado",
         type: "text"
       },
       {

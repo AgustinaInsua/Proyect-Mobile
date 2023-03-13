@@ -228,6 +228,24 @@ h2 {
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 6rem;
    }
+
+   :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 60vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+:host ::ng-deep .p-dialog .p-dialog-content {
+  background: #ffffff;
+  color: #495057;
+  margin-top: -3%;
+  width: 60vw;
+  height: 30vw;
+  padding: 0 0.2rem;
+} 
   
 }
 
@@ -255,6 +273,27 @@ h2 {
     display: inline-flex;
     flex-direction: column;
   }
+
+  :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 55vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    width: 55vw;
+    height: 50vw;
+    display: inline-table;
+    padding: 0 0.2rem;
+  } 
+
+
 }
 
 @media screen and (max-width: 675px) {
@@ -286,6 +325,24 @@ h2 {
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 4rem;
    }
+   :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 70vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    width: 70vw;
+    height: 80vw;
+    display: inline-table;
+    padding: 0 0.2rem;
+  } 
 }
 
 @media screen and (max-width: 540px) {
@@ -317,6 +374,24 @@ h2 {
     padding: 1rem 0.2rem;
     text-align: left;
   }
+  :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 70vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    width: 70vw;
+    height: 80vw;
+    display: inline-table;
+    padding: 0 0.2rem;
+  } 
 }
 
 @media screen and (max-width: 440px) {
@@ -348,12 +423,50 @@ h2 {
     padding: 1rem 0.2rem;
     text-align: left;
   }
+  :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 80vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    width: 80vw;
+    height: 80vw;
+    display: inline-table;
+    padding: 0 0.2rem;
+  } 
 }
 
 :host ::ng-deep {    
   .p-datatable-responsive-demo .p-datatable-tbody > tr > td .p-column-title {
       display: none;
   }
+}
+
+@media screen and (max-width: 960px) {
+  :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 70vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    width: 70vw;
+    height: 100vw;
+    padding: 0 0.2rem;
+  } 
 }
 
 @media screen and (max-width: 40rem) {

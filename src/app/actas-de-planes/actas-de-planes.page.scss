@@ -432,6 +432,12 @@ h2 {
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
 }
+:host ::ng-deep  .p-dialog .p-dialog-content {
+  background: #ffffff;
+  color: #495057;
+  margin-top: -3%;
+  padding: 0 0.2rem;
+}
 
 :host ::ng-deep .p-dropdown ,:host ::ng-deep .p-calendar{
   margin-top: 0%;

@@ -7,7 +7,7 @@ import { ApiService } from '../service/api-service/api.service';
 import {MenuItem} from 'primeng/api';
 import { Table } from 'primeng/table';
 import { RecordDTO } from '../model/dto/recordDTO';
-import { FIELDS_TABLE_RECORD } from '../model/mock-fieldsTableRecord';
+import { FIELDS_TABLE_DEBTS, FIELDS_TABLE_PAYMENTS, FIELDS_TABLE_RECORD } from '../model/mock-fieldsTableRecord';
 import { CalculatorPage } from '../components/calculator/calculator.page';
 
 @Component({
@@ -30,11 +30,14 @@ export class ActasDePlanesPage implements OnInit {
   isRequerid:boolean =true;
   calculator!: Calculadora;
   //actas
+  selectedPeriod:any;
   items!: MenuItem[];
   records!:any;
   periods!:any;
   companies!:any;
   fieldsTableRecord = FIELDS_TABLE_RECORD;
+  fieldsTableDebts = FIELDS_TABLE_DEBTS;
+  fieldsTablePayments = FIELDS_TABLE_PAYMENTS;
   suggestionsCompanies!: string[] ;
   constructor(private router: Router,private messageService: MessageService,
     private apiService: ApiService, private recordDTO: RecordDTO) { }
@@ -217,11 +220,21 @@ error: (error: { message: any; }) =>{
     this.display = true;
     console.log("Evento de click en el menu")
   }
-  showDialogPago(){
+
+  showDialogPago(i: string){
     this.displayPago = true;
+    this.selectedPeriod = this.periods[parseInt(i)];
+    console.log(this.selectedPeriod);
+    console.log(parseInt(i));
+
   }
-  showDialogDeuda(){
+
+  showDialogDeuda(i: string){
     this.displayDeuda = true;
+    this.selectedPeriod = this.periods[parseInt(i)];
+    console.log(this.selectedPeriod);
+    console.log(parseInt(i));
+
   }
   CancelShowDialog(){
     this.display = false;

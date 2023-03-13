@@ -25,7 +25,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.langService.getActualLang());
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -34,12 +33,10 @@ export class HeaderComponent implements OnInit {
     this.home = {icon: 'pi pi-home', routerLink: '/home'};
   }
   changeLangEs(lang: Languages){
-    this.langService.setLang(lang);
-    console.log(this.langService.getActualLang());  }
+    this.langService.setLang(lang);  }
 
   changeLangEn(lang: Languages){
     this.langService.setLang(lang);
-    console.log(this.langService.getActualLang());
   }
 
   private createBreadcrumbs(route: ActivatedRoute, routerLink: string = '', breadcrumbs: MenuItem[] = []): MenuItem[] {

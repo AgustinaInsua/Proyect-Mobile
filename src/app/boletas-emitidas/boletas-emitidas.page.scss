@@ -11,29 +11,57 @@
  }
  
  .companies__flex{
-    width: 100%;
-    height: 47px;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
- }
-
- .containerFilters{
+   width: 100%;
+   height: 47px;
    display: flex;
-   margin-left: 10px;
- }
+   flex-direction: row;
+   align-items: stretch;
+}
 
- .containerFilters_inputs{
-   margin-right: 1%;
+.containerFilters{
+  display: flex;
+  margin-left: 1%;
+}
+
+.containerFilters_inputs{
+  margin-right: 2%;
+  margin-bottom: 1%;
+  display: inline-block;
+  width: 19%;
+  height: 65px;
+  input {
+     width: 100%;
+     height: 40px;
+  }
+  label {
+     display: block;
+     width: 100%;
+     margin-left: 2%;
+     margin-top: 3%;
+     font-size: 20px;
+
+  }
+  
+}
+.containerFilters_estado {
+   margin-left: 36%;
    margin-bottom: 1%;
    display: inline-block;
+   width: 19%;
+   height: 65px;
    input {
       width: 100%;
       height: 40px;
-      
-
    }
- }
+   label {
+      display: block;
+      width: 100%;
+      margin-left: 2%;
+      margin-top: 3%;
+      font-size: 20px;
+ 
+   }
+}
 
  @media screen and (max-width:480px){
    h2{

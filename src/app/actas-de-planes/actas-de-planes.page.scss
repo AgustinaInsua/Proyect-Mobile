@@ -120,8 +120,18 @@
   background: #dee2e6;
   border: 1px solid #dee2e6;
  }
+ 
+:host ::ng-deep .p-paginator .p-dropdown .p-dropdown-label {
+  background: transparent;
+  border: 0 none;
+  width: 20px;
+}
 
-
+:host ::ng-deep .p-calendar-w-btn .p-datepicker-trigger {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-radius: 0px;
+}
 
  .conteiner-data-1 label  {
   padding: 1rem 2.4rem;

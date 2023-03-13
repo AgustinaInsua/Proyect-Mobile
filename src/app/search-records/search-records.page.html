@@ -3,6 +3,70 @@
     <app-menu></app-menu>
   <ion-content>
     <app-title title="Buscar Actas" icon="documents"></app-title>
+    <div>
+      <label>Seleccione un estado: </label>
+    </div>
+    <div class="mainTable">
+      <p-table
+        id="tableCompanies"
+        #dtCompanies
+        [value]="records"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [paginator]="true"
+        [rows]="3"
+        [rowsPerPageOptions]="[1, 2, 3]"
+        [globalFilterFields]="['razonSocial', 'cuit']"
+        (onFilter)="onFilter($event, dtCompanies)"
+        selectionMode="single"
+        autocomplete="off"
+      >
+        <ng-template pTemplate="caption">
+          <div class="companies__flex">
+            <div class="flex__clear">
+              <button
+                pButton
+                label="Limpiar"
+                class="p-button-outlined"
+                icon="pi pi-filter-slash"
+                (click)="clear(dtCompanies)"
+              ></button>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th
+              *ngFor="let column of fieldsTableRecords"
+              pSortableColumn="{{column.field}}"
+            >
+              {{column.title}}
+              <p-sortIcon field="{{column.field}}"></p-sortIcon>
+              <p-columnFilter
+                type={{column.type}}
+                field={{column.field}}
+                display="menu"
+              ></p-columnFilter>
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-company let-i="rowIndex">
+          <tr >
+            <td>{{ company.razonSocial }}</td>
+            <td>{{ company.cuit }}</td>
+            <td >{{ company.amountEmployees }}</td>
+            <td>
+              <div class="optionsButtons">  
+                <div class="viewPlans">
+                  <div class="info"> 
+                    <p id="viewPlans">Ver planes</p>
+                  </div>         
+              </div>  
+              </div>         
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+      </div>
     <button pButton type="button" (click)="paymentRecords()" label="Actas de planes de pago"></button>
   </ion-content>
 </ion-app>

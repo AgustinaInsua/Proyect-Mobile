@@ -9,6 +9,7 @@ import { SearchRecordsPageRoutingModule } from './search-records-routing.module'
 
 import { SearchRecordsPage } from './search-records.page';
 import {ButtonModule} from 'primeng/button';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import {ButtonModule} from 'primeng/button';
     SearchRecordsPageRoutingModule,
     ComponentsModule,
     ButtonModule,
+    TableModule,
     ComponentsModule
   ],
   declarations: [SearchRecordsPage]

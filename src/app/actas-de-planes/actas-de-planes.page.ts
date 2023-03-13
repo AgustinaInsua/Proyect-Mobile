@@ -41,7 +41,7 @@ export class ActasDePlanesPage implements OnInit {
 
   ngOnInit() {
 
-    //calculadora
+    //ToDo:llevarlo a un componente externo
     this.calculator = new Calculadora();
     //acta
     this.apiService.get(ApiService.apiURLCompanies +"/64640/actas").subscribe({next: records => {
@@ -63,6 +63,15 @@ export class ActasDePlanesPage implements OnInit {
     console.log(error.message);
     this.messageService.add({severity:'error', summary:error.message, life:2000});
   }
+});
+
+this.apiService.get(ApiService.apiURLCompanies+"/id/64640").subscribe({next: companies => {
+  this.companies = companies;
+},
+error: (error: { message: any; }) =>{
+  console.log(error.message);
+  this.messageService.add({severity:'error', summary:error.message, life:2000});
+}
 });
 
 

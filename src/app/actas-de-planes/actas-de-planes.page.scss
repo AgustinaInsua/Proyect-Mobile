@@ -123,11 +123,35 @@
 
 
 
- .conteiner-data-1 label , .conteiner-data-3 label{
+ .conteiner-data-1 label  {
   padding: 1rem 2.4rem;
   display: inline;
   font-weight: 700;
   color: #6c757d;
+}
+
+.conteiner-data-2 label  {
+  padding: 1rem 2.4rem;
+  display: inline;
+  font-weight: 700;
+  color: #6c757d;
+}
+
+.conteiner-data-3 label{
+  padding: 1rem 3.5rem;
+  display: inline;
+  font-weight: 700;
+  color: #6c757d;
+}
+
+.conteiner-data-3 td {
+  padding: 1rem 3rem;
+  text-align: left;
+}
+
+.conteiner-data-3 .email {
+  padding: 0rem 0rem;
+  text-align: left;
 }
 
 .conteiner-data-1 {
@@ -159,10 +183,10 @@ h2 {
 }
 
 .conteiner-data-1 .conteiner-data-2 .altaAfip{
-   padding: 1rem 6rem;
+   padding: 1rem 4rem;
 }
 .conteiner-data-1 .fiscalizador {
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
 }
 
 @media screen and (max-width: 1350px) {
@@ -177,7 +201,7 @@ h2 {
     text-align: left;
    }
    .conteiner-data-1 .conteiner-data-2 .altaAfip{
-    padding: 1rem 5rem;
+    padding: 1rem 3rem;
    }
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 4rem;
@@ -199,7 +223,7 @@ h2 {
   }
 
   .conteiner-data-1 .conteiner-data-2 .altaAfip{
-    padding: 1rem 7rem;
+    padding: 1rem 4rem;
    }
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 6rem;
@@ -212,6 +236,17 @@ h2 {
     padding: 1rem 2rem;
     display: inline;
   }
+
+  .conteiner-data-3 label{
+    padding: 1rem 2.4rem;
+    display: inline;
+  }
+
+  .conteiner-data-3 td{
+    padding: 1rem 1.5rem;
+    text-align: left;
+  }
+
   td{
     padding: 0.5rem 1.7rem;
     text-align: left;
@@ -235,9 +270,18 @@ h2 {
     display: inline-flex;
     flex-direction: column;
   }
+  .conteiner-data-3 label{
+    padding: 1rem 2rem;
+    display: inline;
+  }
+
+  .conteiner-data-3 td{
+    padding: 1rem 1rem;
+    text-align: left;
+  }
 
   .conteiner-data-1 .conteiner-data-2 .altaAfip{
-    padding: 1rem 5rem;
+    padding: 1rem 2rem;
    }
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 4rem;
@@ -258,11 +302,21 @@ h2 {
     flex-direction: column;
   }
   .conteiner-data-1 .conteiner-data-2 .altaAfip{
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
    }
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 3rem;
    }
+
+   .conteiner-data-3 label{
+    padding: 1rem 1.2rem;
+    display: inline;
+  }
+
+  .conteiner-data-3 td{
+    padding: 1rem 0.2rem;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 440px) {
@@ -279,11 +333,21 @@ h2 {
     flex-direction: column;
   }
   .conteiner-data-1 .conteiner-data-2 .altaAfip{
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
    }
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 3rem;
    }
+
+   .conteiner-data-3 label{
+    padding: 1rem 1rem;
+    display: inline;
+  }
+
+  .conteiner-data-3 td{
+    padding: 1rem 0.2rem;
+    text-align: left;
+  }
 }
 
 :host ::ng-deep {    

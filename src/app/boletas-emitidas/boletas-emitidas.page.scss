@@ -63,6 +63,22 @@
    }
 }
 
+:host ::ng-deep .p-button {
+   color: #ffffff;
+   background: #67B5CF;
+   border: 1px solid #67B5CF;
+   padding: 0.75rem 1.25rem;
+   font-size: 1rem;
+   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+   border-radius: 20px;
+ }
+ :host ::ng-deep .p-button:hover{
+   color: gray;
+   background: #dee2e6;
+   border: 1px solid #dee2e6;
+  }
+  
+
  @media screen and (max-width:480px){
    h2{
       font-size: small;

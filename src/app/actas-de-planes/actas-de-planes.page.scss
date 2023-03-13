@@ -246,6 +246,16 @@ h2 {
   height: 30vw;
   padding: 0 0.2rem;
 } 
+:host ::ng-deep .p-dialog .p-dialog-footer {
+  border-top: 0 none;
+  background: #ffffff;
+  color: #495057;
+  width: 60vw;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  text-align: right;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
   
 }
 
@@ -280,6 +290,7 @@ h2 {
     background: #ffffff;
     color: #343a40;
     padding: 0rem;
+    margin-left: -40%;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
   }
@@ -291,7 +302,21 @@ h2 {
     height: 50vw;
     display: inline-table;
     padding: 0 0.2rem;
+    margin-left: -40%;
   } 
+
+  :host ::ng-deep .p-dialog .p-dialog-footer {
+    border-top: 0 none;
+    background: #ffffff;
+    color: #495057;
+    width: 70vw;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    text-align: right;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    margin-left: -40%;
+
+  }
 
 
 }
@@ -343,6 +368,16 @@ h2 {
     display: inline-table;
     padding: 0 0.2rem;
   } 
+  :host ::ng-deep .p-dialog .p-dialog-footer {
+    border-top: 0 none;
+    background: #ffffff;
+    color: #495057;
+    width: 70vw;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    text-align: right;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
 }
 
 @media screen and (max-width: 540px) {

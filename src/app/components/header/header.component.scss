@@ -6,3 +6,29 @@
 .sp:checked {
     background-color: #67B5CF;
 }
+
+@media screen and (max-width:768px){
+    :host ::ng-deep .p-breadcrumb {
+        font-size: small;
+        padding: 1rem 1.5%;
+
+        ul li.p-breadcrumb-chevron {
+            font-size: small;
+        }
+       
+    }
+ }
+
+ @media screen and (max-width:480px){
+    :host ::ng-deep .p-breadcrumb {
+        padding: 0.7rem 1.5%;      
+    }
+ }
+ 
+
+ @media screen and (max-width:380px){
+    :host ::ng-deep .p-breadcrumb {
+        font-size: x-small;
+        padding: 0.5rem 0rem;
+    }
+ }

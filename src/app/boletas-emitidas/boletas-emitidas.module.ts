@@ -13,6 +13,8 @@ import {ButtonModule} from 'primeng/button';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {InputTextModule} from 'primeng/inputtext';
 import { HttpClientModule } from '@angular/common/http';
+import {DropdownModule} from 'primeng/dropdown';
+import {DialogModule} from 'primeng/dialog';
 
 @NgModule({
   imports: [
@@ -25,7 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     AutoCompleteModule,
     InputTextModule,
     HttpClientModule,
-    ComponentsModule
+    ComponentsModule,
+    DropdownModule,
+    DialogModule
   ],
   declarations: [BoletasEmitidasPage]
 })

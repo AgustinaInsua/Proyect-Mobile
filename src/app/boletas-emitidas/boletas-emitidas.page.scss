@@ -84,7 +84,14 @@
    border-spacing: 0px;
    width: 100%;
 }
-
+:host ::ng-deep .p-dialog {
+   display: inline-block;
+   flex-direction: column;
+   pointer-events: auto;
+   max-height: 90%;
+   transform: scale(1);
+   position: relative;
+}
 
 :host ::ng-deep .p-datatable-header ng-star-inserted {
    margin-top: 3%;
@@ -99,7 +106,81 @@
    margin-top: 2%;
    font-weight: 700;
 }
+
+:host ::ng-deep .p-dialog .p-dialog-header {
+   border-bottom: 0 none;
+   width: 50vw;
+   background: #ffffff;
+   color: #343a40;
+   padding: 1rem;
+   border-top-right-radius: 6px;
+   border-top-left-radius: 6px;
+ }
+ :host ::ng-deep .p-dialog .p-dialog-content {
+   background: #ffffff;
+   color: #495057;
+   margin-top: -3%;
+   width: 50vw;
+   height: 10vw;
+   display: flex;
+   padding: 0 0.2rem;
+}
+ :host ::ng-deep .p-dialog .p-dialog-footer {
+   border-top: 0 none;
+   background: #ffffff;
+   color: #495057;
+   width: 50vw;
+   padding: 0 1.5rem 1.5rem 1.5rem;
+   text-align: right;
+   border-bottom-right-radius: 6px;
+   border-bottom-left-radius: 6px;
+ }
+
+ :host ::ng-deep .p-card .p-card-body {
+   padding: 0.3rem;
+ }
+ :host ::ng-deep .p-datatable .p-datatable-header {
+   background: #f8f9fa;
+   color: #343a40;
+   border: 1px solid #dee2e6;
+   border-width: 1px 0 1px 0;
+   padding: 0.2rem;
+   font-weight: 700;
+ }
  
+ :host ::ng-deep .p-paginator {
+   background: #ffffff;
+   color: #6c757d;
+   border: solid #e9ecef;
+   border-width: 0;
+   padding: 0rem 1rem;
+   border-radius: 6px;
+ }
+ :host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+   text-align: left;
+   padding: 1rem 1rem;
+   border: 1px solid #dee2e6;
+   border-width: 0 0 1px 0;
+   font-weight: 700;
+   color: #6c757d;
+   background: #f8f9fa;
+   transition: box-shadow 0.2s;
+ }
+ :host ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+   text-align: left;
+   border: 1px solid #dee2e6;
+   border-width: 0 0 1px 0;
+   padding: 0.5rem 1rem;
+ }
+ :host ::ng-deep .p-datatable .p-paginator-bottom {
+   border-width: 0 0 1px 0;
+   border-radius: 0;
+   height: 3rem;
+ }
+  :host ::ng-deep.p-dialog .p-dialog-header-icons {
+   padding: 0.5rem;
+   margin-top: -2%;
+}
 @media screen and (min-width: 1921px){
    
    :host {
@@ -113,11 +194,51 @@
       font-size: 24px;
    }
 }
+
 }
 
-
+@media screen and (max-width: 1200px){
+   
+:host ::ng-deep .p-dialog .p-dialog-header {
+   border-bottom: 0 none;
+   width: 70vw;
+   background: #ffffff;
+   color: #343a40;
+   margin-left: -40%;
+   padding: 1rem;
+   border-top-right-radius: 6px;
+   border-top-left-radius: 6px;
+ }
+ :host ::ng-deep .p-dialog .p-dialog-content {
+   background: #ffffff;
+   color: #495057;
+   margin-top: -3%;
+   margin-left: -40%;
+   width: 70vw;
+   height: 20vw;
+   padding: 0 0.2rem;
+}
+}
 
 @media screen and (max-width:960px){
+
+   :host ::ng-deep .p-dialog .p-dialog-header {
+      border-bottom: 0 none;
+      width: 70vw;
+      background: #ffffff;
+      color: #343a40;
+      padding: 1rem;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+    :host ::ng-deep .p-dialog .p-dialog-content {
+      background: #ffffff;
+      color: #495057;
+      margin-top: -3%;
+      width: 70vw;
+      height: 20vw;
+      padding: 0 0.2rem;
+   }
    .containerFilters_inputs{
       width: 35%;
       height: 80px;
@@ -143,6 +264,94 @@
          height: 40px;
       }
    } 
+   :host ::ng-deep .p-dialog .p-dialog-header {
+      border-bottom: 0 none;
+      width: 80vw;
+      margin-left: -40%;
+      background: #ffffff;
+      color: #343a40;
+      padding: 1rem;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+    :host ::ng-deep .p-dialog .p-dialog-content {
+      background: #ffffff;
+      color: #495057;
+      margin-left: -40%;
+      margin-top: -3%;
+      width: 80vw;
+      height: 25vw;
+      padding: 0 0.2rem;
+   }
+}
+
+@media screen and (max-width:680px){
+
+   :host ::ng-deep .p-dialog .p-dialog-header {
+      border-bottom: 0 none;
+      width: 80vw;
+
+      background: #ffffff;
+      color: #343a40;
+      padding: 1rem;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+    :host ::ng-deep .p-dialog .p-dialog-content {
+      background: #ffffff;
+      color: #495057;
+
+      margin-top: -3%;
+      width: 80vw;
+      height: 30vw;
+      padding: 0 0.2rem;
+   }
+}
+
+@media screen and (max-width:580px){
+
+   :host ::ng-deep .p-dialog .p-dialog-header {
+      border-bottom: 0 none;
+      width: 80vw;
+
+      background: #ffffff;
+      color: #343a40;
+      padding: 1rem;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+    :host ::ng-deep .p-dialog .p-dialog-content {
+      background: #ffffff;
+      color: #495057;
+
+      margin-top: -3%;
+      width: 80vw;
+      height: 30vw;
+      padding: 0 0.2rem;
+   }
+}
+
+@media screen and (max-width:520px){
+
+   :host ::ng-deep .p-dialog .p-dialog-header {
+      border-bottom: 0 none;
+      width: 80vw;
+
+      background: #ffffff;
+      color: #343a40;
+      padding: 1rem;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+    :host ::ng-deep .p-dialog .p-dialog-content {
+      background: #ffffff;
+      color: #495057;
+
+      margin-top: -3%;
+      width: 80vw;
+      height: 30vw;
+      padding: 0 0.2rem;
+   }
 }
 @media screen and (max-width:480px){
    .companies__flex{
@@ -191,5 +400,24 @@
       label {
          font-size: 19px;
       }
+   }
+   :host ::ng-deep .p-dialog .p-dialog-header {
+      border-bottom: 0 none;
+      width: 90vw;
+      background: #ffffff;
+      color: #343a40;
+      margin-left: -50%;
+      padding: 1rem;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+    :host ::ng-deep .p-dialog .p-dialog-content {
+      background: #ffffff;
+      color: #495057;
+      margin-top: -3%;
+      margin-left: -50%;
+      width: 90vw;
+      height: 40vw;
+      padding: 0 0.2rem;
    }
 }

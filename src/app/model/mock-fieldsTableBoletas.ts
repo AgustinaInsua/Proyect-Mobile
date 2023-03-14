@@ -30,3 +30,32 @@ export const FIELDS_TABLE_BOLETA = [
         field: "actions",
         type: "text"
       }]
+
+      export const FIELDS_TABLE_BOLETA_MODAL = [
+        {
+          title: "Fecha Pago Declarada",
+          field: "fechaPagoDeclarada",
+          type: "text"
+        },
+        {
+            title: "Fecha Pago Real",
+            field: "fechaPagoReal",
+            type: "text"
+          },
+          {
+            title: "Monto Basico",
+            field: "montoBasico",
+            type: "text"
+          },
+          {
+            title: "Monto Intereses",
+            field: "montoIntereses",
+            type: "text"
+          },
+          {
+            title: "Monto Total",
+            field: "montoTotal",
+            type: "text"
+          }
+
+          ]

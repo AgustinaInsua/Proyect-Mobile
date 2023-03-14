@@ -133,6 +133,11 @@
   border-radius: 0px;
 }
 
+:host ::ng-deep inputs ng-star-inserted {
+  margin-top: 1%;
+  padding: 1rem 1rem;
+}
+
  .conteiner-data-1 label  {
   padding: 1rem 2.4rem;
   display: inline;
@@ -335,7 +340,7 @@ h2 {
     width: 55vw;
     height: 50vw;
     display: inline-table;
-    padding: 0 0.2rem;
+    padding: 1rem 1.5rem;
     margin-left: -40%;
   } 
 
@@ -628,6 +633,7 @@ h2 {
 
 .inputs{
   margin-top: 1%;
+  padding: 1rem 1.5rem;
 }
 
 .inputs label{

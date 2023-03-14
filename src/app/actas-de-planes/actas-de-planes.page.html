@@ -100,8 +100,8 @@
               <td><span class="p-column-title">Vto.Original</span>{{ period.vtoOriginal }}</td>
               <td><span class="p-column-title">Acciones</span>
                 <div class="optionsButtons">
-                  <p-button [class.selected]="period === selectedPeriod" (onClick)="showDialogPago(i)" icon="pi pi-dollar"></p-button>
-                  <p-button [class.selected]="period === selectedPeriod" (onClick)="showDialogDeuda(i)" icon="pi pi-exclamation-triangle"></p-button>
+                  <p-button [class.selected]="period === selectedPeriod" (onClick)="showDialogPago(period)" icon="pi pi-dollar"></p-button>
+                  <p-button [class.selected]="period === selectedPeriod" (onClick)="showDialogDeuda(period)" icon="pi pi-exclamation-triangle"></p-button>
                 </div>
               </td>
             </tr>
@@ -155,8 +155,7 @@
     <p-dialog [(visible)]="displayPago" [modal]="true" [style]="{ width: '45vw', height: '15vw' }">
       <div class="mainTable">
         <p-table
-          [value]="periods"
-          [(selection)]="selectedPeriod"
+          [value]="selectedPeriod"
           responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{'min-width': '15rem'}"
         >
           <ng-template pTemplate="caption">
@@ -171,13 +170,13 @@
               </th>
             </tr>
           </ng-template>
-          <ng-template pTemplate="body">
+          <ng-template pTemplate="body" let-period>
             <tr>
-              <td><span class="p-column-title">Fecha Pago</span>{{ selectedPeriod.fechaPago }}</td>
-              <td><span class="p-column-title">Nro Cheque/CBU</span>{{ selectedPeriod.nroChequeCBU }}</td>
-              <td><span class="p-column-title">Importe</span>{{ selectedPeriod.importe }}</td>
-              <td><span class="p-column-title">Fecha Acreditacion</span>{{ selectedPeriod.fechaAcreditacion }}</td>
-              <td><span class="p-column-title">Banco</span>{{ selectedPeriod.banco}}</td>
+              <td><span class="p-column-title">Fecha Pago</span>{{ period.fechaPago }}</td>
+              <td><span class="p-column-title">Nro Cheque/CBU</span>{{ period.nroChequeCBU }}</td>
+              <td><span class="p-column-title">Importe</span>{{ period.importe }}</td>
+              <td><span class="p-column-title">Fecha Acreditacion</span>{{ period.fechaAcreditacion }}</td>
+              <td><span class="p-column-title">Banco</span>{{ period.banco}}</td>
             </tr>
           </ng-template>
         </p-table>
@@ -191,8 +190,7 @@
         <p-dialog [(visible)]="displayDeuda" [modal]="true" [style]="{ width: '45vw', height: '15vw' }" >
           <div class="mainTable">
             <p-table
-              [value]="periods"
-              [(selection)]="selectedPeriod"
+              [value]="selectedPeriod"
               responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{'min-width': '15rem'}"
             >
               <ng-template pTemplate="caption">
@@ -207,13 +205,13 @@
                   </th>
                 </tr>
               </ng-template>
-              <ng-template pTemplate="body">
+              <ng-template pTemplate="body" let-period>
                 <tr>
-                  <td><span class="p-column-title">Fecha CalcIntereses</span>{{ selectedPeriod.fechaCalcIntereses }}</td>
-                  <td><span class="p-column-title">Di Mora</span>{{ selectedPeriod.diMora }}</td>
-                  <td><span class="p-column-title">Intereses</span>{{ selectedPeriod.intereses }}</td>
-                  <td><span class="p-column-title">Deuda Actual</span>{{ selectedPeriod.deudaActual }}</td>
-                  <td><span class="p-column-title">Deuda Acumulada</span>{{ selectedPeriod.deudaAcumulada}}</td>
+                  <td><span class="p-column-title">Fecha CalcIntereses</span>{{ period.fechaCalcIntereses }}</td>
+                  <td><span class="p-column-title">Di Mora</span>{{ period.diMora }}</td>
+                  <td><span class="p-column-title">Intereses</span>{{ period.intereses }}</td>
+                  <td><span class="p-column-title">Deuda Actual</span>{{ period.deudaActual }}</td>
+                  <td><span class="p-column-title">Deuda Acumulada</span>{{ period.deudaAcumulada}}</td>
                 </tr>
               </ng-template>
             </p-table>

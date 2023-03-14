@@ -30,7 +30,7 @@ export class ActasDePlanesPage implements OnInit {
   isRequerid:boolean =true;
   calculator!: Calculadora;
   //actas
-  selectedPeriod:any;
+  selectedPeriod!:Array<any>;
   items!: MenuItem[];
   records!:any;
   periods!:any;
@@ -218,24 +218,23 @@ error: (error: { message: any; }) =>{
 
   showDialogCalculator(){
     this.display = true;
-    console.log("Evento de click en el menu")
   }
 
-  showDialogPago(i: string){
+  showDialogPago(event:any){
     this.displayPago = true;
-    this.selectedPeriod = this.periods[parseInt(i)];
+    this.selectedPeriod = new Array();
+    this.selectedPeriod.push(event);
     console.log(this.selectedPeriod);
-    console.log(parseInt(i));
 
   }
 
-  showDialogDeuda(i: string){
-    this.displayDeuda = true;
-    this.selectedPeriod = this.periods[parseInt(i)];
+  showDialogDeuda(event:any){
+    this.displayDeuda = true
+    this.selectedPeriod = new Array();
+    this.selectedPeriod.push(event);
     console.log(this.selectedPeriod);
-    console.log(parseInt(i));
-
   }
+
   CancelShowDialog(){
     this.display = false;
   }

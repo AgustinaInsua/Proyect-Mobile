@@ -79,48 +79,117 @@
   }
   
 
- @media screen and (max-width:480px){
-   h2{
-      font-size: small;
+  :host ::ng-deep .p-datatable-table {
+   margin-top: 0%;
+   border-spacing: 0px;
+   width: 100%;
+}
+
+
+:host ::ng-deep .p-datatable-header ng-star-inserted {
+   margin-top: 3%;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-header {
+   background: #f8f9fa;
+   color: #343a40;
+   border: 1px solid #dee2e6;
+   border-width: 1px 0 1px 0;
+   padding: 1rem 1rem;
+   margin-top: 2%;
+   font-weight: 700;
+}
+ 
+@media screen and (min-width: 1921px){
+   
+   :host {
+     width: 1920px;
+     margin: auto;
+ }
+ .containerFilters_inputs{
+   width: 25%;
+   height: 70px;
+   label{
+      font-size: 24px;
    }
-   .p-button {
-      font-size: small;
-      padding: 0.4rem 0.4rem;
-  }
-  :host ::ng-deep .p-button .p-button-icon-left {
-   margin-right: 0.5rem;
-   display: none;
+}
+}
+
+
+
+@media screen and (max-width:960px){
+   .containerFilters_inputs{
+      width: 35%;
+      height: 80px;
+   } 
+   .containerFilters_estado {
+      width: 35%;
+      height: 80px;
+      margin-right: 3%;
    }
+}
+
+@media screen and (max-width:768px){
+   .containerFilters{
+      display: flex;
+      margin-left: 1%;
+      margin-right: 1%;
+      flex-direction: row;
+   }
+   .containerFilters_inputs{
+      width: 35%;
+      height: 70px;
+      input{
+         height: 40px;
+      }
+   } 
+}
+@media screen and (max-width:480px){
    .companies__flex{
       height: 35px;
    }
-   .flex__clear{
-      width: 130px;
-      display: inline-block;
-      flex-basis: auto;
-      flex-grow: 1;
+
+   .p-button {
+      font-size: medium;
+      padding: 0.4rem 0.4rem;
+   }
+
+   :host ::ng-deep .p-button .p-button-icon-left {
+      margin-right: 0.5rem;
+      display: none;
    }
    
-   .flex__print{
-      width: 47px;
-      display: inline-block;
-      flex-basis: auto;
-   }
-   
-   .flex__search{
-      width: 207px;
-      display: inline-block;
-      flex-basis: auto;
+   .containerFilters{
+      flex-direction: column;
+      font-size: 23px;
+      margin-left: 2%;
+      margin-right: 2%;
    }
    .containerFilters_inputs{
-      margin-right: 1%;
-      margin-bottom: 1%;
-      display: inline-block;
+      width: 100%;
+      height: 61px;
+      margin-right: 0%;
       input {
-         width: 50%;
-         height: 20px;
-         
-   
+         width: 100%;
+         height: 35px;
+         font-size: 19px;
+      }
+      label {
+         font-size: 19px;
       }
     }
+
+    .containerFilters_estado {
+      width: 100%;
+      height: 61px;
+      margin-left: -0.5%;
+      input {
+         width: 100%;
+         height: 35px;
+         font-size: 19px;
+      }
+      label {
+         font-size: 19px;
+      }
+   }
 }

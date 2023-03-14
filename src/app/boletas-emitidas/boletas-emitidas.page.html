@@ -3,6 +3,43 @@
   <app-menu></app-menu>  
   <ion-content>
     <app-title title="Boletas Emitidas" icon="search"></app-title>
+    <div class="containerFilters">
+      <div class="containerFilters_inputs">
+        <label for="inputCuit">Años</label>
+        <input
+          id="inputCuit"
+          type="text"
+          (input)="dtCompanies.filter($any($event.target).value,'cuit','contains')"
+          (onFocus)="dtCompanies.filter($any($event.target).value,'cuit','contains')"
+          (onBlur)="dtCompanies.filter($any($event.target).value,'cuit','contains')"
+          pInputText
+        >
+      </div>
+      <div class="containerFilters_inputs">
+        <label for="inputRazonS">Meses</label>
+      <input 
+        id="inputRazonS"
+        type="text"      
+        (input)="dtCompanies.filter($any($event.target).value,'razonSocial','contains')"
+        (onFocus)="dtCompanies.filter($any($event.target).value,'razonSocial','contains')"
+        (onBlur)="dtCompanies.filter($any($event.target).value,'razonSocial','contains')"
+        pInputText
+        >
+      </div>
+
+      <div class="containerFilters_estado">
+        <label for="inputEstado">Estado</label>
+      <input 
+        id="inputEstado"
+        type="text"      
+        (input)="dtCompanies.filter($any($event.target).value,'estado','contains')"
+        (onFocus)="dtCompanies.filter($any($event.target).value,'estado','contains')"
+        (onBlur)="dtCompanies.filter($any($event.target).value,'estado','contains')"
+        pInputText
+        >
+      </div>
+
+    </div>
     <div class="mainTable">
       <p-table
         id="tableCompanies"
@@ -53,6 +90,11 @@
             <td>{{ boleta.fechaEmision }}</td>
             <td>{{ boleta.cantEmpleados }}</td>
             <td>{{ boleta.estado }}</td>
+            <td>
+              <div class="optionsButtons">
+                <p-button icon="pi pi-dollar"></p-button>
+              </div>
+            </td>
           </tr>
         </ng-template>
       </p-table>

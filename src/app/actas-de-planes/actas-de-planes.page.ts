@@ -7,7 +7,7 @@ import { ApiService } from '../service/api-service/api.service';
 import {MenuItem} from 'primeng/api';
 import { Table } from 'primeng/table';
 import { RecordDTO } from '../model/dto/recordDTO';
-import { FIELDS_TABLE_RECORD } from '../model/mock-fieldsTableRecord';
+import { FIELDS_TABLE_DEBTS, FIELDS_TABLE_PAYMENTS, FIELDS_TABLE_RECORD } from '../model/mock-fieldsTableRecord';
 import { CalculatorPage } from '../components/calculator/calculator.page';
 
 @Component({
@@ -19,6 +19,8 @@ export class ActasDePlanesPage implements OnInit {
 
   //calculadora
   display: boolean = false;  
+  displayPago:boolean = false;  
+  displayDeuda:boolean = false;  
   submitted: boolean = true;  
   value: any;
   minDate!: Date;
@@ -28,17 +30,21 @@ export class ActasDePlanesPage implements OnInit {
   isRequerid:boolean =true;
   calculator!: Calculadora;
   //actas
+  selectedPeriod:any;
   items!: MenuItem[];
   records!:any;
   periods!:any;
+  companies!:any;
   fieldsTableRecord = FIELDS_TABLE_RECORD;
+  fieldsTableDebts = FIELDS_TABLE_DEBTS;
+  fieldsTablePayments = FIELDS_TABLE_PAYMENTS;
   suggestionsCompanies!: string[] ;
   constructor(private router: Router,private messageService: MessageService,
     private apiService: ApiService, private recordDTO: RecordDTO) { }
 
   ngOnInit() {
 
-    //calculadora
+    //ToDo:llevarlo a un componente externo
     this.calculator = new Calculadora();
     //acta
     this.apiService.get(ApiService.apiURLCompanies +"/64640/actas").subscribe({next: records => {
@@ -61,6 +67,17 @@ export class ActasDePlanesPage implements OnInit {
     this.messageService.add({severity:'error', summary:error.message, life:2000});
   }
 });
+
+this.apiService.get(ApiService.apiURLCompanies+"/id/64640").subscribe({next: companies => {
+  this.companies = companies;
+},
+error: (error: { message: any; }) =>{
+  console.log(error.message);
+  this.messageService.add({severity:'error', summary:error.message, life:2000});
+}
+});
+
+
 
   this.items = [
     {
@@ -183,7 +200,7 @@ export class ActasDePlanesPage implements OnInit {
         {
           label: "Calculadora",
           command: (event) => {
-            this.showDialog();
+            this.showDialogCalculator();
         }},
         {
           label: "Eliminar",
@@ -199,9 +216,28 @@ export class ActasDePlanesPage implements OnInit {
   ];
   }
 
-  showDialog(){
+  showDialogCalculator(){
     this.display = true;
     console.log("Evento de click en el menu")
+  }
+
+  showDialogPago(i: string){
+    this.displayPago = true;
+    this.selectedPeriod = this.periods[parseInt(i)];
+    console.log(this.selectedPeriod);
+    console.log(parseInt(i));
+
+  }
+
+  showDialogDeuda(i: string){
+    this.displayDeuda = true;
+    this.selectedPeriod = this.periods[parseInt(i)];
+    console.log(this.selectedPeriod);
+    console.log(parseInt(i));
+
+  }
+  CancelShowDialog(){
+    this.display = false;
   }
 
   selectEvent(event:any){

@@ -120,14 +120,48 @@
   background: #dee2e6;
   border: 1px solid #dee2e6;
  }
+ 
+:host ::ng-deep .p-paginator .p-dropdown .p-dropdown-label {
+  background: transparent;
+  border: 0 none;
+  width: 20px;
+}
 
+:host ::ng-deep .p-calendar-w-btn .p-datepicker-trigger {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-radius: 0px;
+}
 
-
- .conteiner-data-1 label , .conteiner-data-3 label{
+ .conteiner-data-1 label  {
   padding: 1rem 2.4rem;
   display: inline;
   font-weight: 700;
   color: #6c757d;
+}
+
+.conteiner-data-2 label  {
+  padding: 1rem 2.4rem;
+  display: inline;
+  font-weight: 700;
+  color: #6c757d;
+}
+
+.conteiner-data-3 label{
+  padding: 1rem 3.5rem;
+  display: inline;
+  font-weight: 700;
+  color: #6c757d;
+}
+
+.conteiner-data-3 td {
+  padding: 1rem 3rem;
+  text-align: left;
+}
+
+.conteiner-data-3 .email {
+  padding: 0rem 0rem;
+  text-align: left;
 }
 
 .conteiner-data-1 {
@@ -159,10 +193,10 @@ h2 {
 }
 
 .conteiner-data-1 .conteiner-data-2 .altaAfip{
-   padding: 1rem 6rem;
+   padding: 1rem 4rem;
 }
 .conteiner-data-1 .fiscalizador {
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
 }
 
 @media screen and (max-width: 1350px) {
@@ -177,7 +211,7 @@ h2 {
     text-align: left;
    }
    .conteiner-data-1 .conteiner-data-2 .altaAfip{
-    padding: 1rem 5rem;
+    padding: 1rem 3rem;
    }
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 4rem;
@@ -199,11 +233,39 @@ h2 {
   }
 
   .conteiner-data-1 .conteiner-data-2 .altaAfip{
-    padding: 1rem 7rem;
+    padding: 1rem 4rem;
    }
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 6rem;
    }
+
+   :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 60vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+:host ::ng-deep .p-dialog .p-dialog-content {
+  background: #ffffff;
+  color: #495057;
+  margin-top: -3%;
+  width: 60vw;
+  height: 30vw;
+  padding: 0 0.2rem;
+} 
+:host ::ng-deep .p-dialog .p-dialog-footer {
+  border-top: 0 none;
+  background: #ffffff;
+  color: #495057;
+  width: 60vw;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  text-align: right;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
   
 }
 
@@ -212,6 +274,17 @@ h2 {
     padding: 1rem 2rem;
     display: inline;
   }
+
+  .conteiner-data-3 label{
+    padding: 1rem 2.4rem;
+    display: inline;
+  }
+
+  .conteiner-data-3 td{
+    padding: 1rem 1.5rem;
+    text-align: left;
+  }
+
   td{
     padding: 0.5rem 1.7rem;
     text-align: left;
@@ -220,6 +293,42 @@ h2 {
     display: inline-flex;
     flex-direction: column;
   }
+
+  :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 55vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    margin-left: -40%;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    width: 55vw;
+    height: 50vw;
+    display: inline-table;
+    padding: 0 0.2rem;
+    margin-left: -40%;
+  } 
+
+  :host ::ng-deep .p-dialog .p-dialog-footer {
+    border-top: 0 none;
+    background: #ffffff;
+    color: #495057;
+    width: 70vw;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    text-align: right;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    margin-left: -40%;
+
+  }
+
+
 }
 
 @media screen and (max-width: 675px) {
@@ -235,13 +344,50 @@ h2 {
     display: inline-flex;
     flex-direction: column;
   }
+  .conteiner-data-3 label{
+    padding: 1rem 2rem;
+    display: inline;
+  }
+
+  .conteiner-data-3 td{
+    padding: 1rem 1rem;
+    text-align: left;
+  }
 
   .conteiner-data-1 .conteiner-data-2 .altaAfip{
-    padding: 1rem 5rem;
+    padding: 1rem 2rem;
    }
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 4rem;
    }
+   :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 70vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    width: 70vw;
+    height: 80vw;
+    display: inline-table;
+    padding: 0 0.2rem;
+  } 
+  :host ::ng-deep .p-dialog .p-dialog-footer {
+    border-top: 0 none;
+    background: #ffffff;
+    color: #495057;
+    width: 70vw;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    text-align: right;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
 }
 
 @media screen and (max-width: 540px) {
@@ -258,11 +404,39 @@ h2 {
     flex-direction: column;
   }
   .conteiner-data-1 .conteiner-data-2 .altaAfip{
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
    }
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 3rem;
    }
+
+   .conteiner-data-3 label{
+    padding: 1rem 1.2rem;
+    display: inline;
+  }
+
+  .conteiner-data-3 td{
+    padding: 1rem 0.2rem;
+    text-align: left;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 70vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    width: 70vw;
+    height: 80vw;
+    display: inline-table;
+    padding: 0 0.2rem;
+  } 
 }
 
 @media screen and (max-width: 440px) {
@@ -279,17 +453,65 @@ h2 {
     flex-direction: column;
   }
   .conteiner-data-1 .conteiner-data-2 .altaAfip{
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
    }
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 3rem;
    }
+
+   .conteiner-data-3 label{
+    padding: 1rem 1rem;
+    display: inline;
+  }
+
+  .conteiner-data-3 td{
+    padding: 1rem 0.2rem;
+    text-align: left;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 80vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    width: 80vw;
+    height: 80vw;
+    display: inline-table;
+    padding: 0 0.2rem;
+  } 
 }
 
 :host ::ng-deep {    
   .p-datatable-responsive-demo .p-datatable-tbody > tr > td .p-column-title {
       display: none;
   }
+}
+
+@media screen and (max-width: 960px) {
+  :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 70vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    width: 70vw;
+    height: 100vw;
+    padding: 0 0.2rem;
+  } 
 }
 
 @media screen and (max-width: 40rem) {
@@ -368,6 +590,12 @@ h2 {
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
 }
+:host ::ng-deep  .p-dialog .p-dialog-content {
+  background: #ffffff;
+  color: #495057;
+  margin-top: -3%;
+  padding: 0 0.2rem;
+}
 
 :host ::ng-deep .p-dropdown ,:host ::ng-deep .p-calendar{
   margin-top: 0%;
@@ -399,7 +627,17 @@ h2 {
   padding: 0.75rem 1.25rem;
   font-size: 1rem;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
-  border-radius: 6px;
+  border-radius: 20px;
+}
+
+button {
+  color: #ffffff;
+  background: #67B5CF;
+  border: 1px solid #67B5CF;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  border-radius: 20px;
 }
 
 :host ::ng-deep .p-dropdown .p-dropdown-label {

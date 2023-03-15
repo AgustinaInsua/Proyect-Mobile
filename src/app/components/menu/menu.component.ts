@@ -24,11 +24,6 @@ export class MenuComponent implements OnInit {
         title: "Buscar Planes",
         icon: "documents",
         url: "/search-plans"
-      },
-      {
-        title: "Actas",
-        icon: "albums",
-        url: "/actas-de-planes"
       }
     ]
 

@@ -9,6 +9,9 @@
         <input
           id="inputCuit"
           type="text"
+          (input)="dtCompanies.filter($any($event.target).value,'cuit','contains')"
+          (onFocus)="dtCompanies.filter($any($event.target).value,'cuit','contains')"
+          (onBlur)="dtCompanies.filter($any($event.target).value,'cuit','contains')"
           pInputText
         >
       </div>
@@ -16,7 +19,10 @@
         <label for="inputRazonS">{{"INPUTS.RAZON" | translate}}</label>
       <input 
         id="inputRazonS"
-        type="text"      
+        type="text"  
+        (input)="dtCompanies.filter($any($event.target).value,'razonSocial','contains')"
+        (onFocus)="dtCompanies.filter($any($event.target).value,'razonSocial','contains')"
+        (onBlur)="dtCompanies.filter($any($event.target).value,'razonSocial','contains')"    
         pInputText
         >
       </div>

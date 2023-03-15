@@ -10,7 +10,7 @@
           <p-accordionTab header="Datos de la empresa">
 
             <div *ngFor="let record of records">
-              <div *ngFor="let companies of companies">
+
           <div class="conteiner-data-1">
           
             <div class="conteiner-data-4">
@@ -38,12 +38,11 @@
 
 
               </div>
-         </div>
+  
         </div>
 
           </p-accordionTab>
           <p-accordionTab header="Datos de contacto">
-            <div *ngFor="let companies of companies">
               <div class="conteiner-data-3">
 
                 <label>Nombre</label>
@@ -56,8 +55,7 @@
                 <td> {{companies.email}}</td>
                 <td>{{companies.contactNumber}}</td> 
 
-                </div>
-            </div>           
+                </div>           
           </p-accordionTab>
         </p-accordion>
       </div>
@@ -93,7 +91,17 @@
               <td><span class="p-column-title">Periodo</span>{{ period.periodo }}</td>
               <td><span class="p-column-title">Cant.Empledos</span>{{ period.cantEmpleados }}</td>
               <td><span class="p-column-title">Valor cuota</span>{{ period.valorCuota }}</td>
-              <td><span class="p-column-title">Empleados Auditados</span>{{ period.empleadosAuditados }}</td>
+              <td><span class="p-column-title">Empleados Auditados</span>
+                <input
+                tabindex="1"
+                type="text"
+                id="name"
+                pInputText
+                [(ngModel)]="period.empleadosAuditados"
+                #name="ngModel"
+                required
+                pInputText
+              /></td>
               <td><span class="p-column-title">Monto</span>{{ period.monto}}</td>
               <td><span class="p-column-title">Emp.Apagar</span>{{ period.empApagar }}</td>
               <td><span class="p-column-title">Monto.Apagar</span>{{ period.montoApagar}}</td>
@@ -112,7 +120,7 @@
 
   <!--CALCULADORA MODAL-->
    
-  <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '24vw', height: '32vw' }" >
+  <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '26vw', height: '32vw' }">
       <ng-template pTemplate="header">
           <div class="titleCalculadora"><h2>Calculadora</h2></div>
       </ng-template>
@@ -184,7 +192,7 @@
     </p-dialog>
   </div>
 
-      <!--BOTON PAGO MODAL-->
+      <!--BOTON DEUDA MODAL-->
 
       <div *ngIf="selectedPeriod">
         <p-dialog [(visible)]="displayDeuda" [modal]="true" [style]="{ width: '45vw', height: '15vw' }" >

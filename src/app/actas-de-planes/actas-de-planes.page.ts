@@ -68,7 +68,7 @@ export class ActasDePlanesPage implements OnInit {
   }
 });
 
-this.apiService.get(ApiService.apiURLCompanies+"/id/64640").subscribe({next: companies => {
+this.apiService.get(ApiService.apiURLCompanies+"/64640").subscribe({next: companies => {
   this.companies = companies;
 },
 error: (error: { message: any; }) =>{

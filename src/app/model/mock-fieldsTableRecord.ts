@@ -17,7 +17,7 @@ export const FIELDS_TABLE_RECORD = [
   {
     title: 'Empleados Auditados',
     field: 'empleadosAuditados',
-    type: 'number',
+    type: 'input',
   },
   {
     title: 'Monto',

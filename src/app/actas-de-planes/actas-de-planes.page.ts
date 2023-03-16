@@ -220,6 +220,7 @@ error: (error: { message: any; }) =>{
     this.displayPago = true;
     this.selectedPeriod = new Array();
     this.selectedPeriod.push(event);
+    console.log(this.selectedPeriod);
 
   }
 
@@ -227,6 +228,7 @@ error: (error: { message: any; }) =>{
     this.displayDeuda = true
     this.selectedPeriod = new Array();
     this.selectedPeriod.push(event);
+    console.log(this.selectedPeriod);
   }
 
   CancelShowDialog(){

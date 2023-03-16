@@ -121,7 +121,7 @@
     </p-card>
 
   <!--CALCULADORA MODAL-->
-   
+  <div class="dialogCalculadora">
   <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '26vw', height: '32vw' }">
       <ng-template pTemplate="header">
           <div class="titleCalculadora"><h2>Calculadora</h2></div>
@@ -159,7 +159,7 @@
         <div class="buttonCancel"><button (click)="CancelShowDialog()">Cancelar</button></div>
       </ng-template>
     </p-dialog>
-  
+  </div>
   <!--BOTON PAGO MODAL-->
   <div *ngIf="selectedPeriod">
     <p-dialog [(visible)]="displayPago" [modal]="true" [style]="{ width: '45vw', height: '15vw' }">

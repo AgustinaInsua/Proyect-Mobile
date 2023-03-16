@@ -345,23 +345,28 @@ padding: 0 0.2rem;
 }
 @media screen and (max-width: 1250px) {
 
+
   :host ::ng-deep .p-dialog .p-dialog-header {
     border-bottom: 0 none;
-    width: 50vw;
+    width: 60vw;
+    margin-left: -10%;
     background: #ffffff;
     color: #343a40;
     padding: 0rem;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
-}
-:host ::ng-deep .p-dialog .p-dialog-content {
-  background: #ffffff;
-  color: #495057;
-  margin-top: -3%;
-  width: 50vw;
-  height: 40vw;
-  padding: 0 0.2rem;
-} 
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    margin-left: -10%;
+    width: 60vw;
+    height: 40vw;
+    display: inline-table;
+    padding: 0 0.2rem;
+  } 
+
 
   :host ::ng-deep .dialogCalculadora .p-dialog .p-dialog-header {
     border-bottom: 0 none;
@@ -425,7 +430,29 @@ padding: 0 0.2rem;
    .conteiner-data-1 .fiscalizador {
    padding: 1rem 6rem;
    }
-
+   :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 70vw;
+    margin-left: -25%;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    margin-top: -3%;
+    margin-left: -25%;
+    width: 70vw;
+    height: 40vw;
+    display: inline-table;
+    padding: 0 0.2rem;
+  } 
+  :host ::ng-deep .dialogPago .p-dialog , :host ::ng-deep .dialogDeuda .p-dialog {
+    margin-top: -10%;
+  }
    :host ::ng-deep .dialogCalculadora .p-dialog .p-dialog-header {
     border-bottom: 0 none;
     width: 50vw;
@@ -539,26 +566,9 @@ padding: 0 0.2rem;
     flex-direction: column;
   }
 
-  :host ::ng-deep .p-dialog .p-dialog-header {
-    border-bottom: 0 none;
-    width: 55vw;
-    background: #ffffff;
-    color: #343a40;
-    padding: 0rem;
-    margin-left: -40%;
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px;
+  :host ::ng-deep .dialogPago .p-dialog , :host ::ng-deep .dialogDeuda .p-dialog {
+    margin-top: -20%;
   }
-  :host ::ng-deep .p-dialog .p-dialog-content {
-    background: #ffffff;
-    color: #495057;
-    margin-top: -3%;
-    width: 55vw;
-    height: 50vw;
-    display: inline-table;
-    padding: 1rem 1.5rem;
-    margin-left: -40%;
-  } 
 
   :host ::ng-deep .p-dialog .p-dialog-footer {
     border-top: 0 none;
@@ -775,25 +785,9 @@ padding: 0 0.2rem;
     padding: 1rem 0rem;
     text-align: left;
   }
-  :host ::ng-deep .p-dialog .p-dialog-header {
-    border-bottom: 0 none;
-    width: 70vw;
-    margin-left: -60%;
-    background: #ffffff;
-    color: #343a40;
-    padding: 0rem;
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px;
-}
-:host ::ng-deep .p-dialog .p-dialog-content {
-  background: #ffffff;
-  color: #495057;
-  margin-left: -60%;
-  margin-top: -3%;
-  width: 70vw;
-  height: 30vw;
-  padding: 0 0.2rem;
-} 
+  :host ::ng-deep .dialogPago .p-dialog , :host ::ng-deep .dialogDeuda .p-dialog {
+    margin-top: -35%;
+  }
 :host ::ng-deep .p-dialog .p-dialog-footer {
   border-top: 0 none;
   background: #ffffff;

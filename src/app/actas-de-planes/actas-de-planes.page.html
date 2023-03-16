@@ -161,8 +161,8 @@
     </p-dialog>
   </div>
   <!--BOTON PAGO MODAL-->
-  <div *ngIf="selectedPeriod">
-    <p-dialog [(visible)]="displayPago" [modal]="true" [style]="{ width: '45vw', height: '15vw' }">
+  <div *ngIf="selectedPeriod" class="dialogPago">
+    <p-dialog [(visible)]="displayPago" [modal]="true" [style]="{ width: '50vw', height: '15vw' }">
       <div class="mainTable">
         <p-table
           [value]="selectedPeriod"
@@ -196,8 +196,8 @@
 
       <!--BOTON DEUDA MODAL-->
 
-      <div *ngIf="selectedPeriod">
-        <p-dialog [(visible)]="displayDeuda" [modal]="true" [style]="{ width: '45vw', height: '15vw' }" >
+      <div *ngIf="selectedPeriod" class="dialogDeuda">
+        <p-dialog [(visible)]="displayDeuda" [modal]="true" [style]="{ width: '50vw', height: '15vw' }" >
           <div class="mainTable">
             <p-table
               [value]="selectedPeriod"

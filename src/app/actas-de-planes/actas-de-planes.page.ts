@@ -49,10 +49,8 @@ export class ActasDePlanesPage implements OnInit {
     //acta
     this.apiService.get(ApiService.apiURLCompanies +"/64640/actas").subscribe({next: records => {
       this.recordDTO.setRecordByCompany(records);
-      console.log(records);
     },
     error: (error: { message: any; }) =>{
-      console.log(error.message);
       this.messageService.add({severity:'error', summary:error.message, life:2000});
     }
   });
@@ -63,7 +61,6 @@ export class ActasDePlanesPage implements OnInit {
     this.periods = this.recordDTO.getPeriodByRecord();
   },
   error: (error: { message: any; }) =>{
-    console.log(error.message);
     this.messageService.add({severity:'error', summary:error.message, life:2000});
   }
 });
@@ -72,7 +69,6 @@ this.apiService.get(ApiService.apiURLCompanies+"/64640").subscribe({next: compan
   this.companies = companies;
 },
 error: (error: { message: any; }) =>{
-  console.log(error.message);
   this.messageService.add({severity:'error', summary:error.message, life:2000});
 }
 });
@@ -87,7 +83,7 @@ error: (error: { message: any; }) =>{
         {
           label: "Resumen",
           command: (event) => {
-           console.log("Imprimir resumen");
+     
         }
       },
         {
@@ -95,12 +91,12 @@ error: (error: { message: any; }) =>{
           items:[
             { label: "Acta", 
               command: (event) => {
-                console.log("Imprimir Acta")
+        
               }
             },
             { label: "Acta Compactada", 
               command: (event) => {
-                console.log("Imprimir Acta Acompactada")
+          
               }
             }
           ]
@@ -110,19 +106,19 @@ error: (error: { message: any; }) =>{
           items:[
             { label: "Certificado", 
               command: (event) => {
-                console.log("Imprimir Certificado")
+             
               }
             },
             { label: "Certificado Compactado", 
               command: (event) => {
-                console.log("Imprimir Certificado Compactado")
+          
               }
             }
           ]},
         {
           label: "PDF Adhesion",
           command: (event) => {
-           console.log("PDF Adhesion");
+         
         }}
     ]
     },
@@ -132,22 +128,22 @@ error: (error: { message: any; }) =>{
           {
             label: "Guardar",
             command: (event) => {
-              console.log("Guardar");
+           
           }},
           {
             label: "Cerrar",
             command: (event) => {
-              console.log("Cerrar");
+            
           }},
           {
             label: "Cancelar",
             command: (event) => {
-              console.log("Cancelar");
+          
           }},
           {
             label: "Salir",
             command: (event) => {
-              console.log("Salir");
+          
           }}
       ]
     },
@@ -159,22 +155,22 @@ error: (error: { message: any; }) =>{
           items:[
             { label: "Fecha Calc. Int.", 
               command: (event) => {
-                console.log("Asociar Fecha Calc. Int.")
+                
               }
             },
             { label: "Fecha de Pago", 
               command: (event) => {
-                console.log("Asociar Fecha de Pago")
+            
               }
             },
             { label: "Cheque", 
               command: (event) => {
-                console.log("Asociar Cheque")
+            
               }
             },
             { label: "CBU General", 
               command: (event) => {
-                console.log("Asociar CBU General")
+     
               }
             }
           ]},
@@ -183,12 +179,12 @@ error: (error: { message: any; }) =>{
             items:[
               { label: "Fecha Calc. Int.", 
                 command: (event) => {
-                  console.log("Asociar Fecha Calc. Int.")
+          
                 }
               },
               { label: "Fecha de Acreditación", 
                 command: (event) => {
-                  console.log("Asociar Fecha de Pago")
+            
                 }
               }
             ]},
@@ -207,7 +203,7 @@ error: (error: { message: any; }) =>{
           items:[
             { label: "Fecha de Pago", 
               command: (event) => {
-                console.log("Asociar Fecha Calc. Int.")
+
               }
             }
           ]}
@@ -224,7 +220,6 @@ error: (error: { message: any; }) =>{
     this.displayPago = true;
     this.selectedPeriod = new Array();
     this.selectedPeriod.push(event);
-    console.log(this.selectedPeriod);
 
   }
 
@@ -232,7 +227,6 @@ error: (error: { message: any; }) =>{
     this.displayDeuda = true
     this.selectedPeriod = new Array();
     this.selectedPeriod.push(event);
-    console.log(this.selectedPeriod);
   }
 
   CancelShowDialog(){

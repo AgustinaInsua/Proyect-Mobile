@@ -33,10 +33,6 @@ const routes: Routes = [
     path: 'search-companies',
     loadChildren: () => import('./search-companies/search-companies.module').then( m => m.SearchCompaniesPageModule)
   },
-  {
-    path: 'aux-table',
-    loadChildren: () => import('./aux-table/aux-table.module').then( m => m.AuxTablePageModule)
-  },
 /*  {
     path: 'actas-de-planes',
     loadChildren: () => import('./actas-de-planes/actas-de-planes.module').then( m => m.ActasDePlanesPageModule)
@@ -52,7 +48,8 @@ const routes: Routes = [
   {
     path: 'search-records',
     loadChildren: () => import('./search-records/search-records.module').then( m => m.SearchRecordsPageModule)
-  },  {
+  },
+  {
     path: 'calculator',
     loadChildren: () => import('./components/calculator/calculator.module').then( m => m.CalculatorPageModule)
   },

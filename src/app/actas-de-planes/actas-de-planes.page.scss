@@ -207,6 +207,62 @@ h2 {
   padding: 1rem 4rem;
 }
 
+@media screen and (max-width: 1920px) {
+  :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 50vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+:host ::ng-deep .p-dialog .p-dialog-content {
+  background: #ffffff;
+  color: #495057;
+  margin-top: -3%;
+  width: 50vw;
+  height: 30vw;
+  padding: 0 0.2rem;
+} 
+
+  :host ::ng-deep .dialogCalculadora .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 28vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    text-align: center;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+:host ::ng-deep .dialogCalculadora .p-dialog .p-dialog-content {
+  background: #ffffff;
+  color: #495057;
+  margin-top: -3%;
+  display: inline-table;
+  width: 28vw;
+  height: 38vw;
+  padding: 0 0.2rem;
+} 
+:host ::ng-deep .dialogCalculadora .p-dialog .p-dialog-footer {
+  border-top: 0 none;
+  background: #ffffff;
+  color: #495057;
+  width: 28vw;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  text-align: right;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.dialogCalculadora .inputs {
+  margin-top: 1%;
+  margin-left: 5%;
+}
+.dialogCalculadora .titleCalculadora {
+  margin-left: 150px;
+}
+}
 @media screen and (max-width: 1350px) {
 
   .conteiner-data-1 label {
@@ -266,12 +322,50 @@ h2 {
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
 }
+.dialogCalculadora .titleCalculadora {
+  margin-left: 130px;
 }
-@media screen and (max-width: 1247px) {
+:host ::ng-deep .p-dialog .p-dialog-header {
+  border-bottom: 0 none;
+  width: 50vw;
+  background: #ffffff;
+  color: #343a40;
+  padding: 0rem;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+:host ::ng-deep .p-dialog .p-dialog-content {
+background: #ffffff;
+color: #495057;
+margin-top: -3%;
+width: 50vw;
+height: 30vw;
+padding: 0 0.2rem;
+} 
+}
+@media screen and (max-width: 1250px) {
+
+  :host ::ng-deep .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    width: 50vw;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0rem;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+:host ::ng-deep .p-dialog .p-dialog-content {
+  background: #ffffff;
+  color: #495057;
+  margin-top: -3%;
+  width: 50vw;
+  height: 40vw;
+  padding: 0 0.2rem;
+} 
 
   :host ::ng-deep .dialogCalculadora .p-dialog .p-dialog-header {
     border-bottom: 0 none;
-    width: 40vw;
+    width: 35vw;
     background: #ffffff;
     margin-left: -10%;
     color: #343a40;
@@ -285,7 +379,7 @@ h2 {
   margin-top: -3%;
   margin-left: -10%;
   display: inline-table;
-  width: 40vw;
+  width: 35vw;
   height: 40vw;
   padding: 0 0.2rem;
 } 
@@ -293,16 +387,14 @@ h2 {
   border-top: 0 none;
   background: #ffffff;
   color: #495057;
-  width: 40vw;
+  width: 35vw;
   margin-left: -10%;
   padding: 0 1.5rem 1.5rem 1.5rem;
   text-align: right;
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
 }
-.dialogCalculadora .inputs {
-  margin-left: 10%;
-}
+
 :host ::ng-deep .dialogCalculadora .p-dialog {
   margin-top: -5%;
 }
@@ -373,6 +465,9 @@ h2 {
   padding: 0rem 2rem;
   text-align: left;
 }
+.dialogCalculadora .titleCalculadora {
+  margin-left: 190px;
+}
 }
 @media screen and (max-width: 980px) {
   .dialogCalculadora .inputs {
@@ -381,6 +476,9 @@ h2 {
   :host ::ng-deep .dialogCalculadora .p-dialog {
     margin-top: -10%;
   }
+  .dialogCalculadora .titleCalculadora {
+    margin-left: 170px;
+  }
 }
 @media screen and (max-width: 923px) {
   .dialogCalculadora .inputs {
@@ -388,6 +486,9 @@ h2 {
   }
   :host ::ng-deep .dialogCalculadora .p-dialog {
     margin-top: -15%;
+  }
+  .dialogCalculadora .titleCalculadora {
+    margin-left: 160px;
   }
 }
 @media screen and (max-width: 960px) {
@@ -507,6 +608,9 @@ h2 {
   }
   :host ::ng-deep .dialogCalculadora .p-dialog {
     margin-top: -20%;
+  }
+  .dialogCalculadora .titleCalculadora {
+    margin-left: 150px;
   }
 }
 @media screen and (max-width: 742px) {
@@ -750,30 +854,34 @@ h2 {
   border-bottom-left-radius: 6px;
 }
   .dialogCalculadora .inputs {
-    margin-left: 1%;
+    margin-left: 0%;
   }
   :host ::ng-deep .dialogCalculadora .p-dialog {
     margin-top: -40%;
   }
+  .dialogCalculadora .titleCalculadora {
+    margin-left: 120px;
+  }
 }
 
 @media screen and (max-width: 543px) {
-  .dialogCalculadora .inputs {
-    margin-left: 0%;
-    padding: 1rem 3rem;
-  }
   :host ::ng-deep .dialogCalculadora .p-dialog {
     margin-top: -50%;
+  }
+  .dialogCalculadora .inputs {
+    padding: 1rem 1rem;
+    margin-left: 4%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .dialogCalculadora .inputs {
-    margin-left: 0%;
-    padding: 1rem 1rem;
-  }
+
   :host ::ng-deep .dialogCalculadora .p-dialog {
     margin-top: -60%;
+  }
+
+  .dialogCalculadora .titleCalculadora {
+    margin-left: 90px;
   }
 }
 
@@ -843,6 +951,13 @@ h2 {
   .conteiner-data-3 label{
     padding: 1rem 0.2rem;
     text-align: left;
+  }
+  .dialogCalculadora .titleCalculadora {
+    margin-left: 70px;
+  }
+  .dialogCalculadora .inputs {
+    margin-left: 0%;
+    padding: 1rem;
   }
 }
 

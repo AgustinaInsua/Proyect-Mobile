@@ -9,6 +9,7 @@ import { Table } from 'primeng/table';
 import { RecordDTO } from '../model/dto/recordDTO';
 import { FIELDS_TABLE_DEBTS, FIELDS_TABLE_PAYMENTS, FIELDS_TABLE_RECORD } from '../model/mock-fieldsTableRecord';
 import { CalculatorPage } from '../components/calculator/calculator.page';
+import { Company } from '../model/Company';
 
 @Component({
   selector: 'app-actas-de-planes',
@@ -34,7 +35,7 @@ export class ActasDePlanesPage implements OnInit {
   items!: MenuItem[];
   records!:any;
   periods!:any;
-  companies!:any;
+  companies:any;
   fieldsTableRecord = FIELDS_TABLE_RECORD;
   fieldsTableDebts = FIELDS_TABLE_DEBTS;
   fieldsTablePayments = FIELDS_TABLE_PAYMENTS;
@@ -67,6 +68,7 @@ export class ActasDePlanesPage implements OnInit {
 
 this.apiService.get(ApiService.apiURLCompanies+"/64640").subscribe({next: companies => {
   this.companies = companies;
+  console.log(this.companies);
 },
 error: (error: { message: any; }) =>{
   this.messageService.add({severity:'error', summary:error.message, life:2000});

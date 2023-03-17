@@ -5,7 +5,7 @@ export const FIELDS_TABLE_RECORD = [
     type: 'text',
   },
   {
-    title: 'Cant.Empleados',
+    title: 'Cant Empleados',
     field: 'cantEmpleados',
     type: 'number',
   },
@@ -25,17 +25,17 @@ export const FIELDS_TABLE_RECORD = [
     type: 'text',
   },
   {
-    title: 'Emp.Apagar',
+    title: 'Emp Apagar',
     field: 'empApagar',
     type: 'number',
   },
   {
-    title: 'Monto.Apagar',
+    title: 'Monto Apagar',
     field: 'montoApagar',
     type: 'text',
   },
   {
-    title: 'Vto.Original',
+    title: 'Vto Original',
     field: 'vtoOriginal',
     type: 'text',
   },

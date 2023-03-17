@@ -70,6 +70,7 @@
 
 :host ::ng-deep .p-datatable .p-datatable-thead > tr > th{
   text-align:center;
+  padding: 0.2rem 2rem;
 }
 
 :host ::ng-deep .p-datatable .p-datatable-tbody > tr > td{
@@ -258,7 +259,7 @@ h2 {
   margin-left: 150px;
 }
 }
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1367px) {
 
   .conteiner-data-1 label {
     padding: 1rem 1.5rem;
@@ -318,7 +319,10 @@ h2 {
   border-bottom-left-radius: 6px;
 }
 .dialogCalculadora .titleCalculadora {
-  margin-left: 130px;
+  margin-left: 120px;
+}
+.dialogCalculadora .inputs {
+  margin-left: 5%;
 }
 :host ::ng-deep .p-dialog .p-dialog-header {
   border-bottom: 0 none;
@@ -397,6 +401,9 @@ padding: 0 0.2rem;
 
 :host ::ng-deep .dialogCalculadora .p-dialog {
   margin-top: -5%;
+}
+:host ::ng-deep .empAuditados .p-inputtext {
+  width: 30%;
 }
 
 }
@@ -492,6 +499,9 @@ padding: 0 0.2rem;
 .dialogCalculadora .titleCalculadora {
   margin-left: 190px;
 }
+:host ::ng-deep .empAuditados .p-inputtext {
+  width: 35%;
+}
 }
 @media screen and (max-width: 980px) {
   .dialogCalculadora .inputs {
@@ -503,6 +513,9 @@ padding: 0 0.2rem;
   .dialogCalculadora .titleCalculadora {
     margin-left: 170px;
   }
+  :host ::ng-deep .empAuditados .p-inputtext {
+    width: 30%;
+ }
 }
 @media screen and (max-width: 923px) {
   .dialogCalculadora .inputs {
@@ -536,6 +549,11 @@ padding: 0 0.2rem;
   :host ::ng-deep .dialogCalculadora .p-dialog {
     margin-top: -10%;
   }
+  :host ::ng-deep .empAuditados .p-inputtext {
+    width: 30%;
+    float: right;
+ }
+ 
 }
 
 @media screen and (max-width: 800px) {
@@ -1133,5 +1151,5 @@ button {
 }
 
 :host ::ng-deep .p-inputtext {
-   width: 30%;
+   width: 20%;
 }

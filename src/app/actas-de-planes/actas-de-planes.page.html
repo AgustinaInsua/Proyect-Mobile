@@ -91,10 +91,10 @@
           <ng-template pTemplate="body" let-period let-i="rowIndex" >
             <tr>
               <td><span class="p-column-title">Periodo</span>{{ period.periodo }}</td>
-              <td><span class="p-column-title">Cant.Empledos</span>{{ period.cantEmpleados }}</td>
+              <td><span class="p-column-title">Cant Empledos</span>{{ period.cantEmpleados }}</td>
               <td><span class="p-column-title">Valor cuota</span>{{ period.valorCuota }}</td>
               <td><span class="p-column-title">Empleados Auditados</span>
-                <input
+              <div class="empAuditados">  <input
                 tabindex="1"
                 type="text"
                 id="name"
@@ -103,11 +103,11 @@
                 #name="ngModel"
                 required
                 pInputText
-              /></td>
+              /></div></td>
               <td><span class="p-column-title">Monto</span>{{ period.monto}}</td>
-              <td><span class="p-column-title">Emp.Apagar</span>{{ period.empApagar }}</td>
-              <td><span class="p-column-title">Monto.Apagar</span>{{ period.montoApagar}}</td>
-              <td><span class="p-column-title">Vto.Original</span>{{ period.vtoOriginal }}</td>
+              <td><span class="p-column-title">Emp Apagar</span>{{ period.empApagar }}</td>
+              <td><span class="p-column-title">Monto Apagar</span>{{ period.montoApagar}}</td>
+              <td><span class="p-column-title">Vto Original</span>{{ period.vtoOriginal }}</td>
               <td><span class="p-column-title">Acciones</span>
                 <div class="optionsButtons">
                   <p-button [class.selected]="period === selectedPeriod" (onClick)="showDialogPago(period)" icon="pi pi-dollar"></p-button>

@@ -4,9 +4,9 @@
   <ion-content>
     <app-title title="Actas de planes de pago" icon="documents"></app-title>
     <p-menubar [model]="items"></p-menubar>
-        <p-card>
+    <p-card styleClass="card-override">
       <div class="container">
-        <p-accordion [multiple]="true">
+        <p-accordion [multiple]="true" styleClass="accordion-override">
           <p-accordionTab header="Datos de la empresa">
 
             <div *ngFor="let record of records">
@@ -75,6 +75,7 @@
           selectionMode="single"
           autocomplete="off"
           responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{'min-width': '15rem'}"
+          styleClass="table-override"
         >
           <ng-template pTemplate="caption">
             <h2>Plan de pagos</h2>
@@ -122,7 +123,7 @@
 
   <!--CALCULADORA MODAL-->
   <div class="dialogCalculadora">
-  <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '26vw', height: '34vw' }">
+  <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '26vw', height: '34vw' }" styleClass="dialogCalculator-override">
       <ng-template pTemplate="header">
           <div class="titleCalculadora"><h2>Calculadora</h2></div>
       </ng-template>
@@ -130,7 +131,7 @@
         <div class="inputs">
           <label>Fecha de primer pago</label>
           <p-calendar  [minDate]="calculator.todayDate" [showIcon]="true" [(ngModel)]="calculator.date" #date="ngModel" (onSelect)="selectEvent($event)" [required]="true" name="date"
-          placeholder="Seleccione..."></p-calendar>
+          placeholder="Seleccione..." styleClass="calendar-override"></p-calendar>
           <div [hidden]="date.valid || !date.touched" class="errors">
             <span *ngIf="date.errors?.['required']">
                 La fecha es requerida
@@ -156,13 +157,15 @@
       
       <ng-template pTemplate="footer">
         <div class="buttonAcept"><p-button (click)="CancelShowDialog()" [disabled]="submitted">Aceptar</p-button></div>
-        <div class="buttonCancel"><button (click)="CancelShowDialog()">Cancelar</button></div>
+        <div class="buttonCancel"><p-button (click)="CancelShowDialog()">Cancelar</p-button></div>
       </ng-template>
     </p-dialog>
   </div>
+
+  
   <!--BOTON PAGO MODAL-->
   <div *ngIf="selectedPeriod" class="dialogPago">
-    <p-dialog [(visible)]="displayPago" [modal]="true" [style]="{ width: '50vw', height: '15vw' }">
+    <p-dialog [(visible)]="displayPago" [modal]="true" [style]="{ width: '50vw', height: '15vw' }" styleClass="dialogButtons-override">
       <div class="mainTable">
         <p-table
           [value]="selectedPeriod"
@@ -197,7 +200,7 @@
       <!--BOTON DEUDA MODAL-->
 
       <div *ngIf="selectedPeriod" class="dialogDeuda">
-        <p-dialog [(visible)]="displayDeuda" [modal]="true" [style]="{ width: '50vw', height: '15vw' }" >
+        <p-dialog [(visible)]="displayDeuda" [modal]="true" [style]="{ width: '50vw', height: '15vw' }" styleClass="dialogButtons-override">
           <div class="mainTable">
             <p-table
               [value]="selectedPeriod"

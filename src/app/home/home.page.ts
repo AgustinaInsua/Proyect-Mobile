@@ -1,3 +1,4 @@
+import { FIELDS_TABLE_CHEQUES } from './../model/mock-fieldsTableCheques';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Calculadora } from '../model/Calculadora';
@@ -17,20 +18,47 @@ export class HomePage {
   selecPeriodicity: any;
   isRequerid:boolean =true;
   calculator!: Calculadora;
-
+  fieldsTable = FIELDS_TABLE_CHEQUES;
+  cheques: any;
+  banks: any;
+  selectedBank: any;
+  accountNumber !: Number;
+  zipCode !: string;
   constructor() {
   this.calculator = new Calculadora();
   }
     
   ngOnInit() {
+    this.cheques = [
+      {
+        cuote: "1",
+        datePayment: "10-02-23",
+        dateAcred: "",
+        amountPay: "4215",
+        import: "4215",
+        bank : ""
+      },
+      {
+        cuote: "2",
+        datePayment: "10-03-23",
+        dateAcred: "",
+        amountPay: "4324",
+        import: "4324",
+        bank : ""
+      }     
+    ];
+    this.banks = [
+      {name:"Santander"}, 
+      {name:"ICBC"}, 
+      {name:"Galicia"}, 
+      {name:"Credicoop"}, 
+      {name:"Provincia"}, 
+      {name:"Brubank"}, 
+      {name:"Nacion"}, 
+      {name:"BBVA"}, 
+      {name:"Patagonia"}];
   }
 
-  onSelect(event:any){
-    if(this.selecAmountPayments !=null && this.calculator.date != null ){
-      this.submitted = false; 
-      }else {
-      this.submitted = true; }
-  }
 
   showDialog() {
     this.display = true;
@@ -39,4 +67,5 @@ export class HomePage {
     guardarDatos(){
 
     }
+
 }

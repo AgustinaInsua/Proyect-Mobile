@@ -6,46 +6,57 @@
   <h4>{{"HOME.TITLE" | translate}}</h4>
 
 
-  <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '30vw', height: '38vw' }" position="center">
+  <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '80vw', height: '38vw' }" position="center">
     <ng-template pTemplate="header">
-        <h2>Calculadora</h2>
+      
     </ng-template>
-    <ng-template pTemplate="content">
-      <div class="inputs">
-        <label>Fecha de primer pago</label>
-        <p-calendar  [minDate]="calculator.todayDate" [showIcon]="true" [(ngModel)]="calculator.date" #date="ngModel" (onSelect)="onSelect($event)" [required]="true" name="date"
-        placeholder="Seleccione..."></p-calendar>
-        <div [hidden]="date.valid || !date.touched" class="errors">
-          <span *ngIf="date.errors?.['required']">
-              La fecha es requerida
-          </span>    
-        </div>
-    
-        <label>Aprobador</label>
-        <p-dropdown [options]="calculator.aprobadores"  placeholder="Seleccione..." ></p-dropdown>
-
-        <label>Cantidad de pagos</label>
-        <p-dropdown class="form-control" [options]="calculator.amountPayments" name ="amountPayments"  (onChange)="onSelect($event)" [(ngModel)]="selecAmountPayments" #amountPayments="ngModel"
-         [required]="true" placeholder="Seleccione..." id="amountPayments"></p-dropdown>
-        <div [hidden]="amountPayments.valid || !amountPayments.touched" class="errors">
-          <span *ngIf="amountPayments.errors?.['required']">
-              La cantidad de pagos es requerida
-          </span>    
-        </div>
-
-        <label>Periocidad</label>
-        <p-dropdown [options]="calculator.periodicity"  placeholder="Seleccione..."></p-dropdown>
-      </div>
-
-      <div class="buttonAcept"><p-button [disabled]="submitted">Aceptar</p-button></div>
-      <div class="buttonCancel"><p-button>Cancelar</p-button></div>
-    </ng-template>
-    
+    <p-table [value]="cheques" [tableStyle]="{'min-width': '50rem'}">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Cuota
+              </th>
+              <th>Fecha Pago</th>
+              <th>Fecha Acred</th>
+              <th>Importe Pagar</th>
+              <th>Importe</th>
+              <th>Banco <p-dropdown [options]="banks" [(ngModel)]="selectedBank" placeholder="Seleccione..." optionLabel="name" [filter]="true" [showClear]="true" [filterBy]="banks.name"></p-dropdown></th>
+              <th>Nro Cheque
+              </th>
+              <th>Nro Cuenta
+                <input type="number" [(ngModel)]="accountNumber" pInputText>
+              </th>
+              <th>Cod Postal
+                <input type="text" [(ngModel)]="zipCode" pInputText>
+              </th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-cheques>
+          <tr>
+              <td>{{cheques.cuote}}</td>
+              <td>{{cheques.datePayment}}</td>
+              <td>
+                <p-calendar [minDate]="calculator.todayDate" [(ngModel)]="value" [showIcon]="true" inputId="icon"></p-calendar>
+              </td>
+              <td>{{cheques.amountPay}}</td>
+              <td>
+                <input value="{{cheques.import}}" pInputText>
+              </td>
+              <td>
+                <p-dropdown [options]="banks" [(ngModel)]="selectedBank" optionLabel="name" placeholder="Seleccione..."></p-dropdown>
+              </td>
+              <td>
+                <input type="number" pInputText>
+              </td>
+              <td><input type="number" value="{{accountNumber}}" pInputText></td>
+              <td><input type="text" value="{{zipCode}}" pInputText></td>
+          </tr>
+      </ng-template>
+  </p-table>
     <ng-template pTemplate="footer">
-
+      <button pButton type="button" (click)="showDialog()" label="Aceptar"></button>
     </ng-template>
   </p-dialog>
 
-<button pButton type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Calculadora"></button>
+<button pButton type="button" (click)="showDialog()" label="Cheques"></button>
 </ion-content>
 </ion-app>

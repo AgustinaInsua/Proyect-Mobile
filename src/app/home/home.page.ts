@@ -22,6 +22,7 @@ export class HomePage {
   cheques: any;
   banks: any;
   selectedBank: any;
+  selectedBank2: any;
   accountNumber !: Number;
   zipCode !: string;
   constructor() {

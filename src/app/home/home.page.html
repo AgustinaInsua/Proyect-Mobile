@@ -6,20 +6,20 @@
   <h4>{{"HOME.TITLE" | translate}}</h4>
 
 
-  <p-dialog [(visible)]="display" [modal]="true" [style]="{ width: '80vw', height: '38vw' }" position="center">
+  <p-dialog [(visible)]="display" [modal]="true" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{ width: '80vw', height: '38vw' }" position="center">
     <ng-template pTemplate="header">
-      
+      <h2>Asociar Cheque</h2>
     </ng-template>
-    <p-table [value]="cheques" [tableStyle]="{'min-width': '50rem'}">
+    <p-table [value]="cheques" [tableStyle]="{'min-width': '50rem'}" styleClass="checkTable" >
       <ng-template pTemplate="header">
           <tr>
-              <th>Cuota
+              <th class="table">Cuota
               </th>
               <th>Fecha Pago</th>
               <th>Fecha Acred</th>
               <th>Importe Pagar</th>
               <th>Importe</th>
-              <th>Banco <p-dropdown [options]="banks" [(ngModel)]="selectedBank" placeholder="Seleccione..." optionLabel="name" [filter]="true" [showClear]="true" [filterBy]="banks.name"></p-dropdown></th>
+              <th>Banco <p-dropdown [options]="banks" [(ngModel)]="selectedBank" placeholder="Seleccione..." optionLabel="name" [filter]="true" [showClear]="true" [filterBy]="banks.name" appendTo="body"></p-dropdown></th>
               <th>Nro Cheque
               </th>
               <th>Nro Cuenta
@@ -37,12 +37,12 @@
               <td>
                 <p-calendar [minDate]="calculator.todayDate" [(ngModel)]="value" [showIcon]="true" inputId="icon"></p-calendar>
               </td>
-              <td>{{cheques.amountPay}}</td>
+              <td class="table">{{cheques.amountPay}}</td>
               <td>
                 <input value="{{cheques.import}}" pInputText>
               </td>
               <td>
-                <p-dropdown [options]="banks" [(ngModel)]="selectedBank" optionLabel="name" placeholder="Seleccione..."></p-dropdown>
+                <p-dropdown [options]="banks"  [ngModel]="selectedBank" optionLabel="name" placeholder="Seleccione..." [filter]="true" [filterBy]="banks.name" appendTo="body"></p-dropdown>
               </td>
               <td>
                 <input type="number" pInputText>

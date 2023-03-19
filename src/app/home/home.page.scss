@@ -1,8 +1,4 @@
-h2{
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #495057;
-  padding-left: 20px;
- }
+
 
  :host ::ng-deep .toolbar-container {
    padding-left: unset;
@@ -65,19 +61,50 @@ label{
    float: right;
 }
 
-
+:host {
+   ::ng-deep .checkDialog {
+      .p-dialog-header {
+         padding: 0.7rem 0.7rem;
+      }
+   }
+}
 :host {
    ::ng-deep .checkTable {
       .p-datatable-thead > tr > th {
          text-align: center;
       }
+      input {
+         width: 100%;
+      }
+      .p-dropdown {
+         width: 100%;
+         .p-dropdown-label {
+            text-align: center;
+         }
+      }
+
+      
 }
 
-}
-   
 
-     
-    
+}
+.checkTable__inputs--import {
+   width: 100%;
+}
+
+.checkTable__inputs {
+   width: 100%;
+}
+
+.titleDialog {
+   margin-top: 5px;
+   text-align: center;
+   color: #67b5cf;
+   font-size: 18px;
+   font-weight: 700;
+   margin-left: 45%;
+
+   }
 
 .errors {
    color: red;

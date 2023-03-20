@@ -41,7 +41,6 @@
 
  :host ::ng-deep .p-datatable .p-datatable-tbody > tr > td{
    text-align:center;
-   padding: 0;
  }
  
  :host ::ng-deep .p-button{
@@ -68,27 +67,6 @@
    border: 1px solid #dee2e6;
   }
 
-#search{
-   height: 0px; 
-   top: -8px;
-   position: relative;
- }
-
- #pencil{
-   height: 0px; 
-   left: 10px;
-   top: -22px;
-   margin-left: 40px;
-   position: relative;
- }
-
- #print {
-   height: 0px; 
-   left: 20px;
-   top: -35px;
-   margin-left: 80px;
-   position: relative;
- }
 
 .info {
  height: 0px;
@@ -98,7 +76,10 @@
  -webkit-transition: opacity 0.2s;
  opacity: 0;
 }
-
+:host ::ng-deep  .p-button.p-button-icon-only {
+   width: 3rem;
+   padding: 0.75rem 0;
+}
 
 div#search:hover div.info, div#pencil:hover div.info, div#print:hover div.info{
  opacity: 1;
@@ -123,9 +104,7 @@ p#buscarActas,p#editarActas,p#imprimirActas{
 }
 
 .optionsButtons {
- float: left;
- top: 0px;
- position: relative;
+   display: inline-flex;
 }
 
 :host ::ng-deep .p-datatable-table {

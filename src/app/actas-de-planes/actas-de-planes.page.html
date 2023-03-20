@@ -10,7 +10,7 @@
           <p-accordionTab header="Datos de la empresa">
 
             <div *ngFor="let record of records">
-              <div *ngFor="let companies of companies">      
+  
           <div class="conteiner-data-1">
           
             <div class="conteiner-data-4">
@@ -29,7 +29,7 @@
             <label>Alta AFIP</label>
             <label>Aprob Fec.Int </label>
             <label>Aprob Fec.Acr</label>
-            <td>{{companies.cuit}}</td>
+            <td>{{company?.cuit}}</td>
             <td class="altaAfip">{{record.altaAfip}}</td>
             <td>{{record.aprobadorFecIntereses}}</td>
             <td>{{record.aprobadorFecAcreditacion}}</td> 
@@ -38,26 +38,22 @@
 
 
               </div>
-
-        </div>
       </div>
           </p-accordionTab>
-          <p-accordionTab header="Datos de contacto">
-            <div *ngFor="let companies of companies">   
+          <p-accordionTab header="Datos de contacto" > 
               <div class="conteiner-data-3">
 
                 <label>Nombre</label>
                 <label>Apellido</label>
                 <label class="email">Mail</label>
                 <label class="telef">Telefono</label>
-
-               <td>{{companies.contactName}}</td>
-                <td>{{companies.contactLastName}}</td>
-                <td> {{companies.email}}</td>
-                <td>{{companies.contactNumber}}</td> 
+      
+               <td>{{company?.contactName}}</td>
+                <td>{{company?.contactLastName}}</td>
+                <td> {{company?.email}}</td>
+                <td>{{company?.contactNumber}}</td> 
 
                 </div>
-              </div>
           </p-accordionTab>
         </p-accordion>
       </div>

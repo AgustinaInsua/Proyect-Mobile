@@ -20,7 +20,7 @@ export class HomePage {
   calculator!: Calculadora;
   fieldsTable = FIELDS_TABLE_CHEQUES;
   cheques: any;
-  banks: any;
+  
   selectedBank: any;
   selectedBank2: any;
   accountNumber !: Number;
@@ -30,40 +30,11 @@ export class HomePage {
   }
     
   ngOnInit() {
-    this.cheques = [
-      {
-        cuote: "1",
-        datePayment: "10-02-23",
-        dateAcred: "",
-        amountPay: "4215",
-        import: "4215",
-        bank : ""
-      },
-      {
-        cuote: "2",
-        datePayment: "10-03-23",
-        dateAcred: "",
-        amountPay: "4324",
-        import: "4324",
-        bank : ""
-      }     
-    ];
-    this.banks = [
-      {name:"Santander"}, 
-      {name:"ICBC"}, 
-      {name:"Galicia"}, 
-      {name:"Credicoop"}, 
-      {name:"Provincia"}, 
-      {name:"Brubank"}, 
-      {name:"Nacion"}, 
-      {name:"BBVA"}, 
-      {name:"Patagonia"}];
+    
+    
   }
 
 
-  showDialog() {
-    this.display = true;
-   }
 
     guardarDatos(){
 

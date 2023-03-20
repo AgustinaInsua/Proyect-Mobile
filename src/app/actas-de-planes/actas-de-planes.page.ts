@@ -36,7 +36,15 @@ export class ActasDePlanesPage implements OnInit {
   records!:any;
   periods!:any;
   company!:Company;
-  
+
+  //cheque
+  banks!: any;
+  cheques!: any;
+  selectedBank: any;
+  accountNumber !: Number;
+  zipCode !: string;
+  displayCheque: boolean = false;
+
   fieldsTableRecord = FIELDS_TABLE_RECORD;
   fieldsTableDebts = FIELDS_TABLE_DEBTS;
   fieldsTablePayments = FIELDS_TABLE_PAYMENTS;
@@ -63,22 +71,50 @@ export class ActasDePlanesPage implements OnInit {
     this.records= records;
     this.periods = this.recordDTO.getPeriodByRecord();
   },
+    error: (error: { message: any; }) =>{
+      this.messageService.add({severity:'error', summary:error.message, life:2000});
+    }
+  });
+
+  this.apiService.get(ApiService.apiURLCompanies+"/id/64640").subscribe({next: companies => {
+    this.company = new Company(companies);
+    console.log(this.company);
+  },
   error: (error: { message: any; }) =>{
+    console.log(error.message);
     this.messageService.add({severity:'error', summary:error.message, life:2000});
   }
-});
+  });
 
-this.apiService.get(ApiService.apiURLCompanies+"/id/64640").subscribe({next: companies => {
-  this.company = new Company(companies);
-  console.log(this.company);
-},
-error: (error: { message: any; }) =>{
-  console.log(error.message);
-  this.messageService.add({severity:'error', summary:error.message, life:2000});
-}
-});
+  this.cheques = [
+    {
+      cuote: "1",
+      datePayment: "10-02-23",
+      dateAcred: "",
+      amountPay: "4215",
+      import: "4215",
+      bank : ""
+    },
+    {
+      cuote: "2",
+      datePayment: "10-03-23",
+      dateAcred: "",
+      amountPay: "4324",
+      import: "4324",
+      bank : ""
+    }     
+  ];
 
-
+  this.banks = [
+    {name:"Santander"}, 
+    {name:"ICBC"}, 
+    {name:"Galicia"}, 
+    {name:"Credicoop"}, 
+    {name:"Provincia"}, 
+    {name:"Brubank"}, 
+    {name:"Nacion"}, 
+    {name:"BBVA"}, 
+    {name:"Patagonia"}];
 
   this.items = [
     {
@@ -170,7 +206,7 @@ error: (error: { message: any; }) =>{
             },
             { label: "Cheque", 
               command: (event) => {
-                console.log("Asociar Cheque")
+                this.showDialogCheque();
               }
             },
             { label: "CBU General", 
@@ -235,6 +271,10 @@ error: (error: { message: any; }) =>{
 
   CancelShowDialog(){
     this.display = false;
+  }
+
+  showDialogCheque(){
+    this.displayCheque = true;
   }
 
   selectEvent(event:any){

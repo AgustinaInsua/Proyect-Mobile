@@ -188,6 +188,7 @@
   background: transparent;
   border: 0 none;
   width: 192px;
+  text-align: center;
 }
 
 .conteiner-data-1 label {
@@ -1231,3 +1232,56 @@ h2 {
   margin-top: -3px;
 }
 
+
+:host {
+  ::ng-deep .checkDialog {
+     .p-dialog-header {
+        padding: 0.7rem 0.7rem;
+     }
+     .p-dialog-content {
+        padding: 0 0.8rem 1rem 0.8rem;
+     }
+     .p-dialog-footer {
+        padding: 0 0.8rem 0.3rem 0.8rem;
+     }
+  }
+}
+:host {
+  ::ng-deep .checkTable {
+     .p-datatable-thead > tr > th {
+        text-align: center;
+     }
+     input {
+        width: 9vw;      
+     }
+     input::-webkit-outer-spin-button,
+     input::-webkit-inner-spin-button {
+        display: none;
+     }
+     
+  }
+
+  .checkTable__inputs--import {
+     width: 100%;
+  }
+
+  .p-dropdown {
+     width: 100%;
+     .p-dropdown-label {
+        text-align: center;
+     }
+  }    
+}
+
+
+
+
+.titleDialog {
+  margin-top: 5px;
+  text-align: center;
+  color: #67b5cf;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 45%;
+
+}

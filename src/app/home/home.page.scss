@@ -61,50 +61,7 @@ label{
    float: right;
 }
 
-:host {
-   ::ng-deep .checkDialog {
-      .p-dialog-header {
-         padding: 0.7rem 0.7rem;
-      }
-   }
-}
-:host {
-   ::ng-deep .checkTable {
-      .p-datatable-thead > tr > th {
-         text-align: center;
-      }
-      input {
-         width: 100%;
-      }
-      .p-dropdown {
-         width: 100%;
-         .p-dropdown-label {
-            text-align: center;
-         }
-      }
 
-      
-}
-
-
-}
-.checkTable__inputs--import {
-   width: 100%;
-}
-
-.checkTable__inputs {
-   width: 100%;
-}
-
-.titleDialog {
-   margin-top: 5px;
-   text-align: center;
-   color: #67b5cf;
-   font-size: 18px;
-   font-weight: 700;
-   margin-left: 45%;
-
-   }
 
 .errors {
    color: red;
@@ -116,7 +73,47 @@ label{
  }
 
 
-
+ :host {
+   ::ng-deep .calendar-override{
+      .p-datepicker-trigger {
+       border-top-left-radius: 0;
+       border-bottom-left-radius: 0;
+       border-radius: 0px;
+     }
+      .p-datepicker {
+       min-width: 50%;
+       width: 120%;
+       height: 600%;
+       margin-left: -5%;
+     }
+     .p-inputtext {
+       flex: 1 1 auto;
+       width: 192px;
+     }
+     .p-datepicker table th , .p-datepicker table td{
+       padding: 0rem;
+     }
+     .p-datepicker .p-datepicker-header {
+   padding: 0rem;
+   color: #495057;
+   background: #ffffff;
+   font-weight: 600;
+   margin: 0;
+   border-bottom: 1px solid #dee2e6;
+   border-top-right-radius: 6px;
+   border-top-left-radius: 6px;
+   display: flex;
+ }
+ .p-datepicker table {
+   width: 30%;
+   height: 30%;
+   border-collapse: collapse;
+ }
+  .p-calendar {
+   background-color: #d9d9d9;
+ }
+   }
+ }
 
 
  @media screen and (min-width: 1329px){

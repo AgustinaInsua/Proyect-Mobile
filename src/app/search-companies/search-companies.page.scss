@@ -35,6 +35,14 @@
    }
    
  }
+ :host ::ng-deep .p-datatable .p-datatable-thead > tr > th{
+   text-align:center;
+ }
+
+ :host ::ng-deep .p-datatable .p-datatable-tbody > tr > td{
+   text-align:center;
+   padding: 0;
+ }
  
  :host ::ng-deep .p-button{
    color: gray;
@@ -127,6 +135,7 @@ p#buscarActas,p#editarActas,p#imprimirActas{
 }
 
 
+
 :host ::ng-deep .p-datatable-header ng-star-inserted {
    margin-top: 3%;
 }
@@ -137,7 +146,7 @@ p#buscarActas,p#editarActas,p#imprimirActas{
    border: 1px solid #dee2e6;
    border-width: 1px 0 1px 0;
    padding: 1rem 1rem;
-   margin-top: 2%;
+   margin-top: 0.5%;
    font-weight: 700;
 }
  

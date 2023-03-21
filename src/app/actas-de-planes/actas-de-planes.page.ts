@@ -77,7 +77,7 @@ export class ActasDePlanesPage implements OnInit {
     }
   });
 
-  this.apiService.get(ApiService.apiURLCompanies+"/id/64640").subscribe({next: companies => {
+  this.apiService.get(ApiService.apiURLCompanies+"/64640").subscribe({next: companies => {
     this.company = new Company(companies);
     this.load = true;
     console.log(this.company);

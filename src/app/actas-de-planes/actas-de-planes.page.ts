@@ -36,6 +36,7 @@ export class ActasDePlanesPage implements OnInit {
   records!:any;
   periods!:any;
   company!:Company;
+  load!:boolean;
 
   //cheque
   banks!: any;
@@ -78,6 +79,7 @@ export class ActasDePlanesPage implements OnInit {
 
   this.apiService.get(ApiService.apiURLCompanies+"/id/64640").subscribe({next: companies => {
     this.company = new Company(companies);
+    this.load = true;
     console.log(this.company);
   },
   error: (error: { message: any; }) =>{

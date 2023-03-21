@@ -5,14 +5,14 @@
     <app-title title="Actas de planes de pago" icon="documents"></app-title>
     <p-menubar [model]="items"></p-menubar>
     <p-card styleClass="card-override">
-      <div class="container">
+      <div class="container" *ngIf="load">
         <p-accordion [multiple]="true" styleClass="accordion-override">
           <p-accordionTab header="Datos de la empresa">
 
             <div *ngFor="let record of records">
   
           <div class="conteiner-data-1">
-          
+  
             <div class="conteiner-data-4">
             <label>Acta</label> 
                <label>Estado</label> 
@@ -29,16 +29,16 @@
             <label>Alta AFIP</label>
             <label>Aprob Fec.Int </label>
             <label>Aprob Fec.Acr</label>
-            <td>{{company?.cuit}}</td>
+            <td>{{company.cuit}}</td>
             <td class="altaAfip">{{record.altaAfip}}</td>
             <td>{{record.aprobadorFecIntereses}}</td>
             <td>{{record.aprobadorFecAcreditacion}}</td> 
            </div>
-              
+          </div>
 
 
               </div>
-      </div>
+      
           </p-accordionTab>
           <p-accordionTab header="Datos de contacto" > 
               <div class="conteiner-data-3">
@@ -48,10 +48,10 @@
                 <label class="email">Mail</label>
                 <label class="telef">Telefono</label>
       
-               <td>{{company?.contactName}}</td>
-                <td>{{company?.contactLastName}}</td>
-                <td> {{company?.email}}</td>
-                <td>{{company?.contactNumber}}</td> 
+               <td>{{company.contactName}}</td>
+                <td>{{company.contactLastName}}</td>
+                <td> {{company.email}}</td>
+                <td>{{company.contactNumber}}</td> 
 
                 </div>
           </p-accordionTab>

@@ -15,15 +15,7 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },/*
-  {
-    path: 'actualizar-datos',
-    loadChildren: () => import('./actualizar-datos/actualizar-datos.module').then( m => m.ActualizarDatosPageModule)
   },
-  {
-    path: 'boletas-emitidas',
-    loadChildren: () => import('./boletas-emitidas/boletas-emitidas.module').then( m => m.BoletasEmitidasPageModule)
-  },*/
   { 
     //Este es solo para pruebas directas en menu
     path: 'menu',
@@ -33,14 +25,6 @@ const routes: Routes = [
     path: 'search-companies',
     loadChildren: () => import('./search-companies/search-companies.module').then( m => m.SearchCompaniesPageModule)
   },
-/*  {
-    path: 'actas-de-planes',
-    loadChildren: () => import('./actas-de-planes/actas-de-planes.module').then( m => m.ActasDePlanesPageModule)
-  },
-  {
-    path: 'search-records',
-    loadChildren: () => import('./search-records/search-records.module').then( m => m.SearchRecordsPageModule)
-  },*/
   {
     path: 'search-plans',
     loadChildren: () => import('./search-plans/search-plans.module').then( m => m.SearchPlansPageModule)

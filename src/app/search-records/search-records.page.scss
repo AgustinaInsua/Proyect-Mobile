@@ -1,20 +1,17 @@
-:host ::ng-deep .p-button{
-    color: gray;
-    background: white;
-    border: white;
-    padding: 0.75rem 1.25rem;
-    font-size: 1rem;
-    border-radius: 50px;
+:host ::ng-deep .p-button {
+   color: #ffffff;
+   background: #67b5cf;
+   border: 1px solid #67b5cf;
+   padding: 0.75rem 1.25rem;
+   font-size: 1rem;
+   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+   border-radius: 20px;
  }
-
  :host ::ng-deep .p-button:hover{
-    color: gray;
-    background: #dee2e6;
-    border: 1px solid #dee2e6;
-    padding: 0.75rem 1.25rem;
-    font-size: 1rem;
-    border-radius: 50px;
- }
+   color: gray;
+   background: #dee2e6;
+   border: 1px solid #dee2e6;
+  }
  :host ::ng-deep .p-datatable .p-datatable-thead > tr > th{
    text-align:center;
  }
@@ -44,7 +41,7 @@ p{
 
    .viewRecord{
     position: relative;
-    top: -3px;
+    top: -8px;
     height: 60px;
 }
 
@@ -69,6 +66,31 @@ p{
    width: 100%;
 }
 
+:host ::ng-deep .p-paginator-bottom {
+   border-width: 0 0 1px 0;
+   border-radius: 0;
+   height: 3rem;
+ }
+
+ :host ::ng-deep .p-paginator {
+   background: #ffffff;
+   color: #6c757d;
+   border: solid #e9ecef;
+   border-width: 0;
+   padding: 0rem 1rem;
+   border-radius: 6px;
+ }
+ :host ::ng-deep .p-dropdown{
+   margin-top: 0%;
+   background-color: #d9d9d9;
+ }
+ :host ::ng-deep .p-dropdown .p-dropdown-trigger {
+   background: transparent;
+   color: #6c757d;
+   width: 2rem;
+   border-top-right-radius: 6px;
+   border-bottom-right-radius: 6px;
+}
 @media screen and (max-width:960px){
    .filter__dropdown{
       width: 26vw;

@@ -8,13 +8,13 @@ import { IonicModule } from '@ionic/angular';
 import { BoletasEmitidasPageRoutingModule } from './boletas-emitidas-routing.module';
 import { BoletasEmitidasPage } from './boletas-emitidas.page';
 
-import {TableModule} from 'primeng/table';
-import {ButtonModule} from 'primeng/button';
-import {AutoCompleteModule} from 'primeng/autocomplete';
-import {InputTextModule} from 'primeng/inputtext';
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { InputTextModule } from 'primeng/inputtext';
 import { HttpClientModule } from '@angular/common/http';
-import {DropdownModule} from 'primeng/dropdown';
-import {DialogModule} from 'primeng/dialog';
+import { DropdownModule } from 'primeng/dropdown';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   imports: [
@@ -29,8 +29,8 @@ import {DialogModule} from 'primeng/dialog';
     HttpClientModule,
     ComponentsModule,
     DropdownModule,
-    DialogModule
+    DialogModule,
   ],
-  declarations: [BoletasEmitidasPage]
+  declarations: [BoletasEmitidasPage],
 })
 export class BoletasEmitidasPageModule {}

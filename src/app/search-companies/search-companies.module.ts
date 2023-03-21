@@ -10,13 +10,13 @@ import { SearchCompaniesPageRoutingModule } from './search-companies-routing.mod
 
 import { SearchCompaniesPage } from './search-companies.page';
 import { TableModule } from 'primeng/table';
-import {ButtonModule} from 'primeng/button';
-import {AutoCompleteModule} from 'primeng/autocomplete';
-import {InputTextModule} from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { InputTextModule } from 'primeng/inputtext';
 import { HttpClientModule } from '@angular/common/http';
-import {MessagesModule} from 'primeng/messages';
-import {MessageModule} from 'primeng/message';
-import {ToastModule} from 'primeng/toast';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
+import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 
 @NgModule({
@@ -34,9 +34,9 @@ import { MessageService } from 'primeng/api';
     TranslateModule,
     MessageModule,
     MessagesModule,
-    ToastModule
-  ], 
+    ToastModule,
+  ],
   providers: [MessageService],
-  declarations: [SearchCompaniesPage]
+  declarations: [SearchCompaniesPage],
 })
 export class SearchCompaniesPageModule {}

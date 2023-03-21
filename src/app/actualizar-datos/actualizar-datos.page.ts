@@ -9,25 +9,21 @@ import { Router } from '@angular/router';
   templateUrl: './actualizar-datos.page.html',
   styleUrls: ['./actualizar-datos.page.scss'],
 })
-
 export class ActualizarDatosPage implements OnInit {
-
   companies: any;
 
-  constructor(private companyDTO: CompanyDTO,private router: Router) { }
+  constructor(private companyDTO: CompanyDTO, private router: Router) {}
 
   ngOnInit() {
     this.companies = this.companyDTO.getCompanyInformation();
-    console.log(this.companies);
   }
 
-  saveData(){
+  saveData() {
     this.companyDTO.setCompanyInformationMail(this.companies.mail);
     this.router.navigate(['search-companies']);
   }
 
-  cancelData(){
+  cancelData() {
     this.router.navigate(['search-companies']);
   }
-
 }

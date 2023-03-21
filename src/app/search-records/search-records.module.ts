@@ -8,9 +8,9 @@ import { IonicModule } from '@ionic/angular';
 import { SearchRecordsPageRoutingModule } from './search-records-routing.module';
 
 import { SearchRecordsPage } from './search-records.page';
-import {ButtonModule} from 'primeng/button';
+import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
-import {DropdownModule} from 'primeng/dropdown';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   imports: [
@@ -22,8 +22,8 @@ import {DropdownModule} from 'primeng/dropdown';
     ButtonModule,
     TableModule,
     ComponentsModule,
-    DropdownModule
+    DropdownModule,
   ],
-  declarations: [SearchRecordsPage]
+  declarations: [SearchRecordsPage],
 })
 export class SearchRecordsPageModule {}

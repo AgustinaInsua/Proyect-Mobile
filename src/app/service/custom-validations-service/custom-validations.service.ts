@@ -1,39 +1,48 @@
 import { RegularExpressions } from './../../model/RegularExpressions';
 import { Injectable } from '@angular/core';
-import { AbstractControl, ValidationErrors, ValidatorFn } from "@angular/forms";
+import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CustomValidationsService {
+  constructor() {}
 
-  constructor() { }
-  
-  static passwordValidatorsRegEx(regex: RegExp, error: ValidationErrors): ValidatorFn {
+  static passwordValidatorsRegEx(
+    regex: RegExp,
+    error: ValidationErrors
+  ): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       if (!control.value) {
         return null;
       }
       const valid = regex.test(control.value);
       return valid ? null : error;
-    }
+    };
   }
 
   static valitatorsNumbersValid(): ValidatorFn {
-    return this.passwordValidatorsRegEx(RegularExpressions.atLeastANumber, { requiresDigit: true });
+    return this.passwordValidatorsRegEx(RegularExpressions.atLeastANumber, {
+      requiresDigit: true,
+    });
   }
 
   static valitatorsUpperCaseValid(): ValidatorFn {
-    return (this.passwordValidatorsRegEx(RegularExpressions.atLeastAUpperCase, { requiresUppercase: true }));
+    return this.passwordValidatorsRegEx(RegularExpressions.atLeastAUpperCase, {
+      requiresUppercase: true,
+    });
   }
 
   static validatorsLowerCaseValid(): ValidatorFn {
-    return this.passwordValidatorsRegEx(RegularExpressions.atLeastALowerCase, { requiresLowercase: true });
+    return this.passwordValidatorsRegEx(RegularExpressions.atLeastALowerCase, {
+      requiresLowercase: true,
+    });
   }
 
   static validatorsSpecialCharacter(): ValidatorFn {
-    return this.passwordValidatorsRegEx(RegularExpressions.atLeastASpecialCharacter, { requiresSpecialChars: true });
+    return this.passwordValidatorsRegEx(
+      RegularExpressions.atLeastASpecialCharacter,
+      { requiresSpecialChars: true }
+    );
   }
-
 }
-

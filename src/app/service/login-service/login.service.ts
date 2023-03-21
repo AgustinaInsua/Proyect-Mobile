@@ -6,37 +6,21 @@ import { Injectable } from '@angular/core';
 import { User } from 'src/app/model/User';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
   url = environment.apiURL;
-  constructor(private apiService: ApiService) { }
-  /*
-  validateUser(user: User){
-    return this.existUser(user);
-  }
-  */
-  existUser(user: User){
-    return USERS_LOGIN.some((obj) =>{
-      return (obj.email === user.email) && (obj.password === user.password)}) ? 
-      HttpStatusCode.Ok : 
-      HttpStatusCode.Unauthorized;
+  constructor(private apiService: ApiService) {}
+
+  existUser(user: User) {
+    return USERS_LOGIN.some((obj) => {
+      return obj.email === user.email && obj.password === user.password;
+    })
+      ? HttpStatusCode.Ok
+      : HttpStatusCode.Unauthorized;
   }
 
-  validateUser(user: User){
-
-    return this.apiService.post(this.url+'login', user);
-    /*.subscribe({next: companies => {
-      console.log(companies);
-      console.log("TRUE");
-    },
-    error: (error: { message: any; }) =>{
-      console.log(user);
-      console.log("FALSE");
-    }
-  });*/
+  validateUser(user: User) {
+    return this.apiService.post(this.url + 'login', user);
   }
-  }
-  
-  
-
+}

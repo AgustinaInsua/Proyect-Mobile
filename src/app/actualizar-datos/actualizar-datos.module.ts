@@ -10,12 +10,12 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { TableModule } from 'primeng/table';
-import {ButtonModule} from 'primeng/button';
-import {AutoCompleteModule} from 'primeng/autocomplete';
-import {InputTextModule} from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { InputTextModule } from 'primeng/inputtext';
 import { HttpClientModule } from '@angular/common/http';
-import {CardModule} from 'primeng/card';
-import {AccordionModule} from 'primeng/accordion';
+import { CardModule } from 'primeng/card';
+import { AccordionModule } from 'primeng/accordion';
 
 @NgModule({
   imports: [
@@ -31,8 +31,8 @@ import {AccordionModule} from 'primeng/accordion';
     CardModule,
     AccordionModule,
     ComponentsModule,
-    TranslateModule
+    TranslateModule,
   ],
-  declarations: [ActualizarDatosPage]
+  declarations: [ActualizarDatosPage],
 })
 export class ActualizarDatosPageModule {}

@@ -14,42 +14,42 @@ import { Company } from '../model/Company';
 })
 export class SearchPlansPage implements OnInit {
   fieldsTablePlans = FIELDS_TABLE_PLANS;
-  companies !: Company[];
+  companies!: Company[];
   items!: MenuItem[];
   constructor(
     private router: Router,
     private apiService: ApiService,
     private messageService: MessageService,
-    private routerService: RoutingService) { }
+    private routerService: RoutingService
+  ) {}
 
   ngOnInit() {
     this.items = [
-      {label: 'Acta', command: () => {
-          
-      }},
-      {label: 'Acta Compacta', command: (e: any) => {
-          console.log(e);
-      }}
-  ];
-    this.apiService.get(ApiService.apiURLCompanies).subscribe({next: companies => {
-      this.companies = companies;
-    },
-    error: (error: { message: any; }) =>{
-      this.messageService.add({severity:'error', summary:error.message, life:2000});
-    }
-  })
-  
+      { label: 'Acta', command: () => {} },
+      { label: 'Acta Compacta', command: (e: any) => {} },
+    ];
+    this.apiService.get(ApiService.apiURLCompanies).subscribe({
+      next: (companies) => {
+        this.companies = companies;
+      },
+      error: (error: { message: any }) => {
+        this.messageService.add({
+          severity: 'error',
+          summary: error.message,
+          life: 2000,
+        });
+      },
+    });
   }
 
-  navToSearchRecords(){
+  navToSearchRecords() {
     //this.router.navigate(['search-records']);
-    this.routerService.navTo("search-plans/search-records");
+    this.routerService.navTo('search-plans/search-records');
   }
 
-  onFilter(event: any, table: Table){
-  }
+  onFilter(event: any, table: Table) {}
 
-  clear (table: Table){
+  clear(table: Table) {
     table.clear();
   }
 }

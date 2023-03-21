@@ -1,4 +1,3 @@
-import { LanguageService } from './service/language-service/language.service';
 import { Component } from '@angular/core';
 import { Languages } from './model/emumLanguages';
 
@@ -8,7 +7,7 @@ import { Languages } from './model/emumLanguages';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private langService: LanguageService) {
-    this.langService.setDefaultLang(Languages.es);
+  constructor() {
+   
   }
 }

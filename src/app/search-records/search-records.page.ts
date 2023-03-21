@@ -12,45 +12,47 @@ import { DropdownFilterOptions } from 'primeng/dropdown';
   styleUrls: ['./search-records.page.scss'],
 })
 export class SearchRecordsPage implements OnInit {
-  records : any;
+  records: any;
   fieldsTableRecords = FIELDS_TABLE_RECORDS;
-  status !: any;
+  status!: any;
   selectedStatus!: StatusRecord;
-  constructor(private router: Router, private apiService: ApiService) { }
-  
+  constructor(private router: Router, private apiService: ApiService) {}
+
   ngOnInit() {
-    this.apiService.get(ApiService.apiURLCompanies + "/64640/actas").subscribe({next: records => {
-      this.records = records;
-    }});
+    this.apiService.get(ApiService.apiURLCompanies + '/64640/actas').subscribe({
+      next: (records) => {
+        this.records = records;
+      },
+    });
     this.status = [
       {
-        code: "ABIERTA",
-        label: "Abierta"},
+        code: 'ABIERTA',
+        label: 'Abierta',
+      },
       {
-        code: "CERRADA",
-        label: "Cerrada"}, 
+        code: 'CERRADA',
+        label: 'Cerrada',
+      },
       {
-        code: "CANCELADA",
-        label: "Cancelada"}];
+        code: 'CANCELADA',
+        label: 'Cancelada',
+      },
+    ];
   }
 
-  paymentRecords (){
+  paymentRecords() {
     this.router.navigate(['search-plans/search-records/actas-de-planes']);
   }
 
-  onFilter(event : any, dtCompanies: Table){
-  }
+  onFilter(event: any, dtCompanies: Table) {}
 
-  clear(table : Table){
+  clear(table: Table) {
     table.clear();
   }
 
-  filter (table: Table, value: any){
-    try{
-      table.filter(value.code,'estado','equals');
-    } catch (e: any){
-      console.log("Te vere en el infierno error mugroso");
-    }
-    
+  filter(table: Table, value: any) {
+    try {
+      table.filter(value.code, 'estado', 'equals');
+    } catch (e: any) {}
   }
 }

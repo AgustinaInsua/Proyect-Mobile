@@ -13,9 +13,9 @@ import { IonicModule } from '@ionic/angular';
 import { SearchPlansPageRoutingModule } from './search-plans-routing.module';
 
 import { SearchPlansPage } from './search-plans.page';
-import {SpeedDialModule} from 'primeng/speeddial';
-import {SplitButtonModule} from 'primeng/splitbutton';
-import {MenuModule} from 'primeng/menu';
+import { SpeedDialModule } from 'primeng/speeddial';
+import { SplitButtonModule } from 'primeng/splitbutton';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
   imports: [
@@ -30,9 +30,9 @@ import {MenuModule} from 'primeng/menu';
     TableModule,
     SpeedDialModule,
     SplitButtonModule,
-    MenuModule
+    MenuModule,
   ],
   providers: [MessageService],
-  declarations: [SearchPlansPage]
+  declarations: [SearchPlansPage],
 })
 export class SearchPlansPageModule {}

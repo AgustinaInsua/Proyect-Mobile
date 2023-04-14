@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'search-companies',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {

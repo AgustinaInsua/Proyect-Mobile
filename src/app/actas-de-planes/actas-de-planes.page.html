@@ -259,7 +259,7 @@
                     <td>{{cheques.cuote}}</td>
                     <td>{{cheques.datePayment}}</td>
                     <td>
-                      <p-calendar [minDate]="calculator.todayDate" [(ngModel)]="value" [showIcon]="true" inputId="icon" styleClass="calendar-override" dateFormat="dd/mm/yy" [readonlyInput]="true" ></p-calendar>
+                      <p-calendar [minDate]="calculator.todayDate" [ngModel]="value" [showIcon]="true" inputId="icon" styleClass="calendar-override" dateFormat="dd/mm/yy" [readonlyInput]="true" appendTo="body" ></p-calendar>
                     </td>
                     <td>{{cheques.amountPay}}</td>
                     <td>

@@ -29,7 +29,7 @@
             <div class="labelInput">
                 <label for="password">Contraseña</label>
             </div>
-            <input tabindex="2" type="text" id="password" name="password" [(ngModel)]="user.password" #password="ngModel" minlength="6" required pInputText>
+            <input tabindex="2" type="text" id="password" name="password" [(ngModel)]="user.password" #password="ngModel" minlength="4" required pInputText>
             <div [hidden]="password.valid || !password.touched" class="errors">
                 <div *ngIf="password.errors?.['required']">
                     Contraseña es requerida
